@@ -1,0 +1,42 @@
+/* CSS Document */
+.wrapper
+{ float:left;
+margin:2px;
+height:1200px;
+width:980px;
+padding:2px;
+border:2px solid #CC6699;
+}
+.head
+{ float:left;
+margin:2px;
+height:120px;
+width:967px;
+padding:2px;
+border:2px solid #336600;
+}
+.logo
+{ float:left;
+margin:2px;
+height:80px;
+width:200px;
+padding:2px;
+border:2px solid #336600;
+}
+
+.container
+{ float:left;
+margin:2px;
+height:965px;
+width:967px;
+padding:2px;
+border:2px solid #336600;
+}
+.footer
+{ float:left;
+margin:2px;
+height:40px;
+width:967px;
+padding:2px;
+border:2px solid #336600;
+}

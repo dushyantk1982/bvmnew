@@ -1,0 +1,40 @@
+/* CSS Document */
+.wrapper
+{ float:left;
+height:900px;
+width:1300px;
+padding:2px;
+margin:2px;
+margin-left:10px; margin-right:10px;
+border:2px solid #FF0000;
+}
+
+.head
+{
+float:leftl;
+height:100px;
+width:1292px;
+padding:1px;
+margin:1px;
+border:2px solid #0000CC;
+}
+
+.layer1
+{
+float:left;
+height:40px;
+width:1284px;
+padding:1px;
+margin:1px;
+border:2px solid #009999;
+}
+
+.layer2
+{
+float:left;
+height:40px;
+width:1284px;
+padding:1px;
+margin:1px;
+border:2px solid #009999;
+}

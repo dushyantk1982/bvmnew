@@ -1,0 +1,136 @@
+/* CSS Document */
+.wrapper
+{ /*float:left;*/
+height:900px;
+width:1200px;
+padding:2px;
+margin:2px;
+margin-left:auto; 
+margin-right:auto;
+background:#FFFFFF;
+/*border:2px solid #FF0000;*/
+}
+
+.head
+{
+float:leftl;
+height:150px;
+width:1193px;
+padding:1px;
+margin:1px;
+/*border:2px solid #0000CC;*/
+}
+
+.container
+{
+float:left;
+height:730px;
+width:1193px;
+padding:0px;
+margin:0px;
+/*border:2px solid #0000CC;*/
+}
+
+.left
+{
+float:left;
+height:730px;
+width:100px;
+padding:0px;
+margin:0px;
+/*border:2px solid #0000CC;*/
+}
+
+.content
+{
+float:left;
+height:730px;
+width:900px;
+padding:0px;
+margin:0px;
+/*border:2px solid #0000CC;*/
+}
+
+.lable
+{
+border-style:solid;
+width:30px;
+vertical-align:middle;
+/*background-color:#FFFF99;*/
+}
+
+.right
+{
+float:left;
+height:730px;
+width:100px;
+padding:0px;
+margin:0px;
+/*border:2px solid #0000CC;*/
+}
+
+
+
+.layer
+{
+margin-left:500px;
+margin-top:20px;
+margin-bottom:20px;
+height:80px;
+width:1193px;
+padding:0px;
+margin:0px;
+font-size:36px;
+/*border:2px solid #009999;*/
+}
+
+.layer1
+{
+float:left;
+height:42px;
+width:1193px;
+padding:1px;
+margin:0px;
+/*border:2px solid #009999;*/
+}
+
+.layer2
+{
+float:left;
+height:20px;
+width:1193px;
+padding:1px;
+margin:0px;
+background:#FFFFFF;
+font-size:18px; color:#003366;
+/*border:2px solid #009999;*/
+}
+
+.menu2
+{
+float:left;
+margin-top:5px;
+padding:2px;
+margin-left:15px;
+}
+
+.name
+{
+float:left;
+margin-top:5px;
+padding:2px;
+margin-left:15px;
+margin-top:10px;
+}
+
+
+.footer1
+{
+float:left;
+height:20px;
+width:1193px;
+padding:1px;
+margin:1px;
+background:#E8E8E8;
+/*border:2px solid #0000CC;*/
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+	<link rel='stylesheet' type='text/css' href='menu/styles.css' />
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	<script type='text/javascript' src='menu/menu_jquery.js'></script>
+</head>
+<body>
+<div id='cssmenu'>
+<ul>
+	<li class='last'><a href='adhome.php'><span>Home</span></a></li>
+	<li class='last'><a href='adhome.php?id=1'><span>View Enquiry</span></a></li>
+	<li class='has-sub'><a href='#'><span>Exam</span></a>
+      <ul>
+         <li class='last'><a href='adhome.php?id=2'><span>Internal Marks</span></a></li>
+		 <li class='last'><a href='adhome.php?id=3'><span>Insert Assignment</span></a></li>
+	  </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Faculty</span></a>
+      <ul>
+         <li class='last'><a href='adhome.php?id=4.1'><span>Subject Assign</span></a></li>
+		 <li class='last'><a href='adhome.php?id=4.2'><span>Update Assigned Subject</span></a></li>
+	</ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Student</span></a>
+   		<ul>
+			<li class='last'><a href='adhome.php?id=21'><span>Student Registration</span></a></li>
+			<li class='has-sub'><a href='adhome.php?id=22'><span>Update Status</span></a>
+				<ul>
+					<li class='last'><a href='adhome.php?id=22.1'><span>Class Wise</span></a></li>
+					<li class='last'><a href='adhome.php?id=22.2'><span>Student Wise</span></a></li>
+					<li class='last'><a href='adhome.php?id=22.3'><span>Change Password</span></a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+   <li class='last'><a href='../index.php'><span>Logout</span></a></li>
+</ul>
+</div>
+</body>
+</html>

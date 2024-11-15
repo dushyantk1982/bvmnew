@@ -1,0 +1,45 @@
+/* CSS Document */
+#top
+{
+width:80%;
+height:75px;
+margin-left:10%;
+margin-right:10%;
+position:fixed;
+}
+#menu
+{float:left;
+
+WIDTH:20%;
+height:450;
+background-image:url(../images/NEWSIDE.png);}
+#container
+{
+float:right;
+width:80%;
+overflow:auto;
+height:450;}
+.pagefont
+{
+font-size-adjust:inherit;
+font-size:14px;
+color:#330000;
+font-family:"century schoolbook";
+}
+#upper
+{
+vertical-align:top;
+
+}
+#demo
+{
+
+height:25px;
+background-image:url(../images/tabback.jpg);
+
+top:-3 px;
+vertical-align:middle;
+width:100%;
+position:fixed;
+bottom:0;
+top:auto;}

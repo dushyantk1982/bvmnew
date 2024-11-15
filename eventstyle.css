@@ -1,0 +1,94 @@
+/* CSS Document */
+.eventcontent
+{ float:left;
+margin:0px;
+height:110px;
+width:183px;
+padding:0px;
+border:0px solid #CC6699;
+}
+.event1
+{ float:left;
+margin:0px;
+height:110px;
+width:183px;
+padding:0px;
+background:url(images/fdi.jpg) no-repeat;
+/*<!--border:2px solid #336600;-->*/
+}
+
+.dataevent1
+{float:right;
+margin-top:50px;
+height:50px;
+width:100px;
+padding:0px;
+font:"Courier New", Courier, monospace; color:#00FF00;
+}
+
+.event2
+{ float:left;
+margin:0px;
+height:110px;
+width:183px;
+padding:0px;
+background:url(images/award.jpg) no-repeat;
+/*<!--border:2px solid #336600;-->*/
+}
+
+.dataevent2
+{float:right;
+margin-top:50px;
+height:50px;
+width:100px;
+padding:0px;
+font:"Courier New", Courier, monospace; color:#00FF00;
+}
+.event3
+{ float:left;
+margin:0px;
+height:110px;
+width:183px;
+padding:0px;
+background:url(images/hrmoney.jpg) no-repeat;
+/*<!--border:2px solid #336600;-->*/
+}
+
+.dataevent3
+{float:right;
+margin-top:70px;
+height:30px;
+width:80px;
+padding:0px;
+font:"Courier New", Courier, monospace; color:#00FF00;
+}
+
+.homecenter
+{float:left;
+margin:1px;
+height:250px;
+width:700px;
+padding:0px;
+}
+
+.homecenter1
+{
+float:left;
+margin-top:500px;
+margin:0px;
+height:130px;
+width:730px;
+padding:0px;
+/*background:url(images/blankco.png) repeat;
+border:solid #333333;*/
+}
+
+/*.homecenter2
+{
+float:left;
+margin-top:800px;
+margin:0px;
+height:240px;
+width:240px;
+padding:0px;
+}*/

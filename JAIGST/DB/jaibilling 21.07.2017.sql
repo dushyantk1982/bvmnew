@@ -1,0 +1,3221 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.0.2
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 21, 2017 at 12:24 PM
+-- Server version: 10.0.17-MariaDB
+-- PHP Version: 5.6.14
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `jaibilling`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `area`
+--
+
+CREATE TABLE `area` (
+  `area_id` bigint(10) NOT NULL,
+  `area_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `area`
+--
+
+INSERT INTO `area` (`area_id`, `area_name`) VALUES
+(1, 'Chandbadani Naka'),
+(2, 'Madhoganj, Taraganj'),
+(3, 'Shinde Ki Chhavani'),
+(4, 'Gol Pahariya, Janakganj, Jiwaji Ganj'),
+(5, 'Vinay Nagar, Anand Nagar, Bahodapur'),
+(6, 'Guda Naka, Subhash Market');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `autogen`
+--
+
+CREATE TABLE `autogen` (
+  `id` bigint(100) NOT NULL,
+  `inv` bigint(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bank`
+--
+
+CREATE TABLE `bank` (
+  `bank_id` bigint(100) NOT NULL,
+  `bank` varchar(100) NOT NULL,
+  `bank_add` varchar(100) NOT NULL,
+  `account_name` varchar(100) NOT NULL,
+  `account_no` varchar(100) NOT NULL,
+  `account_type` varchar(20) NOT NULL,
+  `IFSC` varchar(50) NOT NULL,
+  `SWIFT` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bill`
+--
+
+CREATE TABLE `bill` (
+  `id` bigint(100) NOT NULL,
+  `bill_no` bigint(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bill`
+--
+
+INSERT INTO `bill` (`id`, `bill_no`) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 14),
+(15, 15),
+(16, 16),
+(17, 17),
+(18, 18),
+(19, 19),
+(20, 20),
+(21, 21),
+(22, 22),
+(23, 23),
+(24, 24),
+(25, 25),
+(26, 26),
+(27, 27),
+(28, 28),
+(29, 29),
+(30, 30),
+(31, 31),
+(32, 32),
+(33, 33),
+(34, 34),
+(35, 35),
+(36, 36),
+(37, 37),
+(38, 38),
+(39, 39),
+(40, 40),
+(41, 41),
+(42, 42),
+(43, 43),
+(44, 44),
+(45, 45),
+(46, 46),
+(47, 47),
+(48, 48),
+(49, 49),
+(50, 50),
+(51, 51),
+(52, 52),
+(53, 53),
+(54, 54),
+(55, 55),
+(56, 56),
+(57, 57),
+(58, 58),
+(59, 59),
+(60, 60),
+(61, 61),
+(62, 62),
+(63, 63),
+(64, 64),
+(65, 65),
+(66, 66),
+(67, 67),
+(68, 68),
+(69, 69),
+(70, 70),
+(71, 71),
+(72, 72),
+(73, 73),
+(74, 74),
+(75, 75),
+(76, 76),
+(77, 77),
+(78, 78),
+(79, 79),
+(80, 80),
+(81, 81),
+(82, 82),
+(83, 83),
+(84, 84),
+(85, 85),
+(86, 86),
+(87, 87),
+(88, 88),
+(89, 89),
+(90, 90),
+(91, 91),
+(92, 92),
+(93, 93),
+(94, 94),
+(95, 95),
+(96, 96),
+(97, 97),
+(98, 98),
+(99, 99),
+(100, 100),
+(101, 101),
+(102, 102),
+(103, 103),
+(104, 104),
+(105, 105),
+(106, 106),
+(107, 107),
+(108, 108),
+(109, 109),
+(110, 110),
+(111, 111),
+(112, 112),
+(113, 113),
+(114, 114),
+(115, 115),
+(116, 116),
+(117, 117),
+(118, 118),
+(119, 119),
+(120, 120),
+(121, 121),
+(122, 122),
+(123, 123),
+(124, 124),
+(125, 125),
+(126, 126),
+(127, 127),
+(128, 128),
+(129, 129),
+(130, 130),
+(131, 131),
+(132, 132),
+(133, 133),
+(134, 134),
+(135, 135),
+(136, 136),
+(137, 137),
+(138, 138),
+(139, 139),
+(140, 140),
+(141, 141),
+(142, 142),
+(143, 143),
+(144, 144),
+(145, 145),
+(146, 146),
+(147, 147),
+(148, 148),
+(149, 149),
+(150, 150),
+(151, 151),
+(152, 152),
+(153, 153),
+(154, 154),
+(155, 155),
+(156, 156),
+(157, 157),
+(158, 158),
+(159, 159),
+(160, 160),
+(161, 161),
+(162, 162),
+(163, 163),
+(164, 164),
+(165, 165),
+(166, 166),
+(167, 167),
+(168, 168),
+(169, 169),
+(170, 170),
+(171, 171),
+(172, 172),
+(173, 173),
+(174, 174),
+(175, 175),
+(176, 176),
+(177, 177),
+(178, 178),
+(179, 179),
+(180, 180),
+(181, 181),
+(182, 182),
+(183, 183),
+(184, 184),
+(185, 185),
+(186, 186),
+(187, 187),
+(188, 188),
+(189, 189),
+(190, 190),
+(191, 191),
+(192, 192),
+(193, 193),
+(194, 194),
+(195, 195),
+(196, 196),
+(197, 197),
+(198, 198),
+(199, 199),
+(200, 200),
+(201, 201),
+(202, 202),
+(203, 203),
+(204, 204),
+(205, 205),
+(206, 206),
+(207, 207),
+(208, 208),
+(209, 209),
+(210, 210),
+(211, 211),
+(212, 212),
+(213, 213),
+(214, 214),
+(215, 215),
+(216, 216),
+(217, 217),
+(218, 218),
+(219, 219),
+(220, 220),
+(221, 221),
+(222, 222),
+(223, 223),
+(224, 224),
+(225, 225),
+(226, 226),
+(227, 227),
+(228, 228),
+(229, 229),
+(230, 230),
+(231, 231),
+(232, 232),
+(233, 233),
+(234, 234),
+(235, 235),
+(236, 236),
+(237, 237),
+(238, 238),
+(239, 239),
+(240, 240),
+(241, 241),
+(242, 242),
+(243, 243),
+(244, 244),
+(245, 245),
+(246, 246),
+(247, 247),
+(248, 248),
+(249, 249),
+(250, 250),
+(251, 251),
+(252, 252),
+(253, 253),
+(254, 254),
+(255, 255),
+(256, 256),
+(257, 257),
+(258, 258),
+(259, 259),
+(260, 260),
+(261, 261),
+(262, 262),
+(263, 263),
+(264, 263),
+(265, 264),
+(266, 264),
+(267, 264),
+(268, 265),
+(269, 266),
+(270, 267),
+(271, 268),
+(272, 269),
+(273, 270),
+(274, 271),
+(275, 272),
+(276, 273),
+(277, 274),
+(278, 275),
+(279, 276),
+(280, 277),
+(281, 278),
+(282, 279),
+(283, 280),
+(284, 281),
+(285, 282),
+(286, 283),
+(287, 284),
+(288, 285),
+(289, 286),
+(290, 287),
+(291, 288),
+(292, 289),
+(293, 290),
+(294, 291),
+(295, 292),
+(296, 293),
+(297, 294),
+(298, 295),
+(299, 296),
+(300, 297),
+(301, 298),
+(302, 299),
+(303, 300),
+(304, 301),
+(305, 302),
+(306, 303),
+(307, 304),
+(308, 305),
+(309, 306),
+(310, 307),
+(311, 308);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `category_id` bigint(100) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `description` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`category_id`, `category`, `description`) VALUES
+(1, 'OLIVIA', 'OLIVIA COMPANY'),
+(2, 'ARCHI', 'ARCHI COMPANY');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client`
+--
+
+CREATE TABLE `client` (
+  `client_id` bigint(100) NOT NULL,
+  `client_name` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `area_id` int(10) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `state` varchar(50) NOT NULL,
+  `country` varchar(50) NOT NULL,
+  `pin` varchar(10) NOT NULL,
+  `contact` varchar(50) NOT NULL,
+  `mobile` varchar(50) NOT NULL,
+  `mail` varchar(50) NOT NULL,
+  `PAN` varchar(50) NOT NULL,
+  `TIN` varchar(50) NOT NULL,
+  `ST` varchar(50) NOT NULL,
+  `CST` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `client`
+--
+
+INSERT INTO `client` (`client_id`, `client_name`, `address`, `area_id`, `city`, `state`, `country`, `pin`, `contact`, `mobile`, `mail`, `PAN`, `TIN`, `ST`, `CST`) VALUES
+(1, 'BOBBY GENERAL ', 'ANAND NAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(2, 'SHE & SHE COSMETIC', 'ANAND NAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(3, 'JAI MAA SANTOSHI', 'ANAND NAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(4, 'BRANDAVAN MEDICAL', 'ANAND NAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(5, 'SADBHAVNA ', 'BAHODAPUR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(6, 'AYUSH COSMETIC', 'BAHODAPUR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(7, 'RIYA SIYA KIRANA', 'BAHODAPUR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(8, 'BALAJI GARMENTS', 'BAHODAPUR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(9, 'SHAIFALI GENERAL', 'NAI SADAK', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(10, 'KHUSHBU GENERAL', 'SHINDE KI CHHAWANI', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(11, 'DIVYANSHI COSMETIC', 'SHINDE KI CHHAWANI', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(12, 'AASHIRWAD GENERAL STORE', 'SHINDE KI CHHAWANI', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(13, 'M.D. & SONS', 'MADHOGAN', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(14, 'KAMAL KIRANA', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(15, 'SHRI RAM GENERAL', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(16, 'KALPANA MEDICAL', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(17, 'SAKSHI BEAUTY PARLOUR', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(18, 'KAVYA MEDICAL', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(19, 'KESHAV COSMETIC', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(20, 'P.K. AGENCY', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '23665102821', '', ''),
+(21, 'KESHAR COSMETICS', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(22, 'K.S. COSMETICS', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(23, 'KHUSHBU KRISHNA', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(24, 'CHITRA GENERAL', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(25, 'SHUBHAM GENERAL', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(26, 'RAJ BEAUTY', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(27, 'HIMANSHU MEDICAL', 'CHANDABADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(28, 'KHUSHBU COSMETICS', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(29, 'MAA KAILADEVI ', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(30, 'KHUSHBU KIRANA ', 'NAI SADAK', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(31, 'ACHALNATH MEDICAL', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(32, 'JITENDRA KIRANA', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(33, 'JAI BABA FARMA', 'HUJRAT PULL', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(34, 'MAHAVEER COSMETIC', 'TOPI BAZAR', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(35, 'MUKESH KIRANA', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(36, 'LAXMI GENERAL STORE', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(37, 'BANTI KIRANA', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(38, 'PAL KIRANA', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(39, 'MAA MANSHA DEVI', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(40, 'BALAJI PROVISION', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(41, 'SUNIL MEDICAL', 'NAI SADAK', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(42, 'RAMESH KIRANA', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(43, 'KANCHAN GENERAL STORE', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(44, 'GURUKRIPA TRADERS', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(45, 'SHIVANI BEAUTY PARLOUR', 'GENDEWALI SADAK', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(46, 'SANTOSH PROVISION', 'GENDEWALI SADAK', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(47, 'VINOD COSMETICS', 'DHOLIBUA KA PULL, BAJARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(48, 'KALPANA COSMETICS', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(49, 'PANKAJ KIRANA', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(50, 'MANOJ KIRANA', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(51, 'AMRAPURKAR GENERAL STORE', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(52, 'BAJRANG STORE', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(53, 'BALAJI STORE', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(54, 'GURUNANAK MEDICAL', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(55, 'DEEPAK GENERAL STORE', 'ANAND NAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(56, 'AADITYA KIRANA', 'NEAR SHIV KIRANA SHABAD PRATAP AASHRAM ROAD', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(57, 'ARPIT KIRANA', 'ANAND NAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(58, 'MAA COLLECTION', 'ANAND NAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(59, 'SUMIT KIRANA', 'ANAND NAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(60, 'DEV KIRANA', 'ANAND NAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(61, 'GOYAL HOJARI', 'ANAND NAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(62, 'KRISHNA COSMETICS', 'NEAR KATESHWAR, GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(63, 'A.B. GOYAL GENERAL', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(64, 'MADHAV DAS', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '23725102497', '', ''),
+(65, 'MONU GENERAL', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '23805101483', '', ''),
+(66, 'BANDIL HOJARI', 'FALKA BAZAR', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(67, 'ASHWIN KIRANA', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(68, 'GIRRAJ PROVISION', 'NEAR VINOD, CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(69, 'SHRI MAHADEV MEDICAL', 'KATORATAL, CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(70, 'MAA LAKHESHWARI COSMETICS', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(71, 'BABA KIRANA', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(72, 'KUMAR MEDICAL', 'LAXMIGANJ, GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(73, 'MAA SHARDA COSMETICS', 'NEAR GORKHI SCOUT, MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(74, 'OM SAI GENERAL', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(75, 'MAHESH GENERAL', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(76, 'KHANDELWAL GENERAL', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(77, 'SAI GENERAL ', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(78, 'KALPANA BENGAL', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(79, 'JUHI GENERAL', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(80, 'VASHUDEV GENERAL', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '23415100776', '', ''),
+(81, 'AASHISH GENERAL ', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(82, 'PALAK TRADERS', 'VINAYNAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(83, 'MAHAK GENERAL', 'VINAYNAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(84, 'JAI SAI FATION', ' NEAR MAA SHARDA, BADA', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(85, 'AASHIRWAD SHOPING CENTER', 'INFRON OF RAM MANDIR, PHALKA BAZAR', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '23745305022', '', ''),
+(86, 'NAGAJI GENERAL STORE', 'PHALKA BAZAR', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '23449213399', '', ''),
+(87, 'CHACHA GENERAL STORE', 'INDERGANJ CHAURAHA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '23219030065', '', ''),
+(88, 'S.S. ENTERPRISES', 'NEAR HAAT PULL, SHINDE KI CHHAWANI', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(89, 'SATYAM PROVISION', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(90, 'MOTIRAM NANAK RAM', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(91, 'GOYAL STORE', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(92, 'JAI BALAJI COSMETICS', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(93, 'PREM KIRANA', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(94, 'SAMADH KIRANA', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(95, 'KALPANA COSMETICS', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(96, 'PARIHAR GENERAL STORE', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(97, 'MAA KAILADEVI ', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(98, 'CHANDANI STORE', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(99, 'RAJAN DAS BALCHANDRA', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(100, 'DEVI CHANDRA HITESH KUMAR', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(101, 'SUNIL', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(102, 'DEEPAK KIRANA', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(103, 'SHIVHARE MEDICAL', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(104, 'BHAJAN LAL KIRANA', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(105, 'SATGURU KRIPA KIRANA', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(106, 'Dua Departmental', 'Taraganj, Madhoganj', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(107, 'AASHIRWAD KIRANA', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(108, 'S.S. MEDICAL', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(109, 'PARI COSMETIC', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(110, 'LAXMI BENGAL', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(111, 'MITTAL STORE', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(112, 'NAGELE COSMETICS', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(113, 'KAAMDHENU', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(114, 'ACHLESHWAR STORE', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(115, 'GANESH GENERAL STORE', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(116, 'NITIN SHOPPING', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(117, 'NEERAJ COSMETICS', 'TOPI BAZAR', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(118, 'MAA VAISHNO KIRANA', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(119, 'BABA KIRANA', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(120, 'JHA KIRANA', 'GENDEWALI SADAK, GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(121, 'BALAJI ENTERPRISES', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(122, 'SHRI RAM MEDICAL', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(123, 'NARESH KIRANA', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(124, 'PAWAN COSMETICS', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(125, 'KUNIKA KIRANA', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(126, 'MAA VAISHNO KIRANA', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(127, 'MAA COSMETICS', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(128, 'MAA NARMADE COSMETICS', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(129, 'TIRUPATI MEDICAL', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(130, 'SHIV GENERAL STORE', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(131, 'RADHIKA GENERAL', 'VINAYNAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(132, 'KAMADGIRI GENERAL', 'VINAYNAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(133, 'AMAN EMPORIOM', 'VINAYNAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(134, 'RAJPOOT GENERAL STORE', 'VINAYNAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(135, 'VAISHNAVI COSMETICS', 'VINAYNAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(136, 'MAHADEV FASHION GALLERY', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(137, 'SUMANLATA GENERAL', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(138, 'MAA TARA DEVI', 'AAMKHO, CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(139, 'PAYAL COSMETICS', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(140, 'MAA COSMETIC', 'CHANDBADANI NAKA', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(141, 'S.S.D. COSMETIC', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(142, 'OM KIRANA', 'NEA SHIVANI BEAUTY PARLOUR, GOLPAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(143, 'BAJRANG KIRANA', 'INFRONT OF SANTOSH FLOOR, GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(144, 'A. K. COSMETIC', 'GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(145, 'SHRI RAM GENERAL', 'NEAR DEEPAK, GOLPAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(146, 'SARASHWATI MEDIAL', 'HANUMAN CHAURAHA, GOL PAHARIYA', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(147, 'AASHA KIRANA', 'INFRONT OF MAA NARMADE, MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(148, 'KAILASH CHAND LAXMAN DAS', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(149, 'MUSKAN BEAUTY PLACE', 'MADHOGANJ', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(150, 'GURUNANAK KIRANA', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(151, 'OMI KIRANA', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(152, 'NEHA COSMETICS', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(153, 'NAGAJI GENERAL STORE', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(154, 'ATUL GENERAL', 'SUBHASH MARKET', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(155, 'AMAN HOJARI', 'GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(156, 'GOYAL GENERAL STORE', 'GULAB MARKET, GUDA NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(157, 'MAHA LAXMI COSMETIC', 'INFRONT OF NEERAJ, TOPI BAZAR', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(158, 'PEARL COSMETIC', 'INDERGANJ', 1, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '23869135854', '', ''),
+(159, 'MAYA FHESSION', 'Subhash Market', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(160, 'B. K. General ', 'Nai Sadak', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(161, 'MAHADEV GENERAL', 'IN-FRONT OF RAM MANDIR', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(162, 'NAMAN MEDICAL', 'SHINDE KI CHHAWANI', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(163, 'MAHADEV PRASAD ', 'SHINDE KI CHHAWANI', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(164, 'LALLA RAMSHWAROOP', 'SHINDE KI CHHAWANI', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(165, 'GURU KRIPA MEDICAL', 'SINDE KI CHHAWANI', 3, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(166, 'ARYAMAN STOR', 'TOPI BAZAR BADA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(167, 'EVA KIRANA', 'GENDE WALI SADAK', 4, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(168, 'soniya cosmetic', 'samadhiya colony', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(169, 'ramji lal kirana', 'koteshwar vinay nagar', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(170, 'ANSHUL GENRAL STORE', 'KOTESHWAR,VINAY NAGAR', 0, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(171, 'ARJUN KIRANA', 'BOHDAPUR, VINAY NAGAR', 0, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(172, 'ANSHUL GENRAL STORE', 'KOTESHWAR,VINAY NAGAR', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(173, 'ANSHUL GENRAL STORE', 'koteshwar vinay nagar', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(174, 'ARJUN KIRANA', 'BOHDAPUR, VINAY NAGAR', 5, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(175, 'SHIV SHAKTI GANRAL', 'JAWAHAR COLONY', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(176, 'KAMDHENU GANRAL', 'GUDAGUDI NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(177, 'chanchal ganral', 'GUDAGUDI NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(178, 'suneel sales', 'gulab market', 2, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(179, 'MAA COLLECTION', 'GUDAGUDI NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(180, 'MAA SHARDA', 'GUDAGUDI NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(181, 'ASHISH GANREL', 'GUDAGUDI NAKA', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', ''),
+(182, 'VIJAY GENRAL', 'Subhash Market', 6, 'Gwalior', 'M.P.', 'India', '474001', '', '', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `company_profile`
+--
+
+CREATE TABLE `company_profile` (
+  `company_id` bigint(100) NOT NULL,
+  `company_name` varchar(100) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `state` varchar(50) NOT NULL,
+  `country` varchar(50) NOT NULL,
+  `pin` varchar(50) NOT NULL,
+  `contact` varchar(50) NOT NULL,
+  `mobile` varchar(50) NOT NULL,
+  `mail` varchar(50) NOT NULL,
+  `wesite` varchar(50) NOT NULL,
+  `PAN` varchar(50) NOT NULL,
+  `TIN` varchar(50) NOT NULL,
+  `ST` varchar(50) NOT NULL,
+  `CST` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `company_profile`
+--
+
+INSERT INTO `company_profile` (`company_id`, `company_name`, `address`, `city`, `state`, `country`, `pin`, `contact`, `mobile`, `mail`, `wesite`, `PAN`, `TIN`, `ST`, `CST`) VALUES
+(1, 'JAI MAA TRADERS', 'BAKSHI KI GOTH JANAKGANJ', 'GWALIOR', 'M.P.', 'India', '474001', ' ', '9926216669,9893115666', ' ', ' ', '', '23169208868', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `creditor`
+--
+
+CREATE TABLE `creditor` (
+  `trn_id` bigint(100) NOT NULL,
+  `date` date NOT NULL,
+  `vendor_id` bigint(100) NOT NULL,
+  `ref_id` bigint(100) NOT NULL,
+  `inv_value` decimal(10,2) NOT NULL,
+  `payment` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `creditor`
+--
+
+INSERT INTO `creditor` (`trn_id`, `date`, `vendor_id`, `ref_id`, `inv_value`, `payment`) VALUES
+(1, '2017-04-01', 1, 0, '40020.00', '0.00'),
+(2, '2017-03-31', 1, 0, '4394.00', '0.00'),
+(3, '2017-04-16', 1, 0, '6670.00', '0.00'),
+(4, '2017-04-06', 1, 0, '2473.00', '0.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `currency`
+--
+
+CREATE TABLE `currency` (
+  `currency_id` bigint(100) NOT NULL,
+  `currency` varchar(10) NOT NULL,
+  `description` varchar(50) NOT NULL,
+  `country` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `currency`
+--
+
+INSERT INTO `currency` (`currency_id`, `currency`, `description`, `country`) VALUES
+(1, 'Rs.', 'Rupees', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `currency_value`
+--
+
+CREATE TABLE `currency_value` (
+  `cur_val_id` bigint(100) NOT NULL,
+  `date` date NOT NULL,
+  `invoice_id` bigint(100) NOT NULL,
+  `client_id` bigint(100) NOT NULL,
+  `currency_id` bigint(100) NOT NULL,
+  `gross_value` decimal(65,2) NOT NULL,
+  `currency_value` decimal(65,2) NOT NULL,
+  `inr_value` decimal(65,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `debtors`
+--
+
+CREATE TABLE `debtors` (
+  `trn_id` bigint(100) NOT NULL,
+  `date` date NOT NULL,
+  `area_id` bigint(100) NOT NULL,
+  `client_id` bigint(100) NOT NULL,
+  `ref_id` bigint(100) NOT NULL,
+  `detail` varchar(100) NOT NULL,
+  `inv_value` decimal(10,2) NOT NULL,
+  `rect_value` decimal(10,2) NOT NULL,
+  `receivable` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `debtors`
+--
+
+INSERT INTO `debtors` (`trn_id`, `date`, `area_id`, `client_id`, `ref_id`, `detail`, `inv_value`, `rect_value`, `receivable`) VALUES
+(1, '2017-04-01', 0, 1, 1, 'Sales', '142.00', '0.00', '142.00'),
+(2, '2017-04-01', 0, 2, 2, 'Sales', '454.00', '0.00', '454.00'),
+(3, '2017-04-01', 0, 3, 3, 'Sales', '0.00', '0.00', '0.00'),
+(4, '2017-04-01', 5, 4, 4, 'Sales', '741.00', '0.00', '741.00'),
+(5, '2017-04-01', 5, 5, 5, 'Sales', '779.00', '0.00', '779.00'),
+(6, '2017-04-01', 5, 6, 6, 'Sales', '126.00', '0.00', '126.00'),
+(7, '2017-04-01', 5, 7, 7, 'Sales', '144.00', '0.00', '144.00'),
+(8, '2017-04-02', 2, 9, 8, 'Sales', '288.00', '0.00', '288.00'),
+(9, '2017-04-02', 2, 10, 9, 'Sales', '445.00', '0.00', '445.00'),
+(10, '2017-04-02', 0, 11, 10, 'Sales', '0.00', '0.00', '0.00'),
+(11, '2017-04-02', 0, 12, 11, 'Sales', '610.00', '0.00', '610.00'),
+(12, '2017-04-02', 2, 13, 12, 'Sales', '3456.00', '0.00', '3456.00'),
+(13, '2017-04-02', 0, 14, 13, 'Sales', '0.00', '0.00', '0.00'),
+(14, '2017-04-02', 0, 15, 14, 'Sales', '0.00', '0.00', '0.00'),
+(15, '2017-04-02', 6, 16, 15, 'Sales', '354.00', '0.00', '354.00'),
+(16, '2017-04-02', 6, 17, 16, 'Sales', '216.00', '0.00', '216.00'),
+(17, '2017-04-02', 6, 18, 17, 'Sales', '257.00', '0.00', '257.00'),
+(18, '2017-04-02', 6, 19, 18, 'Sales', '1680.00', '0.00', '1680.00'),
+(19, '2017-04-02', 6, 20, 19, 'Sales', '1445.00', '0.00', '1445.00'),
+(20, '2017-04-02', 0, 14, 20, 'Sales', '400.00', '0.00', '400.00'),
+(21, '2017-04-02', 6, 15, 21, 'Sales', '604.00', '0.00', '604.00'),
+(22, '2017-04-04', 6, 21, 22, 'Sales', '578.00', '0.00', '578.00'),
+(23, '2017-04-04', 0, 22, 23, 'Sales', '1195.00', '0.00', '1195.00'),
+(24, '2017-04-04', 6, 23, 24, 'Sales', '606.00', '0.00', '606.00'),
+(25, '2017-04-04', 6, 24, 25, 'Sales', '210.00', '0.00', '210.00'),
+(26, '2017-04-04', 6, 25, 26, 'Sales', '643.00', '0.00', '643.00'),
+(27, '2017-04-04', 0, 26, 27, 'Sales', '260.00', '0.00', '260.00'),
+(28, '2017-04-04', 6, 27, 28, 'Sales', '206.00', '0.00', '206.00'),
+(29, '2017-04-04', 6, 28, 29, 'Sales', '302.00', '0.00', '302.00'),
+(30, '2017-04-04', 0, 29, 30, 'Sales', '0.00', '0.00', '0.00'),
+(31, '2017-04-04', 6, 31, 31, 'Sales', '170.00', '0.00', '170.00'),
+(32, '2017-04-04', 0, 32, 32, 'Sales', '144.00', '0.00', '144.00'),
+(33, '2017-04-06', 4, 34, 33, 'Sales', '988.00', '0.00', '988.00'),
+(34, '2017-04-06', 4, 40, 34, 'Sales', '432.00', '0.00', '432.00'),
+(35, '2017-04-06', 4, 45, 35, 'Sales', '490.00', '0.00', '490.00'),
+(36, '2017-04-06', 4, 46, 36, 'Sales', '120.00', '0.00', '120.00'),
+(37, '2017-04-06', 4, 42, 37, 'Sales', '537.00', '0.00', '537.00'),
+(38, '2017-04-06', 4, 35, 38, 'Sales', '730.00', '0.00', '730.00'),
+(39, '2017-04-06', 4, 37, 39, 'Sales', '925.00', '0.00', '925.00'),
+(40, '2017-04-06', 4, 47, 40, 'Sales', '972.00', '0.00', '972.00'),
+(41, '2017-04-06', 0, 36, 41, 'Sales', '206.00', '0.00', '206.00'),
+(42, '2017-04-06', 0, 38, 42, 'Sales', '206.00', '0.00', '206.00'),
+(43, '2017-04-06', 4, 39, 43, 'Sales', '288.00', '0.00', '288.00'),
+(44, '2017-04-06', 0, 43, 44, 'Sales', '88.00', '0.00', '88.00'),
+(45, '2017-04-06', 0, 44, 45, 'Sales', '0.00', '0.00', '0.00'),
+(46, '2017-04-07', 2, 49, 46, 'Sales', '360.00', '0.00', '360.00'),
+(47, '2017-04-07', 2, 50, 47, 'Sales', '260.00', '0.00', '260.00'),
+(48, '2017-04-07', 2, 51, 48, 'Sales', '480.00', '0.00', '480.00'),
+(49, '2017-04-07', 2, 52, 49, 'Sales', '126.00', '0.00', '126.00'),
+(50, '2017-04-07', 2, 53, 50, 'Sales', '480.00', '0.00', '480.00'),
+(51, '2017-04-07', 2, 54, 51, 'Sales', '185.00', '0.00', '185.00'),
+(52, '2017-04-09', 0, 55, 52, 'Sales', '0.00', '0.00', '0.00'),
+(53, '2017-04-09', 0, 56, 53, 'Sales', '0.00', '0.00', '0.00'),
+(54, '2017-04-09', 0, 57, 54, 'Sales', '206.00', '0.00', '206.00'),
+(55, '2017-04-09', 5, 6, 55, 'Sales', '1282.00', '0.00', '1282.00'),
+(56, '2017-04-09', 5, 58, 56, 'Sales', '606.00', '0.00', '606.00'),
+(57, '2017-04-09', 0, 59, 57, 'Sales', '337.00', '0.00', '337.00'),
+(58, '2017-04-09', 5, 60, 58, 'Sales', '142.00', '0.00', '142.00'),
+(59, '2017-04-09', 5, 61, 59, 'Sales', '267.00', '0.00', '267.00'),
+(60, '2017-04-09', 5, 5, 60, 'Sales', '82.00', '0.00', '82.00'),
+(61, '2017-04-09', 6, 62, 61, 'Sales', '504.00', '0.00', '504.00'),
+(62, '2017-04-09', 6, 63, 62, 'Sales', '1080.00', '0.00', '1080.00'),
+(63, '2017-04-09', 6, 20, 63, 'Sales', '333.00', '0.00', '333.00'),
+(64, '2017-04-11', 1, 66, 64, 'Sales', '514.00', '0.00', '514.00'),
+(65, '2017-04-11', 1, 67, 65, 'Sales', '165.00', '0.00', '165.00'),
+(66, '2017-04-11', 0, 68, 66, 'Sales', '117.00', '0.00', '117.00'),
+(67, '2017-04-11', 0, 69, 67, 'Sales', '0.00', '0.00', '0.00'),
+(68, '2017-04-11', 1, 70, 68, 'Sales', '288.00', '0.00', '288.00'),
+(69, '2017-04-11', 1, 71, 69, 'Sales', '165.00', '0.00', '165.00'),
+(70, '2017-04-11', 1, 33, 70, 'Sales', '761.00', '0.00', '761.00'),
+(71, '2017-04-14', 4, 72, 71, 'Sales', '173.00', '0.00', '173.00'),
+(72, '2017-04-14', 0, 43, 72, 'Sales', '713.00', '0.00', '713.00'),
+(73, '2017-04-15', 2, 73, 73, 'Sales', '370.00', '0.00', '370.00'),
+(74, '2017-04-16', 6, 74, 74, 'Sales', '168.00', '0.00', '168.00'),
+(75, '2017-04-16', 6, 75, 75, 'Sales', '5415.00', '0.00', '5415.00'),
+(76, '2017-04-16', 6, 76, 76, 'Sales', '1877.00', '0.00', '1877.00'),
+(77, '2017-04-16', 6, 77, 77, 'Sales', '3230.00', '0.00', '3230.00'),
+(78, '2017-04-16', 6, 78, 78, 'Sales', '339.00', '0.00', '339.00'),
+(79, '2017-04-16', 6, 79, 79, 'Sales', '958.00', '0.00', '958.00'),
+(80, '2017-04-16', 6, 64, 80, 'Sales', '1486.00', '0.00', '1486.00'),
+(81, '2017-04-16', 6, 65, 81, 'Sales', '1415.00', '0.00', '1415.00'),
+(82, '2017-04-16', 6, 80, 82, 'Sales', '1185.00', '0.00', '1185.00'),
+(83, '2017-04-16', 6, 81, 83, 'Sales', '1025.00', '0.00', '1025.00'),
+(84, '2017-04-16', 5, 82, 84, 'Sales', '730.00', '0.00', '730.00'),
+(85, '2017-04-16', 5, 6, 85, 'Sales', '984.00', '0.00', '984.00'),
+(86, '2017-04-16', 5, 1, 86, 'Sales', '186.00', '0.00', '186.00'),
+(87, '2017-04-16', 5, 5, 87, 'Sales', '522.00', '0.00', '522.00'),
+(88, '2017-04-16', 5, 83, 88, 'Sales', '1644.00', '0.00', '1644.00'),
+(89, '2017-04-17', 2, 84, 89, 'Sales', '3960.00', '0.00', '3960.00'),
+(90, '2017-04-17', 3, 85, 90, 'Sales', '891.00', '0.00', '891.00'),
+(91, '2017-04-17', 3, 88, 91, 'Sales', '186.00', '0.00', '186.00'),
+(92, '2017-04-17', 3, 12, 92, 'Sales', '376.00', '0.00', '376.00'),
+(93, '2017-04-17', 3, 86, 93, 'Sales', '185.00', '0.00', '185.00'),
+(94, '2017-04-20', 0, 89, 94, 'Sales', '82.00', '0.00', '82.00'),
+(95, '2017-04-20', 6, 18, 95, 'Sales', '1490.00', '0.00', '1490.00'),
+(96, '2017-04-20', 6, 90, 96, 'Sales', '206.00', '0.00', '206.00'),
+(97, '2017-04-20', 6, 16, 97, 'Sales', '206.00', '0.00', '206.00'),
+(98, '2017-04-20', 6, 91, 98, 'Sales', '480.00', '0.00', '480.00'),
+(99, '2017-04-20', 0, 92, 99, 'Sales', '0.00', '0.00', '0.00'),
+(100, '2017-04-20', 0, 94, 100, 'Sales', '0.00', '0.00', '0.00'),
+(101, '2017-04-20', 6, 96, 101, 'Sales', '285.00', '0.00', '285.00'),
+(102, '2017-04-20', 0, 97, 102, 'Sales', '0.00', '0.00', '0.00'),
+(103, '2017-04-20', 0, 98, 103, 'Sales', '82.00', '0.00', '82.00'),
+(104, '2017-04-20', 6, 99, 104, 'Sales', '720.00', '0.00', '720.00'),
+(105, '2017-04-20', 6, 100, 105, 'Sales', '370.00', '0.00', '370.00'),
+(106, '2017-04-20', 6, 101, 106, 'Sales', '987.00', '0.00', '987.00'),
+(107, '2017-04-20', 4, 46, 107, 'Sales', '206.00', '0.00', '206.00'),
+(108, '2017-04-20', 4, 40, 108, 'Sales', '324.00', '0.00', '324.00'),
+(109, '2017-04-20', 4, 41, 109, 'Sales', '645.00', '0.00', '645.00'),
+(110, '2017-04-20', 4, 102, 110, 'Sales', '1108.00', '0.00', '1108.00'),
+(111, '2017-04-20', 0, 103, 111, 'Sales', '165.00', '0.00', '165.00'),
+(112, '2017-04-20', 4, 47, 112, 'Sales', '165.00', '0.00', '165.00'),
+(113, '2017-04-20', 0, 104, 113, 'Sales', '529.00', '0.00', '529.00'),
+(114, '2017-04-20', 2, 105, 114, 'Sales', '210.00', '0.00', '210.00'),
+(115, '2017-04-21', 0, 106, 115, 'Sales', '82.00', '0.00', '82.00'),
+(116, '2017-04-21', 2, 107, 116, 'Sales', '176.00', '0.00', '176.00'),
+(117, '2017-04-21', 2, 108, 117, 'Sales', '244.00', '0.00', '244.00'),
+(118, '2017-04-21', 2, 109, 118, 'Sales', '165.00', '0.00', '165.00'),
+(119, '2017-04-21', 2, 110, 119, 'Sales', '430.00', '0.00', '430.00'),
+(120, '2017-04-23', 6, 93, 120, 'Sales', '151.00', '0.00', '151.00'),
+(121, '2017-04-23', 6, 112, 121, 'Sales', '415.00', '0.00', '415.00'),
+(122, '2017-04-23', 0, 113, 122, 'Sales', '0.00', '0.00', '0.00'),
+(123, '2017-04-23', 6, 114, 123, 'Sales', '274.00', '0.00', '274.00'),
+(124, '2017-04-23', 6, 77, 124, 'Sales', '293.00', '0.00', '293.00'),
+(125, '2017-04-23', 0, 89, 125, 'Sales', '0.00', '0.00', '0.00'),
+(126, '2017-04-23', 6, 115, 126, 'Sales', '792.00', '0.00', '792.00'),
+(127, '2017-04-23', 6, 116, 127, 'Sales', '1584.00', '0.00', '1584.00'),
+(128, '2017-04-23', 6, 64, 128, 'Sales', '1121.00', '0.00', '1121.00'),
+(129, '2017-04-23', 6, 81, 129, 'Sales', '170.00', '0.00', '170.00'),
+(130, '2017-04-23', 6, 117, 130, 'Sales', '1996.00', '0.00', '1996.00'),
+(131, '2017-04-23', 6, 10, 131, 'Sales', '440.00', '0.00', '440.00'),
+(132, '2017-04-23', 6, 86, 132, 'Sales', '350.00', '0.00', '350.00'),
+(133, '2017-04-26', 0, 22, 133, 'Sales', '0.00', '0.00', '0.00'),
+(134, '2017-04-26', 0, 27, 134, 'Sales', '0.00', '0.00', '0.00'),
+(135, '2017-04-26', 1, 69, 135, 'Sales', '82.00', '0.00', '82.00'),
+(136, '2017-04-26', 1, 118, 136, 'Sales', '603.00', '0.00', '603.00'),
+(137, '2017-04-26', 1, 21, 137, 'Sales', '126.00', '0.00', '126.00'),
+(138, '2017-04-26', 1, 24, 138, 'Sales', '96.00', '0.00', '96.00'),
+(139, '2017-04-27', 4, 119, 139, 'Sales', '542.00', '0.00', '542.00'),
+(140, '2017-04-27', 0, 120, 140, 'Sales', '247.00', '0.00', '247.00'),
+(141, '2017-04-27', 4, 121, 141, 'Sales', '126.00', '0.00', '126.00'),
+(142, '2017-04-27', 4, 122, 142, 'Sales', '441.00', '0.00', '441.00'),
+(143, '2017-05-04', 0, 123, 143, 'Sales', '0.00', '0.00', '0.00'),
+(144, '2017-05-04', 4, 125, 144, 'Sales', '192.00', '0.00', '192.00'),
+(145, '2017-05-04', 4, 72, 145, 'Sales', '265.00', '0.00', '265.00'),
+(146, '2017-05-04', 4, 39, 146, 'Sales', '387.00', '0.00', '387.00'),
+(147, '2017-05-04', 4, 124, 147, 'Sales', '857.00', '0.00', '857.00'),
+(148, '2017-05-04', 0, 126, 148, 'Sales', '602.00', '0.00', '602.00'),
+(149, '2017-05-04', 4, 36, 149, 'Sales', '206.00', '0.00', '206.00'),
+(150, '2017-05-05', 2, 127, 150, 'Sales', '142.00', '0.00', '142.00'),
+(151, '2017-05-05', 2, 129, 151, 'Sales', '206.00', '0.00', '206.00'),
+(152, '2017-05-05', 0, 130, 152, 'Sales', '359.00', '0.00', '359.00'),
+(153, '2017-05-05', 0, 110, 153, 'Sales', '360.00', '0.00', '360.00'),
+(154, '2017-05-05', 2, 73, 154, 'Sales', '576.00', '0.00', '576.00'),
+(155, '2017-05-05', 2, 111, 155, 'Sales', '274.00', '0.00', '274.00'),
+(156, '2017-05-06', 5, 131, 156, 'Sales', '407.00', '0.00', '407.00'),
+(157, '2017-05-06', 5, 132, 157, 'Sales', '522.00', '0.00', '522.00'),
+(158, '2017-05-06', 5, 8, 158, 'Sales', '951.00', '0.00', '951.00'),
+(159, '2017-05-06', 5, 58, 159, 'Sales', '580.00', '0.00', '580.00'),
+(160, '2017-05-06', 0, 133, 160, 'Sales', '420.00', '0.00', '420.00'),
+(161, '2017-05-06', 0, 1, 161, 'Sales', '0.00', '0.00', '0.00'),
+(162, '2017-05-06', 5, 134, 162, 'Sales', '82.00', '0.00', '82.00'),
+(163, '2017-05-06', 5, 5, 163, 'Sales', '288.00', '0.00', '288.00'),
+(164, '2017-05-07', 5, 14, 164, 'Sales', '641.00', '0.00', '641.00'),
+(165, '2017-05-07', 5, 92, 165, 'Sales', '309.00', '0.00', '309.00'),
+(166, '2017-05-07', 5, 94, 166, 'Sales', '1456.00', '0.00', '1456.00'),
+(167, '2017-05-07', 5, 16, 167, 'Sales', '396.00', '0.00', '396.00'),
+(168, '2017-05-07', 5, 77, 168, 'Sales', '1574.00', '0.00', '1574.00'),
+(169, '2017-05-07', 5, 98, 169, 'Sales', '678.00', '0.00', '678.00'),
+(170, '2017-05-07', 5, 116, 170, 'Sales', '420.00', '0.00', '420.00'),
+(171, '2017-05-07', 5, 64, 171, 'Sales', '450.00', '0.00', '450.00'),
+(172, '2017-05-07', 0, 136, 172, 'Sales', '2139.00', '0.00', '2139.00'),
+(173, '2017-05-07', 6, 81, 173, 'Sales', '850.00', '0.00', '850.00'),
+(174, '2017-05-07', 6, 100, 174, 'Sales', '165.00', '0.00', '165.00'),
+(175, '2017-05-07', 6, 65, 175, 'Sales', '82.00', '0.00', '82.00'),
+(176, '2017-05-07', 6, 137, 176, 'Sales', '233.00', '0.00', '233.00'),
+(177, '2017-05-07', 6, 117, 177, 'Sales', '432.00', '0.00', '432.00'),
+(178, '2017-05-07', 6, 99, 178, 'Sales', '480.00', '0.00', '480.00'),
+(179, '2017-05-07', 6, 89, 179, 'Sales', '247.00', '0.00', '247.00'),
+(180, '2017-05-10', 0, 12, 180, 'Sales', '501.00', '0.00', '501.00'),
+(181, '2017-05-10', 6, 86, 181, 'Sales', '206.00', '0.00', '206.00'),
+(182, '2017-05-10', 0, 21, 182, 'Sales', '0.00', '0.00', '0.00'),
+(183, '2017-05-10', 6, 22, 183, 'Sales', '274.00', '0.00', '274.00'),
+(184, '2017-05-10', 6, 28, 184, 'Sales', '335.00', '0.00', '335.00'),
+(185, '2017-05-10', 6, 70, 185, 'Sales', '513.00', '0.00', '513.00'),
+(186, '2017-05-10', 6, 71, 186, 'Sales', '165.00', '0.00', '165.00'),
+(187, '2017-05-10', 1, 138, 187, 'Sales', '170.00', '0.00', '170.00'),
+(188, '2017-05-10', 1, 139, 188, 'Sales', '180.00', '0.00', '180.00'),
+(189, '2017-05-10', 1, 140, 189, 'Sales', '137.00', '0.00', '137.00'),
+(190, '2017-05-11', 4, 141, 190, 'Sales', '226.00', '0.00', '226.00'),
+(191, '2017-05-11', 4, 142, 191, 'Sales', '185.00', '0.00', '185.00'),
+(192, '2017-05-11', 4, 42, 192, 'Sales', '494.00', '0.00', '494.00'),
+(193, '2017-05-11', 4, 143, 193, 'Sales', '165.00', '0.00', '165.00'),
+(194, '2017-05-11', 4, 146, 194, 'Sales', '253.00', '0.00', '253.00'),
+(195, '2017-05-11', 4, 144, 195, 'Sales', '1947.00', '0.00', '1947.00'),
+(196, '2017-05-11', 4, 37, 196, 'Sales', '329.00', '0.00', '329.00'),
+(197, '2017-05-11', 4, 145, 197, 'Sales', '165.00', '0.00', '165.00'),
+(198, '2017-05-11', 4, 103, 198, 'Sales', '329.00', '0.00', '329.00'),
+(199, '2017-05-11', 4, 47, 199, 'Sales', '604.00', '0.00', '604.00'),
+(200, '2017-05-11', 4, 41, 200, 'Sales', '237.00', '0.00', '237.00'),
+(201, '2017-05-11', 0, 36, 201, 'Sales', '168.00', '0.00', '168.00'),
+(202, '2017-05-13', 4, 107, 202, 'Sales', '410.00', '0.00', '410.00'),
+(203, '2017-05-13', 0, 48, 203, 'Sales', '1612.00', '0.00', '1612.00'),
+(204, '2017-05-13', 4, 50, 204, 'Sales', '707.00', '0.00', '707.00'),
+(205, '2017-05-13', 4, 127, 205, 'Sales', '271.00', '0.00', '271.00'),
+(206, '2017-05-13', 4, 51, 206, 'Sales', '244.00', '0.00', '244.00'),
+(207, '2017-05-13', 2, 147, 207, 'Sales', '247.00', '0.00', '247.00'),
+(208, '2017-05-13', 2, 74, 208, 'Sales', '493.00', '0.00', '493.00'),
+(209, '2017-05-13', 2, 129, 209, 'Sales', '206.00', '0.00', '206.00'),
+(210, '2017-05-13', 2, 148, 210, 'Sales', '411.00', '0.00', '411.00'),
+(211, '2017-05-13', 2, 84, 211, 'Sales', '3039.00', '0.00', '3039.00'),
+(212, '2017-05-13', 2, 149, 212, 'Sales', '727.00', '0.00', '727.00'),
+(213, '2017-05-15', 6, 150, 213, 'Sales', '234.00', '0.00', '234.00'),
+(214, '2017-05-15', 6, 151, 214, 'Sales', '553.00', '0.00', '553.00'),
+(215, '2017-05-15', 6, 77, 215, 'Sales', '1802.00', '0.00', '1802.00'),
+(216, '2017-05-15', 6, 63, 216, 'Sales', '2272.00', '0.00', '2272.00'),
+(217, '2017-05-15', 6, 115, 217, 'Sales', '946.00', '0.00', '946.00'),
+(218, '2017-05-15', 6, 152, 218, 'Sales', '1030.00', '0.00', '1030.00'),
+(219, '2017-05-15', 6, 153, 219, 'Sales', '781.00', '0.00', '781.00'),
+(220, '2017-05-15', 6, 64, 220, 'Sales', '793.00', '0.00', '793.00'),
+(221, '2017-05-15', 6, 20, 221, 'Sales', '960.00', '0.00', '960.00'),
+(222, '2017-05-15', 6, 80, 222, 'Sales', '452.00', '0.00', '452.00'),
+(223, '2017-05-15', 6, 154, 223, 'Sales', '720.00', '0.00', '720.00'),
+(224, '2017-05-15', 6, 90, 224, 'Sales', '206.00', '0.00', '206.00'),
+(225, '2017-05-15', 6, 155, 225, 'Sales', '165.00', '0.00', '165.00'),
+(226, '2017-05-15', 6, 16, 226, 'Sales', '288.00', '0.00', '288.00'),
+(227, '2017-05-15', 6, 98, 227, 'Sales', '206.00', '0.00', '206.00'),
+(228, '2017-05-15', 6, 156, 228, 'Sales', '974.00', '0.00', '974.00'),
+(229, '2017-06-03', 6, 152, 229, 'Sales', '360.00', '0.00', '360.00'),
+(230, '2017-06-03', 0, 65, 230, 'Sales', '3030.00', '0.00', '3030.00'),
+(231, '2017-06-03', 6, 20, 231, 'Sales', '882.00', '0.00', '882.00'),
+(232, '2017-06-03', 6, 80, 232, 'Sales', '617.00', '0.00', '617.00'),
+(233, '2017-06-03', 6, 100, 233, 'Sales', '494.00', '0.00', '494.00'),
+(234, '2017-06-03', 6, 34, 234, 'Sales', '1975.00', '0.00', '1975.00'),
+(235, '2017-06-03', 6, 157, 235, 'Sales', '329.00', '0.00', '329.00'),
+(236, '2017-06-03', 6, 65, 236, 'Sales', '3139.00', '0.00', '3139.00'),
+(237, '2017-06-05', 1, 85, 237, 'Sales', '809.00', '0.00', '809.00'),
+(238, '2017-06-12', 1, 81, 238, 'Sales', '510.00', '0.00', '510.00'),
+(239, '2017-06-12', 1, 154, 239, 'Sales', '616.00', '0.00', '616.00'),
+(240, '2017-06-12', 6, 159, 240, 'Sales', '220.00', '0.00', '220.00'),
+(241, '2017-06-12', 3, 160, 241, 'Sales', '480.00', '0.00', '480.00'),
+(242, '2017-06-12', 3, 161, 242, 'Sales', '653.00', '0.00', '653.00'),
+(243, '2017-06-12', 3, 85, 243, 'Sales', '862.00', '0.00', '862.00'),
+(244, '2017-06-12', 3, 12, 244, 'Sales', '309.00', '0.00', '309.00'),
+(245, '2017-06-12', 0, 162, 245, 'Sales', '264.00', '0.00', '264.00'),
+(246, '2017-06-12', 3, 163, 246, 'Sales', '1384.00', '0.00', '1384.00'),
+(247, '2017-06-12', 3, 164, 247, 'Sales', '176.00', '0.00', '176.00'),
+(248, '2017-06-12', 3, 86, 248, 'Sales', '206.00', '0.00', '206.00'),
+(249, '2017-06-17', 3, 64, 249, 'Sales', '540.00', '0.00', '540.00'),
+(250, '2017-06-17', 3, 81, 250, 'Sales', '782.00', '0.00', '782.00'),
+(251, '2017-06-17', 3, 157, 251, 'Sales', '165.00', '0.00', '165.00'),
+(252, '2017-06-17', 3, 117, 252, 'Sales', '1506.00', '0.00', '1506.00'),
+(253, '2017-06-17', 3, 20, 253, 'Sales', '339.00', '0.00', '339.00'),
+(254, '2017-06-17', 3, 66, 254, 'Sales', '1478.00', '0.00', '1478.00'),
+(255, '2017-06-17', 3, 165, 255, 'Sales', '213.00', '0.00', '213.00'),
+(256, '2017-06-17', 3, 23, 256, 'Sales', '308.00', '0.00', '308.00'),
+(257, '2017-06-17', 6, 166, 257, 'Sales', '1049.14', '0.00', '1049.14'),
+(258, '2017-06-17', 6, 42, 258, 'Sales', '347.00', '0.00', '347.00'),
+(259, '2017-06-17', 6, 145, 259, 'Sales', '165.00', '0.00', '165.00'),
+(260, '2017-06-17', 6, 43, 260, 'Sales', '154.00', '0.00', '154.00'),
+(261, '2017-06-17', 6, 141, 261, 'Sales', '1863.00', '0.00', '1863.00'),
+(262, '2017-06-17', 6, 38, 262, 'Sales', '295.00', '0.00', '295.00'),
+(263, '2017-06-17', 0, 167, 263, 'Sales', '267.00', '0.00', '267.00'),
+(264, '2017-06-17', 0, 167, 263, 'Sales', '267.00', '0.00', '267.00'),
+(265, '2017-06-17', 0, 84, 264, 'Sales', '0.00', '0.00', '0.00'),
+(266, '2017-06-17', 0, 84, 264, 'Sales', '0.00', '0.00', '0.00'),
+(267, '2017-06-17', 0, 84, 264, 'Sales', '0.00', '0.00', '0.00'),
+(268, '2017-06-17', 4, 84, 265, 'Sales', '8196.00', '0.00', '8196.00'),
+(269, '2017-06-17', 4, 108, 266, 'Sales', '308.00', '0.00', '308.00'),
+(270, '2017-06-17', 2, 168, 267, 'Sales', '214.00', '0.00', '214.00'),
+(271, '2017-06-17', 2, 48, 268, 'Sales', '339.00', '0.00', '339.00'),
+(272, '2017-06-17', 2, 147, 269, 'Sales', '739.00', '0.00', '739.00'),
+(273, '2017-06-17', 2, 148, 270, 'Sales', '586.00', '0.00', '586.00'),
+(274, '2017-06-17', 2, 4, 271, 'Sales', '396.00', '0.00', '396.00'),
+(275, '2017-06-17', 2, 3, 272, 'Sales', '268.00', '0.00', '268.00'),
+(276, '2017-06-17', 5, 169, 273, 'Sales', '637.21', '0.00', '637.21'),
+(277, '2017-06-17', 5, 173, 274, 'Sales', '998.00', '0.00', '998.00'),
+(278, '2017-06-17', 5, 174, 275, 'Sales', '514.94', '0.00', '514.94'),
+(279, '2017-06-17', 5, 90, 276, 'Sales', '462.00', '0.00', '462.00'),
+(280, '2017-06-17', 6, 175, 277, 'Sales', '411.01', '0.00', '411.01'),
+(281, '2017-06-17', 6, 14, 278, 'Sales', '268.00', '0.00', '268.00'),
+(282, '2017-06-17', 6, 176, 279, 'Sales', '1138.00', '0.00', '1138.00'),
+(283, '2017-06-17', 6, 92, 280, 'Sales', '652.00', '0.00', '652.00'),
+(284, '2017-06-17', 6, 114, 281, 'Sales', '809.00', '0.00', '809.00'),
+(285, '2017-06-17', 6, 177, 282, 'Sales', '1518.55', '0.00', '1518.55'),
+(286, '2017-06-17', 2, 178, 283, 'Sales', '3224.00', '0.00', '3224.00'),
+(287, '2017-06-17', 0, 177, 284, 'Sales', '1741.00', '0.00', '1741.00'),
+(288, '2017-06-17', 2, 177, 285, 'Sales', '1187.13', '0.00', '1187.13'),
+(289, '2017-06-17', 2, 77, 286, 'Sales', '2919.11', '0.00', '2919.11'),
+(290, '2017-06-17', 6, 179, 287, 'Sales', '453.22', '0.00', '453.22'),
+(291, '2017-06-17', 0, 180, 288, 'Sales', '4285.00', '0.00', '4285.00'),
+(292, '2017-06-17', 6, 152, 289, 'Sales', '448.00', '0.00', '448.00'),
+(293, '2017-06-17', 6, 101, 290, 'Sales', '2541.00', '0.00', '2541.00'),
+(294, '2017-06-17', 6, 20, 291, 'Sales', '1715.00', '0.00', '1715.00'),
+(295, '2017-06-17', 6, 81, 292, 'Sales', '1607.00', '0.00', '1607.00'),
+(296, '2017-06-17', 6, 64, 293, 'Sales', '1984.14', '0.00', '1984.14'),
+(297, '2017-06-17', 6, 182, 294, 'Sales', '131.00', '0.00', '131.00'),
+(298, '2017-06-17', 6, 115, 295, 'Sales', '722.00', '0.00', '722.00'),
+(299, '2017-06-17', 6, 159, 296, 'Sales', '451.01', '0.00', '451.01'),
+(300, '2017-06-17', 6, 42, 297, 'Sales', '342.00', '0.00', '342.00'),
+(301, '2017-06-17', 6, 84, 298, 'Sales', '740.00', '0.00', '740.00'),
+(302, '2017-06-17', 0, 58, 299, 'Sales', '178.00', '0.00', '178.00'),
+(303, '2017-06-17', 6, 5, 300, 'Sales', '1108.00', '0.00', '1108.00'),
+(304, '2017-06-17', 6, 6, 301, 'Sales', '2060.00', '0.00', '2060.00'),
+(305, '2017-06-17', 6, 9, 302, 'Sales', '433.00', '0.00', '433.00'),
+(306, '2017-06-17', 6, 85, 303, 'Sales', '515.00', '0.00', '515.00'),
+(307, '2017-06-17', 6, 12, 304, 'Sales', '287.00', '0.00', '287.00'),
+(308, '2017-06-17', 6, 154, 305, 'Sales', '596.00', '0.00', '596.00'),
+(309, '2017-06-17', 6, 116, 306, 'Sales', '580.00', '0.00', '580.00'),
+(310, '2017-06-17', 6, 63, 307, 'Sales', '1666.00', '0.00', '1666.00'),
+(311, '2017-06-17', 6, 95, 308, 'Sales', '1591.00', '0.00', '1591.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `invoice`
+--
+
+CREATE TABLE `invoice` (
+  `invoice_id` bigint(100) NOT NULL,
+  `invoice_no` bigint(100) NOT NULL,
+  `date` date NOT NULL,
+  `client_id` bigint(100) NOT NULL,
+  `order_id` bigint(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `invoice_value`
+--
+
+CREATE TABLE `invoice_value` (
+  `val_id` bigint(100) NOT NULL,
+  `date` date NOT NULL,
+  `invoice_id` bigint(100) NOT NULL,
+  `gross_value` decimal(10,2) NOT NULL,
+  `st` decimal(10,2) NOT NULL,
+  `net_val` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `item`
+--
+
+CREATE TABLE `item` (
+  `item_id` bigint(100) NOT NULL,
+  `item` varchar(100) NOT NULL,
+  `description` varchar(200) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `MRP` decimal(10,2) NOT NULL,
+  `baserate` decimal(10,2) NOT NULL,
+  `vat` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `item`
+--
+
+INSERT INTO `item` (`item_id`, `item`, `description`, `category`, `MRP`, `baserate`, `vat`) VALUES
+(1, 'MAKE UPSTICK 15GM (02)', '12*15GM', '1', '120.00', '91.53', '14.00'),
+(2, 'MAKE UPSTICK 15GM (03)', '12*15GM', '1', '120.00', '91.53', '14.00'),
+(3, 'MAKE UPSTICK 15GM (04)', '12*15GM', '1', '120.00', '91.53', '14.00'),
+(4, 'MAKE UPSTICK 15GM (05)', '12*15GM', '1', '120.00', '91.53', '14.00'),
+(5, 'MAKE UPSTICK 15GM (06)', '12*15GM', '1', '120.00', '91.53', '14.00'),
+(6, 'MAKE UPSTICK 15GM (07)', '12*15GM', '1', '120.00', '91.53', '14.00'),
+(7, 'MAKE UPSTICK 15GM (007)', '12*15GM', '1', '120.00', '91.53', '14.00'),
+(8, 'MAKE UPSTICK 15GM (01)', '12*15GM', '1', '120.00', '91.53', '14.00'),
+(9, 'PAN CAKE-25GM (21)', '12*15GM', '1', '120.00', '91.53', '14.00'),
+(10, 'PAN CAKE-25GM (22)', '12*25GM', '1', '120.00', '91.53', '14.00'),
+(11, 'PAN CAKE-25GM (23)', '12*25GM', '1', '120.00', '91.53', '14.00'),
+(12, 'PAN CAKE-25GM (24)', '12*25GM', '1', '120.00', '91.53', '14.00'),
+(13, 'PAN CAKE-25GM (25)', '12*25GM', '1', '120.00', '91.53', '14.00'),
+(14, 'PAN CAKE-25GM (26)', '12*25GM', '1', '120.00', '91.53', '14.00'),
+(15, 'PAN CAKE-25GM (27)', '12*25GM', '1', '120.00', '91.53', '14.00'),
+(17, 'PAN CAKE-25GM (28)', '12*25GM', '1', '120.00', '91.53', '14.00'),
+(18, 'PAN CAKE-25GM (29)', '12*25GM', '1', '120.00', '91.53', '14.00'),
+(19, 'HERB BLEACH 7.5GM ', '25*7.5GM', '1', '20.00', '15.81', '14.00'),
+(20, 'HERB BLEACH 8GM ', '15*8GM', '1', '30.00', '22.88', '14.00'),
+(21, 'HERB BLEACH 15GM ', '15*15GM', '1', '40.00', '30.51', '14.00'),
+(22, 'HERB BLEACH 30GM ', '8*30GM', '1', '65.00', '49.58', '14.00'),
+(23, 'HERB BLEACH 60GM ', '6*60GM', '1', '90.00', '68.65', '14.00'),
+(24, 'HERB BLEACH 270GM ', '270GM', '1', '270.00', '205.95', '14.00'),
+(25, 'GOLD BLEACH 7.5GM', '25*7.5GM', '1', '20.00', '15.81', '14.00'),
+(26, 'GOLD BLEACH 9GM', '15*9GM', '1', '35.00', '26.70', '14.00'),
+(27, 'FRUIT BLEACH 7.5GM', '25*7.5GM', '1', '15.00', '11.85', '14.00'),
+(28, 'FRUIT BLEACH 9GM', '15*9GM', '1', '30.00', '22.88', '14.00'),
+(29, 'SHINER BLEACH 7.5GM', '25*7.5GM', '1', '15.00', '11.85', '14.00'),
+(30, 'FRUIT CREAM 50GM', '6*50GM', '1', '50.00', '38.14', '14.00'),
+(31, 'FRUIT CREAM 100GM', '3*100GM', '1', '100.00', '76.28', '14.00'),
+(32, 'GOLD KIT 50GM', '6*50GM', '1', '200.00', '152.56', '14.00'),
+(33, 'APPLE KIT 50GM', '6*50GM', '1', '200.00', '152.56', '14.00'),
+(34, 'PAPAYA KIT 50GM', '6*50GM', '1', '200.00', '152.56', '14.00'),
+(35, 'PEARLS KIT 50GM', '6*50GM', '1', '230.00', '175.44', '14.00'),
+(36, 'DIMOND KIT 50GM', '6*50GM', '1', '230.00', '175.44', '14.00'),
+(37, 'GOLD KIT 60GM', '60GM', '1', '250.00', '190.69', '14.00'),
+(38, 'FRUIT CREAM 15GM (MIX)', '24*15GM', '1', '10.00', '7.63', '14.00'),
+(39, 'FRUIT CREAM 15GM (COLD)', '24*15GM', '1', '10.00', '7.63', '14.00'),
+(40, 'FRUIT CREAM 15GM (FR)', '24*15GM', '1', '10.00', '7.63', '14.00'),
+(41, 'HAIR REMOVER 30GM', '6*30GM', '1', '60.00', '45.77', '14.00'),
+(42, 'COMPACT POWDER 18GM (01)', '12*18GM', '1', '80.00', '61.02', '14.00'),
+(43, 'COMPACT POWDER 18GM (02)', '12*18GM', '1', '80.00', '61.02', '14.00'),
+(44, 'COMPACT POWDER 18GM (03)', '12*18GM', '1', '80.00', '61.02', '14.00'),
+(45, 'COMPACT POWDER 18GM (04)', '12*18GM', '1', '80.00', '61.02', '14.00'),
+(46, 'LIQUED FOUNDATION (01)', '12*28ML', '1', '90.00', '68.65', '14.00'),
+(47, 'LIQUED FOUNDATION (02)', '12*28ML', '1', '90.00', '68.65', '14.00'),
+(48, 'LIQUED FOUNDATION (03)', '12*28ML', '1', '90.00', '68.65', '14.00'),
+(49, 'LIQUED FOUNDATION (04)', '12*28ML', '1', '90.00', '68.65', '14.00'),
+(50, 'OXY BLEACH 9GM', '15*9GM', '1', '40.00', '30.51', '14.00'),
+(51, 'HONEY LOTION 25ML', '12*25ML', '1', '20.00', '15.26', '14.00'),
+(52, 'HONEY LOTION 100ML', '12*100ML', '1', '70.00', '53.39', '14.00'),
+(53, 'HONEY LOTION 500ML', '500ML', '1', '225.00', '171.62', '14.00'),
+(54, 'CLEANSING MILK 25ML', '12*25ML', '1', '20.00', '15.26', '14.00'),
+(55, 'CLEANSING MILK 100ML', '12*100ML', '1', '60.00', '45.77', '14.00'),
+(56, 'CLEANSING MILK 500ML', '500ML', '1', '175.00', '133.49', '14.00'),
+(57, 'KAJAL STICK 2.5GM', '12*2.5GM', '1', '120.00', '91.53', '14.00'),
+(58, 'EYE LINER 5ML', '12*5ML', '1', '70.00', '53.39', '14.00'),
+(59, 'BODY LOTION 25ML', '12*25ML', '1', '25.00', '19.07', '14.00'),
+(60, 'ARCHI ROSE WATER 25ML', '12*25ML', '2', '10.00', '7.02', '14.00'),
+(61, 'ARCHI ROSE WATER 50ML', '12*50ML', '2', '15.00', '10.53', '14.00'),
+(62, 'ARCHI ROSE WATER 100ML', '6*100ML', '2', '20.00', '14.04', '14.00'),
+(63, 'ARCHI ROSE WATER 250ML', '6*250ML', '2', '45.00', '31.58', '14.00'),
+(64, 'ARCHI LIP BALM 3GM', '50*3GM', '2', '5.00', '3.51', '14.00'),
+(65, 'ARCHI GLYCERIN 25ML', '12*25ML', '2', '10.00', '7.62', '5.00'),
+(66, 'ARCHI FACE SCRUB 50GM', '12*50GM', '2', '20.00', '14.04', '14.00'),
+(67, 'ARCHI FACE PACK 35GM', '12*35GM', '2', '20.00', '14.04', '14.00'),
+(68, 'ARCHI MULTANI PWDR 100GM', '12*100GM', '2', '20.00', '15.24', '5.00'),
+(69, 'ARCHI AMLA PWDR 100G', '12*100GM', '2', '40.00', '30.48', '5.00'),
+(70, 'ARCHI ARITHA PWDR 100G', '12*100GM', '2', '40.00', '30.48', '5.00'),
+(71, 'ARCHI SHIKAKAI PWDR 100G', '12*100GM', '2', '40.00', '30.48', '5.00'),
+(72, 'ARCHI COOLER PERFUME', '15', '2', '50.00', '35.09', '14.00'),
+(73, 'ARCHI LIP BALM 6GM', '42*6GM', '2', '10.00', '7.02', '14.00'),
+(74, 'ARCHI FRESH & COOL 60ML ', '12*30ML', '2', '30.00', '21.05', '14.00'),
+(75, 'ARCHI ROSE WATER 750ML', '1*750ML', '2', '90.00', '63.16', '14.00'),
+(76, 'HERB BLEACH 30GM 70/-', '6*30GM', '1', '70.00', '53.39', '14.00'),
+(77, 'ARCHI GLYCERIN 50ML', '12*50ML', '2', '20.00', '16.00', '5.00'),
+(78, 'GOLD BLEACH 9GM 40/-', '15*9gm', '1', '40.00', '30.51', '14.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `item_movment`
+--
+
+CREATE TABLE `item_movment` (
+  `id` bigint(100) NOT NULL,
+  `date` date NOT NULL,
+  `invoice_no` bigint(100) NOT NULL,
+  `item_id` bigint(100) NOT NULL,
+  `pur_qty` bigint(100) NOT NULL,
+  `pur_rate` decimal(10,2) NOT NULL,
+  `gross_pur` decimal(10,2) NOT NULL,
+  `pur_discount_rate` decimal(10,2) NOT NULL,
+  `pur_discount` decimal(10,2) NOT NULL,
+  `pur_base_amt` decimal(10,2) NOT NULL,
+  `pur_vat_rate` decimal(10,2) NOT NULL,
+  `pur_vat` decimal(10,2) NOT NULL,
+  `pur_value` decimal(10,2) NOT NULL,
+  `sales_qty` bigint(100) NOT NULL,
+  `sales_rate` decimal(10,2) NOT NULL,
+  `gross_sales` decimal(10,2) NOT NULL,
+  `sales_discount_rate` decimal(10,2) NOT NULL,
+  `sales_discount` decimal(10,2) NOT NULL,
+  `sales_base_amt` decimal(10,2) NOT NULL,
+  `sales_vat_rate` decimal(10,2) NOT NULL,
+  `sales_vat` decimal(10,2) NOT NULL,
+  `sales_value` decimal(10,2) NOT NULL,
+  `balance_qty` bigint(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `item_movment`
+--
+
+INSERT INTO `item_movment` (`id`, `date`, `invoice_no`, `item_id`, `pur_qty`, `pur_rate`, `gross_pur`, `pur_discount_rate`, `pur_discount`, `pur_base_amt`, `pur_vat_rate`, `pur_vat`, `pur_value`, `sales_qty`, `sales_rate`, `gross_sales`, `sales_discount_rate`, `sales_discount`, `sales_base_amt`, `sales_vat_rate`, `sales_vat`, `sales_value`, `balance_qty`) VALUES
+(1, '2017-04-01', 0, 1, 12, '72.78', '873.36', '0.00', '0.00', '873.00', '14.00', '122.22', '995.22', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12),
+(2, '2017-04-01', 0, 2, 12, '72.78', '873.36', '0.00', '0.00', '873.00', '14.00', '122.22', '995.22', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24),
+(3, '2017-04-01', 0, 3, 12, '72.78', '873.36', '0.00', '0.00', '873.00', '14.00', '122.22', '995.22', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 36),
+(4, '2017-04-01', 0, 4, 12, '72.78', '873.36', '0.00', '0.00', '873.00', '14.00', '122.22', '995.22', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 48),
+(5, '2017-04-01', 0, 5, 12, '72.78', '873.36', '0.00', '0.00', '873.00', '14.00', '122.22', '995.22', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 60),
+(6, '2017-04-01', 0, 9, 24, '72.78', '1746.72', '0.00', '0.00', '1746.00', '14.00', '244.44', '1990.44', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 84),
+(7, '2017-04-01', 0, 10, 24, '72.78', '1746.72', '0.00', '0.00', '1746.00', '14.00', '244.44', '1990.44', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 108),
+(8, '2017-04-01', 0, 11, 36, '72.78', '2620.08', '0.00', '0.00', '2620.00', '14.00', '366.80', '2986.80', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 144),
+(9, '2017-04-01', 0, 12, 24, '72.78', '1746.72', '0.00', '0.00', '1746.00', '14.00', '244.44', '1990.44', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 168),
+(10, '2017-04-01', 0, 13, 12, '72.78', '873.36', '0.00', '0.00', '873.00', '14.00', '122.22', '995.22', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 180),
+(11, '2017-04-01', 0, 14, 12, '72.78', '873.36', '0.00', '0.00', '873.00', '14.00', '122.22', '995.22', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 192),
+(12, '2017-04-01', 0, 15, 12, '72.78', '873.36', '0.00', '0.00', '873.00', '14.00', '122.22', '995.22', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 204),
+(13, '2017-04-01', 0, 21, 150, '24.26', '3639.00', '0.00', '0.00', '3639.00', '14.00', '509.46', '4148.46', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 354),
+(14, '2017-04-01', 0, 19, 624, '13.57', '8467.68', '0.00', '0.00', '8467.00', '14.00', '1185.38', '9652.38', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 978),
+(15, '2017-04-01', 0, 24, 12, '163.75', '1965.00', '0.00', '0.00', '1965.00', '14.00', '275.10', '2240.10', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 990),
+(16, '2017-04-01', 0, 29, 300, '9.43', '2829.00', '0.00', '0.00', '2829.00', '14.00', '396.06', '3225.06', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1290),
+(17, '2017-04-01', 0, 26, 45, '21.23', '955.35', '0.00', '0.00', '955.00', '14.00', '133.70', '1088.70', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1335),
+(18, '2017-04-01', 0, 30, 12, '30.32', '363.84', '0.00', '0.00', '363.00', '14.00', '50.82', '413.82', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1347),
+(19, '2017-04-01', 0, 32, 12, '104.97', '1259.64', '0.00', '0.00', '1259.00', '14.00', '176.26', '1435.26', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1359),
+(20, '2017-04-01', 0, 33, 12, '104.97', '1259.64', '0.00', '0.00', '1259.00', '14.00', '176.26', '1435.26', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1371),
+(21, '2017-04-01', 0, 34, 12, '104.97', '1259.64', '0.00', '0.00', '1259.00', '14.00', '176.26', '1435.26', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1383),
+(22, '2017-04-01', 0, 36, 12, '120.72', '1448.64', '0.00', '0.00', '1448.00', '14.00', '202.72', '1650.72', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1395),
+(23, '2017-04-01', 0, 35, 6, '120.72', '724.32', '0.00', '0.00', '724.00', '14.00', '101.36', '825.36', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1401),
+(24, '2017-04-01', 0, 8, 12, '72.78', '873.36', '0.00', '0.00', '873.00', '14.00', '122.22', '995.22', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1413),
+(25, '2017-03-31', 0, 64, 360, '3.25', '1170.00', '0.00', '0.00', '1170.00', '14.00', '163.80', '1333.80', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 360),
+(26, '2017-03-31', 0, 64, 50, '0.00', '0.00', '0.00', '0.00', '0.00', '5.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 410),
+(27, '2017-03-31', 0, 61, 288, '9.75', '2808.00', '14.29', '401.26', '2406.74', '14.00', '336.84', '2742.84', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 698),
+(28, '2017-03-31', 0, 65, 60, '7.06', '423.60', '8.33', '35.24', '387.76', '5.00', '19.35', '406.35', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 758),
+(29, '2017-04-01', 1, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 294),
+(30, '2017-04-01', 1, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 0),
+(31, '2017-04-01', 2, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', 0),
+(32, '2017-04-01', 2, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '26.69', '80.07', '0.00', '0.00', '80.07', '14.00', '11.21', '91.28', 147),
+(33, '2017-04-01', 2, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', 11),
+(34, '2017-04-01', 2, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', 11),
+(35, '2017-04-01', 3, 69, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2),
+(36, '2017-04-01', 3, 70, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2),
+(37, '2017-04-01', 3, 71, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2),
+(38, '2017-04-01', 3, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0),
+(39, '2017-04-01', 3, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 381),
+(40, '2017-04-01', 3, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1),
+(41, '2017-04-01', 3, 54, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4),
+(42, '2017-04-01', 3, 55, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2),
+(43, '2017-04-01', 3, 35, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 5),
+(44, '2017-04-01', 3, 34, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 10),
+(45, '2017-04-01', 3, 33, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 9),
+(46, '2017-04-01', 4, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', -12),
+(47, '2017-04-01', 4, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.02', '108.24', '0.00', '0.00', '108.24', '14.00', '15.15', '123.39', 276),
+(48, '2017-04-01', 4, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', 264),
+(49, '2017-04-01', 4, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '27.07', '324.84', '0.00', '0.00', '324.84', '14.00', '45.48', '370.32', 252),
+(50, '2017-04-01', 5, 8, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 11),
+(51, '2017-04-01', 5, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 11),
+(52, '2017-04-01', 5, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 11),
+(53, '2017-04-01', 5, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 11),
+(54, '2017-04-01', 5, 4, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 11),
+(55, '2017-04-01', 5, 69, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.12', '104.48', '0.00', '0.00', '104.48', '5.00', '5.22', '109.70', 7),
+(56, '2017-04-01', 5, 70, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.12', '104.48', '0.00', '0.00', '104.48', '5.00', '5.22', '109.70', 3),
+(57, '2017-04-01', 5, 71, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.12', '104.48', '0.00', '0.00', '104.48', '5.00', '5.22', '109.70', -1),
+(58, '2017-04-01', 6, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 608),
+(59, '2017-04-01', 7, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', -12),
+(60, '2017-04-01', 7, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.02', '54.12', '0.00', '0.00', '54.12', '14.00', '7.58', '61.70', 270),
+(61, '2017-04-02', 8, 73, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 36, '7.02', '252.72', '0.00', '0.00', '252.72', '14.00', '35.38', '288.10', -36),
+(62, '2017-04-02', 8, 73, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '0.00', '0.00', '0.00', '0.00', '0.00', '14.00', '0.00', '0.00', -42),
+(63, '2017-04-02', 9, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.02', '144.48', '0.00', '0.00', '144.48', '14.00', '20.23', '164.71', -24),
+(64, '2017-04-02', 9, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', 310),
+(65, '2017-04-02', 9, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.98', '83.76', '0.00', '0.00', '83.76', '5.00', '4.19', '87.95', 48),
+(66, '2017-04-02', 10, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 227),
+(67, '2017-04-02', 10, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12),
+(68, '2017-04-02', 11, 27, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8),
+(69, '2017-04-02', 11, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', 0),
+(70, '2017-04-02', 11, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 600),
+(71, '2017-04-02', 11, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '3.50', '42.00', '0.00', '0.00', '42.00', '14.00', '5.88', '47.88', 248),
+(72, '2017-04-02', 11, 73, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.48', '77.76', '0.00', '0.00', '77.76', '14.00', '10.89', '88.65', 0),
+(73, '2017-04-02', 11, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.02', '144.48', '0.00', '0.00', '144.48', '14.00', '20.23', '164.71', 0),
+(74, '2017-04-02', 12, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 72, '6.02', '433.44', '0.00', '0.00', '433.44', '14.00', '60.68', '494.12', -72),
+(75, '2017-04-02', 12, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 72, '9.02', '649.44', '0.00', '0.00', '649.44', '14.00', '90.92', '740.36', 198),
+(76, '2017-04-02', 12, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 72, '27.07', '1949.04', '0.00', '0.00', '1949.04', '14.00', '272.87', '2221.91', 126),
+(77, '2017-04-02', 13, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 233),
+(78, '2017-04-02', 14, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 258),
+(79, '2017-04-02', 14, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 42),
+(80, '2017-04-02', 15, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '13.70', '205.50', '0.00', '0.00', '205.50', '14.00', '28.77', '234.27', -15),
+(81, '2017-04-02', 15, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '8.77', '105.24', '0.00', '0.00', '105.24', '14.00', '14.73', '119.97', 239),
+(82, '2017-04-02', 16, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '22.81', '136.86', '0.00', '0.00', '136.86', '14.00', '19.16', '156.02', -6),
+(83, '2017-04-02', 16, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 233),
+(84, '2017-04-02', 17, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '20.02', '80.08', '0.00', '0.00', '80.08', '14.00', '11.21', '91.29', -4),
+(85, '2017-04-02', 17, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.83', '82.98', '0.00', '0.00', '82.98', '14.00', '11.62', '94.60', -10),
+(86, '2017-04-02', 17, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '10.37', '62.22', '0.00', '0.00', '62.22', '14.00', '8.71', '70.93', 227),
+(87, '2017-04-02', 18, 8, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 9),
+(88, '2017-04-02', 18, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 9),
+(89, '2017-04-02', 18, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 9),
+(90, '2017-04-02', 18, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 9),
+(91, '2017-04-02', 18, 4, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 9),
+(92, '2017-04-02', 18, 5, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 11),
+(93, '2017-04-02', 18, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 22),
+(94, '2017-04-02', 18, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 22),
+(95, '2017-04-02', 18, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 10),
+(96, '2017-04-02', 18, 17, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 9),
+(97, '2017-04-02', 18, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 11),
+(98, '2017-04-02', 18, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 221),
+(99, '2017-04-02', 19, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 22),
+(100, '2017-04-02', 19, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 34),
+(101, '2017-04-02', 19, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 20),
+(102, '2017-04-02', 19, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 10),
+(103, '2017-04-02', 19, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 9),
+(104, '2017-04-02', 19, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 8),
+(105, '2017-04-02', 19, 17, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 7),
+(106, '2017-04-02', 19, 42, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '53.39', '106.78', '0.00', '0.00', '106.78', '14.00', '14.95', '121.73', 5),
+(107, '2017-04-02', 19, 43, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '53.39', '106.78', '0.00', '0.00', '106.78', '14.00', '14.95', '121.73', 3),
+(108, '2017-04-02', 19, 44, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '53.39', '106.78', '0.00', '0.00', '106.78', '14.00', '14.95', '121.73', 1),
+(109, '2017-04-02', 20, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '8.77', '26.31', '0.00', '0.00', '26.31', '14.00', '3.68', '29.99', 236),
+(110, '2017-04-02', 20, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 0),
+(111, '2017-04-02', 20, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.02', '108.24', '0.00', '0.00', '108.24', '14.00', '15.15', '123.39', 186),
+(112, '2017-04-02', 20, 69, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '26.12', '78.36', '0.00', '0.00', '78.36', '5.00', '3.92', '82.28', 0),
+(113, '2017-04-02', 20, 70, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '26.12', '78.36', '0.00', '0.00', '78.36', '5.00', '3.92', '82.28', 0),
+(114, '2017-04-02', 21, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '8.77', '219.25', '0.00', '0.00', '219.25', '14.00', '30.70', '249.95', 221),
+(115, '2017-04-02', 21, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '23.36', '70.08', '0.00', '0.00', '70.08', '14.00', '9.81', '79.89', 39),
+(116, '2017-04-02', 21, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 27),
+(117, '2017-04-02', 21, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', 248),
+(118, '2017-04-04', 22, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 230),
+(119, '2017-04-04', 22, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', 222),
+(120, '2017-04-04', 22, 40, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '5.26', '126.24', '0.00', '0.00', '126.24', '14.00', '17.67', '143.91', 198),
+(121, '2017-04-04', 22, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.36', '168.00', '0.00', '0.00', '168.00', '14.00', '23.52', '191.52', 198),
+(122, '2017-04-04', 23, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '8.77', '219.25', '0.00', '0.00', '219.25', '14.00', '30.70', '249.95', 128),
+(123, '2017-04-04', 23, 34, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.42', '114.42', '0.00', '0.00', '114.42', '14.00', '16.02', '130.44', 9),
+(124, '2017-04-04', 23, 33, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.42', '114.42', '0.00', '0.00', '114.42', '14.00', '16.02', '130.44', 9),
+(125, '2017-04-04', 23, 35, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.58', '131.58', '0.00', '0.00', '131.58', '14.00', '18.42', '150.00', 4),
+(126, '2017-04-04', 23, 36, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.58', '131.58', '0.00', '0.00', '131.58', '14.00', '18.42', '150.00', 11),
+(127, '2017-04-04', 23, 73, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 42, '6.02', '252.84', '0.00', '0.00', '252.84', '14.00', '35.40', '288.24', 0),
+(128, '2017-04-04', 23, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12),
+(129, '2017-04-04', 23, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '3.37', '84.21', '0.00', '0.00', '84.21', '14.00', '11.79', '95.99', 12),
+(130, '2017-04-04', 24, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.65', '115.80', '0.00', '0.00', '115.80', '14.00', '16.21', '132.01', 193),
+(131, '2017-04-04', 24, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '23.36', '186.88', '0.00', '0.00', '186.88', '14.00', '26.16', '213.04', 31),
+(132, '2017-04-04', 24, 33, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.42', '114.42', '0.00', '0.00', '114.42', '14.00', '16.02', '130.44', 9),
+(133, '2017-04-04', 24, 34, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.42', '114.42', '0.00', '0.00', '114.42', '14.00', '16.02', '130.44', 9),
+(134, '2017-04-04', 25, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.65', '57.90', '0.00', '0.00', '57.90', '14.00', '8.11', '66.01', 187),
+(135, '2017-04-04', 25, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 175),
+(136, '2017-04-04', 25, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.02', '54.12', '0.00', '0.00', '54.12', '14.00', '7.58', '61.70', 180),
+(137, '2017-04-04', 26, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '18.86', '282.90', '0.00', '0.00', '282.90', '14.00', '39.61', '322.51', -15),
+(138, '2017-04-04', 26, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '24.56', '147.36', '0.00', '0.00', '147.36', '14.00', '20.63', '167.99', 141),
+(139, '2017-04-04', 26, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '22.81', '68.43', '0.00', '0.00', '68.43', '14.00', '9.58', '78.01', 28),
+(140, '2017-04-04', 26, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '21.92', '65.76', '0.00', '0.00', '65.76', '14.00', '9.21', '74.97', 25),
+(141, '2017-04-04', 27, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '13.16', '157.92', '0.00', '0.00', '157.92', '14.00', '22.11', '180.03', 551),
+(142, '2017-04-04', 27, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '8.77', '70.16', '0.00', '0.00', '70.16', '14.00', '9.82', '79.98', 130),
+(143, '2017-04-04', 28, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', -12),
+(144, '2017-04-04', 28, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.02', '108.24', '0.00', '0.00', '108.24', '14.00', '15.15', '123.39', 168),
+(145, '2017-04-04', 29, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '3.51', '84.24', '0.00', '0.00', '84.24', '14.00', '11.79', '96.03', -236),
+(146, '2017-04-04', 29, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '32.65', '195.90', '0.00', '0.00', '195.90', '5.00', '9.79', '205.69', -242),
+(147, '2017-04-04', 30, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12),
+(148, '2017-04-04', 31, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.98', '83.76', '0.00', '0.00', '83.76', '5.00', '4.19', '87.95', 24),
+(149, '2017-04-04', 31, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 12),
+(150, '2017-04-04', 32, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 0),
+(151, '2017-04-04', 32, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.02', '54.12', '0.00', '0.00', '54.12', '14.00', '7.58', '61.70', 138),
+(152, '2017-04-04', 32, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3),
+(153, '2017-04-06', 33, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 144, '6.02', '866.88', '0.00', '0.00', '866.88', '14.00', '121.36', '988.24', -144),
+(154, '2017-04-06', 34, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '52.63', '157.89', '0.00', '0.00', '157.89', '14.00', '22.10', '179.99', -3),
+(155, '2017-04-06', 34, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -6),
+(156, '2017-04-06', 34, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.02', '54.12', '0.00', '0.00', '54.12', '14.00', '7.58', '61.70', 156),
+(157, '2017-04-06', 34, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 150),
+(158, '2017-04-06', 34, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '31.58', '94.74', '0.00', '0.00', '94.74', '14.00', '13.26', '108.00', 147),
+(159, '2017-04-06', 35, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '52.63', '315.78', '0.00', '0.00', '315.78', '14.00', '44.21', '359.99', -6),
+(160, '2017-04-06', 35, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -12),
+(161, '2017-04-06', 35, 32, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.42', '114.42', '0.00', '0.00', '114.42', '14.00', '16.02', '130.44', 11),
+(162, '2017-04-06', 36, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '8.77', '105.24', '0.00', '0.00', '105.24', '14.00', '14.73', '119.97', 165),
+(163, '2017-04-06', 37, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '26.32', '315.84', '0.00', '0.00', '315.84', '14.00', '44.22', '360.06', -12),
+(164, '2017-04-06', 37, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.83', '82.98', '0.00', '0.00', '82.98', '14.00', '11.62', '94.60', 582),
+(165, '2017-04-06', 37, 68, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.06', '78.36', '0.00', '0.00', '78.36', '5.00', '3.92', '82.28', 576),
+(166, '2017-04-06', 38, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '8.77', '219.25', '0.00', '0.00', '219.25', '14.00', '30.70', '249.95', 140),
+(167, '2017-04-06', 38, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '52.63', '315.78', '0.00', '0.00', '315.78', '14.00', '44.21', '359.99', 134),
+(168, '2017-04-06', 38, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 128),
+(169, '2017-04-06', 38, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '35.09', '105.27', '0.00', '0.00', '105.27', '14.00', '14.74', '120.01', 125),
+(170, '2017-04-06', 39, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 574),
+(171, '2017-04-06', 39, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', 566),
+(172, '2017-04-06', 39, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '26.70', '80.10', '0.00', '0.00', '80.10', '14.00', '11.21', '91.31', 138),
+(173, '2017-04-06', 39, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', 132),
+(174, '2017-04-06', 39, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 120),
+(175, '2017-04-06', 39, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.02', '54.12', '0.00', '0.00', '54.12', '14.00', '7.58', '61.70', 150),
+(176, '2017-04-06', 39, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 144),
+(177, '2017-04-06', 39, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '27.07', '81.21', '0.00', '0.00', '81.21', '14.00', '11.37', '92.58', 141),
+(178, '2017-04-06', 39, 0, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '14.00', '0.00', '0.00', 141),
+(179, '2017-04-06', 40, 52, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '46.28', '694.20', '0.00', '0.00', '694.20', '14.00', '97.19', '791.39', -15),
+(180, '2017-04-06', 40, 51, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '13.22', '158.64', '0.00', '0.00', '158.64', '14.00', '22.21', '180.85', -27),
+(181, '2017-04-06', 41, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', 0),
+(182, '2017-04-06', 42, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', 0),
+(183, '2017-04-06', 43, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', -6),
+(184, '2017-04-06', 43, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', -18),
+(185, '2017-04-06', 44, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24),
+(186, '2017-04-06', 44, 66, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', 0),
+(187, '2017-04-06', 45, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6),
+(188, '2017-04-07', 46, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '52.63', '315.78', '0.00', '0.00', '315.78', '14.00', '44.21', '359.99', -6),
+(189, '2017-04-07', 46, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -12),
+(190, '2017-04-07', 47, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '5.26', '78.90', '0.00', '0.00', '78.90', '14.00', '11.05', '89.95', 559),
+(191, '2017-04-07', 47, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '5.26', '78.90', '0.00', '0.00', '78.90', '14.00', '11.05', '89.95', 544),
+(192, '2017-04-07', 47, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '35.09', '70.18', '0.00', '0.00', '70.18', '14.00', '9.83', '80.01', 542),
+(193, '2017-04-07', 47, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 540),
+(194, '2017-04-07', 48, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -15),
+(195, '2017-04-07', 49, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', -12),
+(196, '2017-04-07', 49, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '6.98', '41.88', '0.00', '0.00', '41.88', '5.00', '2.09', '43.97', 6),
+(197, '2017-04-07', 50, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -15),
+(198, '2017-04-07', 51, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', -12),
+(199, '2017-04-07', 51, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '30.08', '90.24', '0.00', '0.00', '90.24', '14.00', '12.63', '102.87', -15),
+(200, '2017-04-09', 52, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 342),
+(201, '2017-04-09', 52, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -129),
+(202, '2017-04-09', 53, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 130),
+(203, '2017-04-09', 53, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 87),
+(204, '2017-04-09', 53, 68, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6),
+(205, '2017-04-09', 54, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', 0),
+(206, '2017-04-09', 54, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 62),
+(207, '2017-04-09', 55, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 551),
+(208, '2017-04-09', 55, 37, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.58', '131.58', '0.00', '0.00', '131.58', '14.00', '18.42', '150.00', 550),
+(209, '2017-04-09', 55, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', 21),
+(210, '2017-04-09', 55, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', 21),
+(211, '2017-04-09', 55, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', 33),
+(212, '2017-04-09', 55, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', 19),
+(213, '2017-04-09', 55, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', 9),
+(214, '2017-04-09', 55, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', 8),
+(215, '2017-04-09', 55, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', 7),
+(216, '2017-04-09', 55, 17, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', 6),
+(217, '2017-04-09', 55, 18, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', 5),
+(218, '2017-04-09', 55, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -361),
+(219, '2017-04-09', 56, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', -8),
+(220, '2017-04-09', 56, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -23),
+(221, '2017-04-09', 57, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '3.37', '40.44', '0.00', '0.00', '40.44', '14.00', '5.66', '46.10', 62),
+(222, '2017-04-09', 57, 73, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '6.02', '36.12', '0.00', '0.00', '36.12', '14.00', '5.06', '41.18', 6),
+(223, '2017-04-09', 57, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '6.02', '36.12', '0.00', '0.00', '36.12', '14.00', '5.06', '41.18', 0),
+(224, '2017-04-09', 57, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.02', '54.12', '0.00', '0.00', '54.12', '14.00', '7.58', '61.70', 138),
+(225, '2017-04-09', 57, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '6.98', '41.88', '0.00', '0.00', '41.88', '5.00', '2.09', '43.97', 0),
+(226, '2017-04-09', 57, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '30.08', '90.24', '0.00', '0.00', '90.24', '14.00', '12.63', '102.87', 0),
+(227, '2017-04-09', 58, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 128),
+(228, '2017-04-09', 58, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 116),
+(229, '2017-04-09', 59, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '6.02', '36.12', '0.00', '0.00', '36.12', '14.00', '5.06', '41.18', -6),
+(230, '2017-04-09', 59, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.02', '54.12', '0.00', '0.00', '54.12', '14.00', '7.58', '61.70', 138),
+(231, '2017-04-09', 59, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 132),
+(232, '2017-04-09', 59, 68, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.06', '78.36', '0.00', '0.00', '78.36', '5.00', '3.92', '82.28', 126),
+(233, '2017-04-09', 60, 68, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.06', '78.36', '0.00', '0.00', '78.36', '5.00', '3.92', '82.28', -6),
+(234, '2017-04-09', 61, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '26.32', '315.84', '0.00', '0.00', '315.84', '14.00', '44.22', '360.06', -12),
+(235, '2017-04-09', 61, 38, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '5.26', '126.24', '0.00', '0.00', '126.24', '14.00', '17.67', '143.91', -36),
+(236, '2017-04-09', 62, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 19),
+(237, '2017-04-09', 62, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 31),
+(238, '2017-04-09', 62, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 17),
+(239, '2017-04-09', 62, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 8),
+(240, '2017-04-09', 62, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 7),
+(241, '2017-04-09', 62, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 6),
+(242, '2017-04-09', 62, 8, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 8),
+(243, '2017-04-09', 62, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 8),
+(244, '2017-04-09', 62, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 8),
+(245, '2017-04-09', 63, 24, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '162.28', '162.28', '0.00', '0.00', '162.28', '14.00', '22.72', '185.00', 11),
+(246, '2017-04-09', 63, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '23.36', '70.08', '0.00', '0.00', '70.08', '14.00', '9.81', '79.89', 25),
+(247, '2017-04-09', 63, 28, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '20.02', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', 22),
+(248, '2017-04-11', 64, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 543),
+(249, '2017-04-11', 64, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', 535),
+(250, '2017-04-11', 64, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 523),
+(251, '2017-04-11', 64, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.02', '108.24', '0.00', '0.00', '108.24', '14.00', '15.15', '123.39', 126),
+(252, '2017-04-11', 65, 68, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '13.06', '156.72', '0.00', '0.00', '156.72', '5.00', '7.84', '164.56', -12),
+(253, '2017-04-11', 66, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 282),
+(254, '2017-04-11', 66, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '30.08', '30.08', '0.00', '0.00', '30.08', '14.00', '4.21', '34.29', -133),
+(255, '2017-04-11', 67, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12),
+(256, '2017-04-11', 68, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.02', '144.48', '0.00', '0.00', '144.48', '14.00', '20.23', '164.71', -24),
+(257, '2017-04-11', 68, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.02', '108.24', '0.00', '0.00', '108.24', '14.00', '15.15', '123.39', 114),
+(258, '2017-04-11', 69, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', -12),
+(259, '2017-04-11', 69, 68, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.06', '78.36', '0.00', '0.00', '78.36', '5.00', '3.92', '82.28', -18),
+(260, '2017-04-11', 70, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.02', '144.48', '0.00', '0.00', '144.48', '14.00', '20.23', '164.71', -24),
+(261, '2017-04-11', 70, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '9.02', '216.48', '0.00', '0.00', '216.48', '14.00', '30.31', '246.79', 90),
+(262, '2017-04-11', 70, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', 78),
+(263, '2017-04-11', 70, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '27.07', '162.42', '0.00', '0.00', '162.42', '14.00', '22.74', '185.16', 72),
+(264, '2017-04-14', 71, 30, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '33.05', '99.15', '0.00', '0.00', '99.15', '14.00', '13.88', '113.03', 9),
+(265, '2017-04-14', 71, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 124),
+(266, '2017-04-14', 72, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 346),
+(267, '2017-04-14', 72, 22, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3),
+(268, '2017-04-14', 72, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '13.83', '41.49', '0.00', '0.00', '41.49', '14.00', '5.81', '47.30', 0),
+(269, '2017-04-14', 72, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -3),
+(270, '2017-04-14', 72, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -3),
+(271, '2017-04-14', 72, 8, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4),
+(272, '2017-04-14', 72, 43, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1),
+(273, '2017-04-14', 72, 45, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1),
+(274, '2017-04-14', 72, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 9, '52.63', '473.67', '0.00', '0.00', '473.67', '14.00', '66.31', '539.98', 0),
+(275, '2017-04-14', 72, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 9, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0),
+(276, '2017-04-15', 73, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '27.07', '324.84', '0.00', '0.00', '324.84', '14.00', '45.48', '370.32', -12),
+(277, '2017-04-16', 74, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '24.56', '147.36', '0.00', '0.00', '147.36', '14.00', '20.63', '167.99', 132),
+(278, '2017-04-16', 75, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 18, '52.63', '947.34', '0.00', '0.00', '947.34', '14.00', '132.63', '1079.97', -18),
+(279, '2017-04-16', 75, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 18, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -36),
+(280, '2017-04-16', 75, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '74.56', '447.36', '0.00', '0.00', '447.36', '14.00', '62.63', '509.99', 15),
+(281, '2017-04-16', 75, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '74.56', '447.36', '0.00', '0.00', '447.36', '14.00', '62.63', '509.99', 25),
+(282, '2017-04-16', 75, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '74.56', '894.72', '0.00', '0.00', '894.72', '14.00', '125.26', '1019.98', 5),
+(283, '2017-04-16', 75, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', 5),
+(284, '2017-04-16', 75, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', 2),
+(285, '2017-04-16', 75, 17, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', -1),
+(286, '2017-04-16', 75, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '74.56', '894.72', '0.00', '0.00', '894.72', '14.00', '125.26', '1019.98', -3),
+(287, '2017-04-16', 75, 4, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '74.56', '447.36', '0.00', '0.00', '447.36', '14.00', '62.63', '509.99', 3),
+(288, '2017-04-16', 76, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 18, '52.63', '947.34', '0.00', '0.00', '947.34', '14.00', '132.63', '1079.97', -18),
+(289, '2017-04-16', 76, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 18, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -36);
+INSERT INTO `item_movment` (`id`, `date`, `invoice_no`, `item_id`, `pur_qty`, `pur_rate`, `gross_pur`, `pur_discount_rate`, `pur_discount`, `pur_base_amt`, `pur_vat_rate`, `pur_vat`, `pur_value`, `sales_qty`, `sales_rate`, `gross_sales`, `sales_discount_rate`, `sales_discount`, `sales_base_amt`, `sales_vat_rate`, `sales_vat`, `sales_value`, `balance_qty`) VALUES
+(290, '2017-04-16', 76, 8, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 6),
+(291, '2017-04-16', 76, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -4),
+(292, '2017-04-16', 76, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 13),
+(293, '2017-04-16', 76, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 17),
+(294, '2017-04-16', 76, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 24),
+(295, '2017-04-16', 77, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '52.63', '631.56', '0.00', '0.00', '631.56', '14.00', '88.42', '719.98', -12),
+(296, '2017-04-16', 77, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -24),
+(297, '2017-04-16', 77, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '13.16', '329.00', '0.00', '0.00', '329.00', '14.00', '46.06', '375.06', 510),
+(298, '2017-04-16', 77, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '13.16', '329.00', '0.00', '0.00', '329.00', '14.00', '46.06', '375.06', 485),
+(299, '2017-04-16', 77, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '78.95', '947.40', '0.00', '0.00', '947.40', '14.00', '132.64', '1080.04', 1),
+(300, '2017-04-16', 77, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '24.56', '368.40', '0.00', '0.00', '368.40', '14.00', '51.58', '419.98', 117),
+(301, '2017-04-16', 78, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '19.83', '297.45', '0.00', '0.00', '297.45', '14.00', '41.64', '339.09', -15),
+(302, '2017-04-16', 79, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '19.83', '297.45', '0.00', '0.00', '297.45', '14.00', '41.64', '339.09', -15),
+(303, '2017-04-16', 79, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '35.09', '70.18', '0.00', '0.00', '70.18', '14.00', '9.83', '80.01', -17),
+(304, '2017-04-16', 79, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -19),
+(305, '2017-04-16', 79, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '23.36', '186.88', '0.00', '0.00', '186.88', '14.00', '26.16', '213.04', 17),
+(306, '2017-04-16', 79, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '8.77', '105.24', '0.00', '0.00', '105.24', '14.00', '14.73', '119.97', 118),
+(307, '2017-04-16', 80, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '26.44', '396.60', '0.00', '0.00', '396.60', '14.00', '55.52', '452.12', 102),
+(308, '2017-04-16', 80, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 16),
+(309, '2017-04-16', 80, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 22),
+(310, '2017-04-16', 80, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 4),
+(311, '2017-04-16', 80, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 5),
+(312, '2017-04-16', 81, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -1),
+(313, '2017-04-16', 81, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', 14),
+(314, '2017-04-16', 81, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', 20),
+(315, '2017-04-16', 81, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', 2),
+(316, '2017-04-16', 81, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', 3),
+(317, '2017-04-16', 81, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', 3),
+(318, '2017-04-16', 81, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.83', '82.98', '0.00', '0.00', '82.98', '14.00', '11.62', '94.60', 504),
+(319, '2017-04-16', 81, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '26.70', '160.20', '0.00', '0.00', '160.20', '14.00', '22.43', '182.63', 96),
+(320, '2017-04-16', 82, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 12),
+(321, '2017-04-16', 82, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 18),
+(322, '2017-04-16', 82, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 0),
+(323, '2017-04-16', 82, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 1),
+(324, '2017-04-16', 82, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 1),
+(325, '2017-04-16', 83, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.83', '82.98', '0.00', '0.00', '82.98', '14.00', '11.62', '94.60', 498),
+(326, '2017-04-16', 83, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '24.56', '368.40', '0.00', '0.00', '368.40', '14.00', '51.58', '419.98', 81),
+(327, '2017-04-16', 83, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', -3),
+(328, '2017-04-16', 83, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', -2),
+(329, '2017-04-16', 84, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '8.77', '219.25', '0.00', '0.00', '219.25', '14.00', '30.70', '249.95', 93),
+(330, '2017-04-16', 84, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', 78),
+(331, '2017-04-16', 0, 68, 36, '14.11', '507.96', '14.29', '72.45', '434.55', '5.00', '21.70', '455.70', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 36),
+(332, '2017-04-16', 0, 60, 576, '6.50', '3744.00', '14.29', '535.02', '3208.98', '14.00', '449.12', '3657.12', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 612),
+(333, '2017-04-16', 0, 74, 48, '19.49', '935.52', '14.29', '133.61', '801.39', '14.00', '112.14', '913.14', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 660),
+(334, '2017-04-16', 0, 72, 48, '32.49', '1559.52', '0.00', '0.00', '1559.00', '14.00', '218.26', '1777.26', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 708),
+(335, '2017-04-16', 0, 72, 12, '0.00', '0.00', '0.00', '0.00', '0.00', '14.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 720),
+(336, '2017-04-06', 0, 29, 300, '9.43', '2829.00', '0.00', '0.00', '2829.00', '14.00', '396.06', '3225.06', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 393),
+(337, '2017-04-16', 85, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 10, '8.77', '87.70', '0.00', '0.00', '87.70', '14.00', '12.28', '99.98', 383),
+(338, '2017-04-16', 85, 33, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.42', '114.42', '0.00', '0.00', '114.42', '14.00', '16.02', '130.44', 8),
+(339, '2017-04-16', 85, 36, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.58', '131.58', '0.00', '0.00', '131.58', '14.00', '18.42', '150.00', 10),
+(340, '2017-04-16', 85, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '18.05', '108.30', '0.00', '0.00', '108.30', '14.00', '15.16', '123.46', 42),
+(341, '2017-04-16', 85, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', 33),
+(342, '2017-04-16', 86, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 490),
+(343, '2017-04-16', 86, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 377),
+(344, '2017-04-16', 87, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -3),
+(345, '2017-04-16', 87, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', 10),
+(346, '2017-04-16', 87, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', 0),
+(347, '2017-04-16', 87, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -6),
+(348, '2017-04-16', 88, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 16, '10.37', '165.92', '0.00', '0.00', '165.92', '14.00', '23.23', '189.15', 361),
+(349, '2017-04-16', 88, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 16, '13.83', '221.28', '0.00', '0.00', '221.28', '14.00', '30.98', '252.26', 474),
+(350, '2017-04-16', 88, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', 466),
+(351, '2017-04-16', 88, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.70', '213.60', '0.00', '0.00', '213.60', '14.00', '29.90', '243.50', 73),
+(352, '2017-04-16', 88, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '23.36', '186.88', '0.00', '0.00', '186.88', '14.00', '26.16', '213.04', 9),
+(353, '2017-04-16', 88, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.70', '213.60', '0.00', '0.00', '213.60', '14.00', '29.90', '243.50', 1),
+(354, '2017-04-16', 88, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 564),
+(355, '2017-04-16', 88, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.02', '108.24', '0.00', '0.00', '108.24', '14.00', '15.15', '123.39', 78),
+(356, '2017-04-16', 88, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 72),
+(357, '2017-04-16', 88, 66, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '14.04', '28.08', '0.00', '0.00', '28.08', '14.00', '3.93', '32.01', 70),
+(358, '2017-04-17', 89, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '77.19', '463.14', '0.00', '0.00', '463.14', '14.00', '64.84', '527.98', -9),
+(359, '2017-04-17', 89, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '77.19', '463.14', '0.00', '0.00', '463.14', '14.00', '64.84', '527.98', 4),
+(360, '2017-04-17', 89, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '77.19', '463.14', '0.00', '0.00', '463.14', '14.00', '64.84', '527.98', 12),
+(361, '2017-04-17', 89, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '77.19', '463.14', '0.00', '0.00', '463.14', '14.00', '64.84', '527.98', -9),
+(362, '2017-04-17', 89, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '77.19', '463.14', '0.00', '0.00', '463.14', '14.00', '64.84', '527.98', -6),
+(363, '2017-04-17', 89, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '77.19', '463.14', '0.00', '0.00', '463.14', '14.00', '64.84', '527.98', -8),
+(364, '2017-04-17', 89, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', -1),
+(365, '2017-04-17', 89, 17, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', -4),
+(366, '2017-04-17', 89, 18, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', -7),
+(367, '2017-04-17', 90, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 7),
+(368, '2017-04-17', 90, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 7),
+(369, '2017-04-17', 90, 4, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 2),
+(370, '2017-04-17', 90, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 3),
+(371, '2017-04-17', 90, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 11),
+(372, '2017-04-17', 90, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -10),
+(373, '2017-04-17', 90, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -7),
+(374, '2017-04-17', 90, 32, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '114.42', '228.84', '0.00', '0.00', '228.84', '14.00', '32.04', '260.88', 9),
+(375, '2017-04-17', 91, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 466),
+(376, '2017-04-17', 91, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 355),
+(377, '2017-04-17', 92, 27, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '10.37', '82.96', '0.00', '0.00', '82.96', '14.00', '11.61', '94.57', -8),
+(378, '2017-04-17', 92, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', -16),
+(379, '2017-04-17', 92, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 349),
+(380, '2017-04-17', 92, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '3.36', '84.00', '0.00', '0.00', '84.00', '14.00', '11.76', '95.76', 62),
+(381, '2017-04-17', 93, 75, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '54.14', '162.42', '0.00', '0.00', '162.42', '14.00', '22.74', '185.16', -3),
+(382, '2017-04-16', 76, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.00', '14.00', '20.16', '164.16', -12),
+(383, '2017-04-16', 76, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '27.07', '81.21', '0.00', '0.00', '81.00', '14.00', '11.34', '92.34', -15),
+(384, '2017-04-16', 77, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.00', '14.00', '20.16', '164.16', -12),
+(385, '2017-04-16', 77, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '28.07', '84.21', '0.00', '0.00', '84.00', '14.00', '11.76', '95.76', 30),
+(386, '2017-04-16', 79, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', 24),
+(387, '2017-04-16', 80, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '12.03', '288.72', '0.00', '0.00', '288.72', '14.00', '40.42', '329.14', -24),
+(388, '2017-04-16', 80, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -36),
+(389, '2017-04-16', 81, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -6),
+(390, '2017-04-16', 82, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '8.77', '105.24', '0.00', '0.00', '105.24', '14.00', '14.73', '119.97', 552),
+(391, '2017-04-16', 82, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', 540),
+(392, '2017-04-20', 94, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 438),
+(393, '2017-04-20', 95, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 534),
+(394, '2017-04-20', 95, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.02', '54.12', '0.00', '0.00', '54.12', '14.00', '7.58', '61.70', 72),
+(395, '2017-04-20', 95, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 66),
+(396, '2017-04-20', 95, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', 18),
+(397, '2017-04-20', 96, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', 12),
+(398, '2017-04-20', 97, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', 6),
+(399, '2017-04-20', 98, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -9),
+(400, '2017-04-20', 99, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6),
+(401, '2017-04-20', 99, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -78),
+(402, '2017-04-20', 100, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 294),
+(403, '2017-04-20', 100, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -129),
+(404, '2017-04-20', 101, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '8.77', '105.24', '0.00', '0.00', '105.24', '14.00', '14.73', '119.97', 510),
+(405, '2017-04-20', 101, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', 498),
+(406, '2017-04-20', 102, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -72),
+(407, '2017-04-20', 103, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 438),
+(408, '2017-04-20', 104, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '8.77', '210.48', '0.00', '0.00', '210.48', '14.00', '29.47', '239.95', 462),
+(409, '2017-04-20', 104, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -42),
+(410, '2017-04-20', 105, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(411, '2017-04-20', 105, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', -48),
+(412, '2017-04-20', 106, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 72, '12.03', '866.16', '0.00', '0.00', '866.16', '14.00', '121.26', '987.42', -72),
+(413, '2017-04-20', 107, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', -54),
+(414, '2017-04-20', 108, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 458),
+(415, '2017-04-20', 108, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '23.36', '93.44', '0.00', '0.00', '93.44', '14.00', '13.08', '106.52', 5),
+(416, '2017-04-20', 108, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '20.02', '80.08', '0.00', '0.00', '80.08', '14.00', '11.21', '91.29', 1),
+(417, '2017-04-20', 109, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(418, '2017-04-20', 109, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -69),
+(419, '2017-04-20', 110, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 450),
+(420, '2017-04-20', 110, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '13.69', '205.35', '0.00', '0.00', '205.35', '14.00', '28.75', '234.10', 443),
+(421, '2017-04-20', 110, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '19.83', '297.45', '0.00', '0.00', '297.45', '14.00', '41.64', '339.09', 428),
+(422, '2017-04-20', 110, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '26.44', '396.60', '0.00', '0.00', '396.60', '14.00', '55.52', '452.12', 58),
+(423, '2017-04-20', 111, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -118),
+(424, '2017-04-20', 111, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.02', '144.48', '0.00', '0.00', '144.48', '14.00', '20.23', '164.71', 282),
+(425, '2017-04-20', 112, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(426, '2017-04-20', 113, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 7, '13.83', '96.81', '0.00', '0.00', '96.81', '14.00', '13.55', '110.36', 346),
+(427, '2017-04-20', 113, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '20.02', '80.08', '0.00', '0.00', '80.08', '14.00', '11.21', '91.29', 0),
+(428, '2017-04-20', 113, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 0),
+(429, '2017-04-20', 113, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '23.36', '93.44', '0.00', '0.00', '93.44', '14.00', '13.08', '106.52', -35),
+(430, '2017-04-20', 113, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '10.37', '82.96', '0.00', '0.00', '82.96', '14.00', '11.61', '94.57', 288),
+(431, '2017-04-20', 114, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.70', '184.20', '0.00', '0.00', '184.20', '14.00', '25.79', '209.99', -6),
+(432, '2017-04-20', 95, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 18, '52.63', '947.34', '0.00', '0.00', '947.34', '14.00', '132.63', '1079.97', -18),
+(433, '2017-04-20', 95, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 18, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -36),
+(434, '2017-04-21', 115, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 420),
+(435, '2017-04-21', 115, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 72),
+(436, '2017-04-21', 115, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3),
+(437, '2017-04-21', 116, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.98', '167.52', '0.00', '0.00', '167.52', '5.00', '8.38', '175.90', 0),
+(438, '2017-04-21', 117, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 10, '8.77', '87.70', '0.00', '0.00', '87.70', '14.00', '12.28', '99.98', 331),
+(439, '2017-04-21', 117, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '6.02', '36.12', '0.00', '0.00', '36.12', '14.00', '5.06', '41.18', 420),
+(440, '2017-04-21', 117, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '30.08', '90.24', '0.00', '0.00', '90.24', '14.00', '12.63', '102.87', -75),
+(441, '2017-04-21', 118, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(442, '2017-04-21', 119, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -12),
+(443, '2017-04-21', 119, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 427),
+(444, '2017-04-21', 119, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '18.05', '108.30', '0.00', '0.00', '108.30', '14.00', '15.16', '123.46', 36),
+(445, '2017-04-23', 120, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '3.51', '42.12', '0.00', '0.00', '42.12', '14.00', '5.90', '48.02', 50),
+(446, '2017-04-23', 120, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '30.08', '90.24', '0.00', '0.00', '90.24', '14.00', '12.63', '102.87', -78),
+(447, '2017-04-23', 121, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '30.08', '90.24', '0.00', '0.00', '90.24', '14.00', '12.63', '102.87', -81),
+(448, '2017-04-23', 121, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', 0),
+(449, '2017-04-23', 121, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '8.77', '105.24', '0.00', '0.00', '105.24', '14.00', '14.73', '119.97', 319),
+(450, '2017-04-23', 122, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 372),
+(451, '2017-04-23', 123, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 396),
+(452, '2017-04-23', 123, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -50),
+(453, '2017-04-23', 124, 27, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '10.27', '256.75', '0.00', '0.00', '256.75', '14.00', '35.95', '292.70', -25),
+(454, '2017-04-23', 125, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 384),
+(455, '2017-04-23', 126, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', -15),
+(456, '2017-04-23', 126, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', -10),
+(457, '2017-04-23', 126, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', -7),
+(458, '2017-04-23', 127, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', -12),
+(459, '2017-04-23', 127, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', 0),
+(460, '2017-04-23', 127, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', 8),
+(461, '2017-04-23', 127, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', -18),
+(462, '2017-04-23', 127, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -12),
+(463, '2017-04-23', 127, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -10),
+(464, '2017-04-23', 127, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -2),
+(465, '2017-04-23', 127, 17, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -3),
+(466, '2017-04-23', 128, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', 6),
+(467, '2017-04-23', 128, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -20),
+(468, '2017-04-23', 128, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -14),
+(469, '2017-04-23', 128, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -12),
+(470, '2017-04-23', 128, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '12.03', '288.72', '0.00', '0.00', '288.72', '14.00', '40.42', '329.14', -36),
+(471, '2017-04-23', 128, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.98', '83.76', '0.00', '0.00', '83.76', '5.00', '4.19', '87.95', -12),
+(472, '2017-04-23', 129, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '74.56', '149.12', '0.00', '0.00', '149.12', '14.00', '20.88', '170.00', -14),
+(473, '2017-04-23', 130, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '13.70', '342.50', '0.00', '0.00', '342.50', '14.00', '47.95', '390.45', -25),
+(474, '2017-04-23', 130, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', 3),
+(475, '2017-04-23', 130, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', -23),
+(476, '2017-04-23', 130, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '77.19', '231.57', '0.00', '0.00', '231.57', '14.00', '32.42', '263.99', -17),
+(477, '2017-04-23', 130, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -14),
+(478, '2017-04-23', 130, 24, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '162.28', '486.84', '0.00', '0.00', '486.84', '14.00', '68.16', '555.00', 8),
+(479, '2017-04-23', 130, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 372),
+(480, '2017-04-23', 131, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '13.70', '205.50', '0.00', '0.00', '205.50', '14.00', '28.77', '234.27', 412),
+(481, '2017-04-23', 131, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 404),
+(482, '2017-04-23', 131, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '23.36', '70.08', '0.00', '0.00', '70.08', '14.00', '9.81', '79.89', -2),
+(483, '2017-04-23', 132, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(484, '2017-04-23', 132, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '27.07', '162.42', '0.00', '0.00', '162.42', '14.00', '22.74', '185.16', -18),
+(485, '2017-04-26', 133, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -114),
+(486, '2017-04-26', 134, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -120),
+(487, '2017-04-26', 135, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 360),
+(488, '2017-04-26', 136, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -105),
+(489, '2017-04-26', 136, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '18.05', '108.30', '0.00', '0.00', '108.30', '14.00', '15.16', '123.46', 30),
+(490, '2017-04-26', 137, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 404),
+(491, '2017-04-26', 138, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '3.37', '84.25', '0.00', '0.00', '84.25', '14.00', '11.80', '96.05', -75),
+(492, '2017-04-27', 139, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '18.05', '216.60', '0.00', '0.00', '216.60', '14.00', '30.32', '246.92', 18),
+(493, '2017-04-27', 139, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '30.08', '90.24', '0.00', '0.00', '90.24', '14.00', '12.63', '102.87', -108),
+(494, '2017-04-27', 139, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -125),
+(495, '2017-04-27', 140, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3),
+(496, '2017-04-27', 140, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '6.02', '30.01', '0.00', '0.00', '30.01', '14.00', '4.21', '34.31', 282),
+(497, '2017-04-27', 140, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '3.51', '42.12', '0.00', '0.00', '42.12', '14.00', '5.90', '48.02', -387),
+(498, '2017-04-27', 140, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -61),
+(499, '2017-04-27', 140, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '13.83', '41.49', '0.00', '0.00', '41.49', '14.00', '5.81', '47.30', 345),
+(500, '2017-04-27', 140, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '9.65', '28.95', '0.00', '0.00', '28.95', '14.00', '4.05', '33.00', 288),
+(501, '2017-04-27', 140, 38, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.14', '73.68', '0.00', '0.00', '73.68', '14.00', '10.32', '84.00', 0),
+(502, '2017-04-27', 141, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 393),
+(503, '2017-04-27', 142, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '13.83', '55.32', '0.00', '0.00', '55.32', '14.00', '7.74', '63.06', 389),
+(504, '2017-04-27', 142, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '20.02', '80.08', '0.00', '0.00', '80.08', '14.00', '11.21', '91.29', 385),
+(505, '2017-04-27', 142, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.70', '106.80', '0.00', '0.00', '106.80', '14.00', '14.95', '121.75', 54),
+(506, '2017-04-27', 142, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '30.08', '90.24', '0.00', '0.00', '90.24', '14.00', '12.63', '102.87', -111),
+(507, '2017-04-27', 142, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '18.05', '54.15', '0.00', '0.00', '54.15', '14.00', '7.58', '61.73', 12),
+(508, '2017-05-04', 143, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 306),
+(509, '2017-05-04', 144, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -187),
+(510, '2017-05-04', 145, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.02', '144.48', '0.00', '0.00', '144.48', '14.00', '20.23', '164.71', 342),
+(511, '2017-05-04', 145, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 10, '8.77', '87.70', '0.00', '0.00', '87.70', '14.00', '12.28', '99.98', 306),
+(512, '2017-05-04', 146, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 381),
+(513, '2017-05-04', 146, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '20.02', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', 378),
+(514, '2017-05-04', 146, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -237),
+(515, '2017-05-04', 147, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '19.83', '297.45', '0.00', '0.00', '297.45', '14.00', '41.64', '339.09', -15),
+(516, '2017-05-04', 147, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.70', '213.60', '0.00', '0.00', '213.60', '14.00', '29.90', '243.50', 46),
+(517, '2017-05-04', 147, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 330),
+(518, '2017-05-04', 147, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -287),
+(519, '2017-05-04', 148, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '18.86', '113.16', '0.00', '0.00', '113.16', '14.00', '15.84', '129.00', 0),
+(520, '2017-05-04', 148, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 342),
+(521, '2017-05-04', 148, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.02', '108.24', '0.00', '0.00', '108.24', '14.00', '15.15', '123.39', 60),
+(522, '2017-05-04', 148, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 0),
+(523, '2017-05-04', 148, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '27.07', '162.42', '0.00', '0.00', '162.42', '14.00', '22.74', '185.16', 0),
+(524, '2017-05-04', 148, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -123),
+(525, '2017-05-04', 149, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -6),
+(526, '2017-05-04', 149, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '18.05', '108.30', '0.00', '0.00', '108.30', '14.00', '15.16', '123.46', 6),
+(527, '2017-05-05', 150, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 300),
+(528, '2017-05-05', 150, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '18.05', '72.20', '0.00', '0.00', '72.20', '14.00', '10.11', '82.31', 2),
+(529, '2017-05-05', 151, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', -123),
+(530, '2017-05-05', 152, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 381),
+(531, '2017-05-05', 152, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '20.02', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', 0),
+(532, '2017-05-05', 152, 69, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '26.12', '52.24', '0.00', '0.00', '52.24', '5.00', '2.61', '54.85', 0),
+(533, '2017-05-05', 152, 70, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '26.12', '52.24', '0.00', '0.00', '52.24', '5.00', '2.61', '54.85', 0),
+(534, '2017-05-05', 152, 71, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '26.12', '52.24', '0.00', '0.00', '52.24', '5.00', '2.61', '54.85', 0),
+(535, '2017-05-05', 153, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -1),
+(536, '2017-05-05', 153, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 2),
+(537, '2017-05-05', 153, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -25),
+(538, '2017-05-05', 153, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -337),
+(539, '2017-05-05', 154, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '12.03', '288.72', '0.00', '0.00', '288.72', '14.00', '40.42', '329.14', -24),
+(540, '2017-05-05', 154, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '18.05', '216.60', '0.00', '0.00', '216.60', '14.00', '30.32', '246.92', -10),
+(541, '2017-05-05', 155, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 306),
+(542, '2017-05-05', 155, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -387),
+(543, '2017-05-06', 156, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '35.09', '105.27', '0.00', '0.00', '105.27', '14.00', '14.74', '120.01', -3),
+(544, '2017-05-06', 156, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '0.00', '0.00', '0.00', '0.00', '0.00', '14.00', '0.00', '0.00', -6),
+(545, '2017-05-06', 156, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '23.36', '93.44', '0.00', '0.00', '93.44', '14.00', '13.08', '106.52', -3),
+(546, '2017-05-06', 156, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '52.63', '157.89', '0.00', '0.00', '157.89', '14.00', '22.10', '179.99', -6),
+(547, '2017-05-06', 156, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '0.00', '0.00', '0.00', '0.00', '0.00', '14.00', '0.00', '0.00', -9),
+(548, '2017-05-06', 157, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', -8),
+(549, '2017-05-06', 157, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', -16),
+(550, '2017-05-06', 157, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '23.36', '186.88', '0.00', '0.00', '186.88', '14.00', '26.16', '213.04', -11),
+(551, '2017-05-06', 158, 36, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.58', '131.58', '0.00', '0.00', '131.58', '14.00', '18.42', '150.00', 9),
+(552, '2017-05-06', 158, 32, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.04', '114.04', '0.00', '0.00', '114.04', '14.00', '15.97', '130.01', 8),
+(553, '2017-05-06', 158, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 294),
+(554, '2017-05-06', 158, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.83', '82.98', '0.00', '0.00', '82.98', '14.00', '11.62', '94.60', 288),
+(555, '2017-05-06', 158, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '23.36', '93.44', '0.00', '0.00', '93.44', '14.00', '13.08', '106.52', -15),
+(556, '2017-05-06', 158, 42, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '53.39', '53.39', '0.00', '0.00', '53.39', '14.00', '7.47', '60.86', -16),
+(557, '2017-05-06', 158, 43, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '53.39', '53.39', '0.00', '0.00', '53.39', '14.00', '7.47', '60.86', -17),
+(558, '2017-05-06', 158, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', -129),
+(559, '2017-05-06', 158, 69, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '26.12', '26.12', '0.00', '0.00', '26.12', '5.00', '1.31', '27.43', -130),
+(560, '2017-05-06', 158, 70, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '26.12', '26.12', '0.00', '0.00', '26.12', '5.00', '1.31', '27.43', -131),
+(561, '2017-05-06', 158, 71, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '26.12', '26.12', '0.00', '0.00', '26.12', '5.00', '1.31', '27.43', -132),
+(562, '2017-05-06', 159, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '20.02', '80.08', '0.00', '0.00', '80.08', '14.00', '11.21', '91.29', -4),
+(563, '2017-05-06', 159, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.70', '106.80', '0.00', '0.00', '106.80', '14.00', '14.95', '121.75', 42),
+(564, '2017-05-06', 159, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '23.36', '93.44', '0.00', '0.00', '93.44', '14.00', '13.08', '106.52', -19),
+(565, '2017-05-06', 159, 32, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.42', '114.42', '0.00', '0.00', '114.42', '14.00', '16.02', '130.44', 7),
+(566, '2017-05-06', 159, 34, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.42', '114.42', '0.00', '0.00', '114.42', '14.00', '16.02', '130.44', 9),
+(567, '2017-05-06', 160, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15),
+(568, '2017-05-06', 160, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '24.56', '368.42', '0.00', '0.00', '368.42', '14.00', '51.57', '419.99', -9),
+(569, '2017-05-06', 161, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -64),
+(570, '2017-05-06', 162, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 294),
+(571, '2017-05-06', 163, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 282),
+(572, '2017-05-06', 163, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', -135),
+(573, '2017-05-07', 164, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 373),
+(574, '2017-05-07', 164, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', 365),
+(575, '2017-05-07', 164, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 357);
+INSERT INTO `item_movment` (`id`, `date`, `invoice_no`, `item_id`, `pur_qty`, `pur_rate`, `gross_pur`, `pur_discount_rate`, `pur_discount`, `pur_base_amt`, `pur_vat_rate`, `pur_vat`, `pur_value`, `sales_qty`, `sales_rate`, `gross_sales`, `sales_discount_rate`, `sales_discount`, `sales_base_amt`, `sales_vat_rate`, `sales_vat`, `sales_value`, `balance_qty`) VALUES
+(576, '2017-05-07', 164, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', -120),
+(577, '2017-05-07', 165, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', -8),
+(578, '2017-05-07', 165, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', -16),
+(579, '2017-05-07', 166, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -2),
+(580, '2017-05-07', 166, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', 1),
+(581, '2017-05-07', 166, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -26),
+(582, '2017-05-07', 166, 8, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', 5),
+(583, '2017-05-07', 166, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -8),
+(584, '2017-05-07', 166, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', 6),
+(585, '2017-05-07', 166, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', 6),
+(586, '2017-05-07', 166, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '24.56', '368.40', '0.00', '0.00', '368.40', '14.00', '51.58', '419.98', 12),
+(587, '2017-05-07', 166, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 365),
+(588, '2017-05-07', 166, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 359),
+(589, '2017-05-07', 166, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '18.05', '108.30', '0.00', '0.00', '108.30', '14.00', '15.16', '123.46', -22),
+(590, '2017-05-07', 166, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.98', '83.76', '0.00', '0.00', '83.76', '5.00', '4.19', '87.95', -24),
+(591, '2017-05-07', 167, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', -8),
+(592, '2017-05-07', 167, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '23.36', '186.88', '0.00', '0.00', '186.88', '14.00', '26.16', '213.04', -27),
+(593, '2017-05-07', 168, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '78.95', '947.40', '0.00', '0.00', '947.40', '14.00', '132.64', '1080.04', -26),
+(594, '2017-05-07', 168, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '18.05', '433.20', '0.00', '0.00', '433.20', '14.00', '60.65', '493.85', -46),
+(595, '2017-05-07', 169, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '13.16', '157.92', '0.00', '0.00', '157.92', '14.00', '22.11', '180.03', 353),
+(596, '2017-05-07', 169, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '19.30', '289.50', '0.00', '0.00', '289.50', '14.00', '40.53', '330.03', 338),
+(597, '2017-05-07', 169, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '24.56', '147.36', '0.00', '0.00', '147.36', '14.00', '20.63', '167.99', 6),
+(598, '2017-05-07', 170, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '24.56', '368.40', '0.00', '0.00', '368.40', '14.00', '51.58', '419.98', -9),
+(599, '2017-05-07', 171, 37, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '131.58', '394.74', '0.00', '0.00', '394.74', '14.00', '55.26', '450.00', -3),
+(600, '2017-05-07', 172, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -18),
+(601, '2017-05-07', 172, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -13),
+(602, '2017-05-07', 172, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -47),
+(603, '2017-05-07', 172, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -30),
+(604, '2017-05-07', 172, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -27),
+(605, '2017-05-07', 172, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -10),
+(606, '2017-05-07', 172, 17, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', 0),
+(607, '2017-05-07', 172, 18, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', 0),
+(608, '2017-05-07', 172, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '23.36', '186.88', '0.00', '0.00', '186.88', '14.00', '26.16', '213.04', -66),
+(609, '2017-05-07', 172, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '14.00', '0.00', '0.00', 8),
+(610, '2017-05-07', 172, 42, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '53.39', '106.78', '0.00', '0.00', '106.78', '14.00', '14.95', '121.73', 0),
+(611, '2017-05-07', 172, 43, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '53.39', '106.78', '0.00', '0.00', '106.78', '14.00', '14.95', '121.73', 0),
+(612, '2017-05-07', 172, 46, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '60.07', '120.14', '0.00', '0.00', '120.14', '14.00', '16.82', '136.96', 0),
+(613, '2017-05-07', 172, 47, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '60.07', '120.14', '0.00', '0.00', '120.14', '14.00', '16.82', '136.96', 0),
+(614, '2017-05-07', 173, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '74.56', '149.12', '0.00', '0.00', '149.12', '14.00', '20.88', '170.00', -10),
+(615, '2017-05-07', 173, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '74.56', '149.12', '0.00', '0.00', '149.12', '14.00', '20.88', '170.00', 4),
+(616, '2017-05-07', 173, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '74.56', '149.12', '0.00', '0.00', '149.12', '14.00', '20.88', '170.00', 4),
+(617, '2017-05-07', 173, 8, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '74.56', '149.12', '0.00', '0.00', '149.12', '14.00', '20.88', '170.00', 3),
+(618, '2017-05-07', 173, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '74.56', '149.12', '0.00', '0.00', '149.12', '14.00', '20.88', '170.00', -30),
+(619, '2017-05-07', 174, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(620, '2017-05-07', 175, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -6),
+(621, '2017-05-07', 176, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '18.05', '54.15', '0.00', '0.00', '54.15', '14.00', '7.58', '61.73', -49),
+(622, '2017-05-07', 176, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -55),
+(623, '2017-05-07', 176, 69, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '26.12', '26.12', '0.00', '0.00', '26.12', '14.00', '3.66', '29.78', -56),
+(624, '2017-05-07', 176, 70, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '26.12', '26.12', '0.00', '0.00', '26.12', '14.00', '3.66', '29.78', -57),
+(625, '2017-05-07', 176, 71, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '26.12', '26.12', '0.00', '0.00', '26.12', '14.00', '3.66', '29.78', -58),
+(626, '2017-05-07', 177, 75, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '54.14', '162.42', '0.00', '0.00', '162.42', '14.00', '22.74', '185.16', -3),
+(627, '2017-05-07', 177, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '18.05', '216.60', '0.00', '0.00', '216.60', '14.00', '30.32', '246.92', -61),
+(628, '2017-05-07', 178, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -135),
+(629, '2017-05-07', 179, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 330),
+(630, '2017-05-07', 179, 73, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.02', '144.48', '0.00', '0.00', '144.48', '14.00', '20.23', '164.71', 306),
+(631, '2017-05-10', 180, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 345),
+(632, '2017-05-10', 180, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 0),
+(633, '2017-05-10', 180, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -2),
+(634, '2017-05-10', 180, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -32),
+(635, '2017-05-10', 180, 47, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '60.07', '60.07', '0.00', '0.00', '60.07', '14.00', '8.40', '68.48', 0),
+(636, '2017-05-10', 181, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 318),
+(637, '2017-05-10', 181, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.02', '108.24', '0.00', '0.00', '108.24', '14.00', '15.15', '123.39', 48),
+(638, '2017-05-10', 182, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -387),
+(639, '2017-05-10', 182, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 306),
+(640, '2017-05-10', 183, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -437),
+(641, '2017-05-10', 183, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 294),
+(642, '2017-05-10', 184, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.98', '83.76', '0.00', '0.00', '83.76', '5.00', '4.19', '87.95', -36),
+(643, '2017-05-10', 184, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -42),
+(644, '2017-05-10', 184, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '30.08', '90.24', '0.00', '0.00', '90.24', '14.00', '12.63', '102.87', -138),
+(645, '2017-05-10', 184, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '18.05', '54.15', '0.00', '0.00', '54.15', '14.00', '7.58', '61.73', -64),
+(646, '2017-05-10', 185, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -28),
+(647, '2017-05-10', 185, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -32),
+(648, '2017-05-10', 185, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '17.54', '105.24', '0.00', '0.00', '105.24', '14.00', '14.73', '119.97', -38),
+(649, '2017-05-10', 185, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '18.05', '108.30', '0.00', '0.00', '108.30', '14.00', '15.16', '123.46', -70),
+(650, '2017-05-10', 186, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.02', '144.48', '0.00', '0.00', '144.48', '14.00', '20.23', '164.71', 282),
+(651, '2017-05-10', 187, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -6),
+(652, '2017-05-10', 187, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.98', '83.76', '0.00', '0.00', '83.76', '5.00', '4.19', '87.95', -48),
+(653, '2017-05-10', 188, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '17.54', '105.24', '0.00', '0.00', '105.24', '14.00', '14.73', '119.97', -6),
+(654, '2017-05-10', 188, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 288),
+(655, '2017-05-10', 189, 47, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '60.06', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', -1),
+(656, '2017-05-10', 189, 48, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '60.06', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', -2),
+(657, '2017-05-11', 190, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(658, '2017-05-11', 190, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '18.05', '54.15', '0.00', '0.00', '54.15', '14.00', '7.58', '61.73', -64),
+(659, '2017-05-11', 191, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 270),
+(660, '2017-05-11', 191, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '30.08', '90.24', '0.00', '0.00', '90.24', '14.00', '12.63', '102.87', -121),
+(661, '2017-05-11', 192, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(662, '2017-05-11', 192, 69, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.12', '104.48', '0.00', '0.00', '104.48', '5.00', '5.22', '109.70', -16),
+(663, '2017-05-11', 192, 70, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.12', '104.48', '0.00', '0.00', '104.48', '5.00', '5.22', '109.70', -20),
+(664, '2017-05-11', 192, 71, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.12', '104.48', '0.00', '0.00', '104.48', '5.00', '5.22', '109.70', -24),
+(665, '2017-05-11', 193, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 258),
+(666, '2017-05-11', 193, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 252),
+(667, '2017-05-11', 194, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 246),
+(668, '2017-05-11', 194, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 240),
+(669, '2017-05-11', 194, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.98', '83.76', '0.00', '0.00', '83.76', '5.00', '4.19', '87.95', -60),
+(670, '2017-05-11', 195, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 234),
+(671, '2017-05-11', 195, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -437),
+(672, '2017-05-11', 195, 73, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', -449),
+(673, '2017-05-11', 195, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '26.44', '396.60', '0.00', '0.00', '396.60', '14.00', '55.52', '452.12', -24),
+(674, '2017-05-11', 195, 32, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.41', '114.41', '0.00', '0.00', '114.41', '14.00', '16.02', '130.43', 6),
+(675, '2017-05-11', 195, 35, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.58', '131.58', '0.00', '0.00', '131.58', '14.00', '18.42', '150.00', 4),
+(676, '2017-05-11', 195, 36, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.58', '131.58', '0.00', '0.00', '131.58', '14.00', '18.42', '150.00', 8),
+(677, '2017-05-11', 195, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -33),
+(678, '2017-05-11', 195, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -17),
+(679, '2017-05-11', 195, 38, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.14', '147.36', '0.00', '0.00', '147.36', '14.00', '20.63', '167.99', -41),
+(680, '2017-05-11', 195, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '52.63', '315.78', '0.00', '0.00', '315.78', '14.00', '44.21', '359.99', -47),
+(681, '2017-05-11', 195, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -53),
+(682, '2017-05-11', 196, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(683, '2017-05-11', 196, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '30.08', '90.24', '0.00', '0.00', '90.24', '14.00', '12.63', '102.87', -124),
+(684, '2017-05-11', 196, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '18.05', '54.15', '0.00', '0.00', '54.15', '14.00', '7.58', '61.73', -67),
+(685, '2017-05-11', 197, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(686, '2017-05-11', 198, 73, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 36, '6.02', '216.72', '0.00', '0.00', '216.72', '14.00', '30.34', '247.06', -36),
+(687, '2017-05-11', 198, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 222),
+(688, '2017-05-11', 199, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.02', '144.48', '0.00', '0.00', '144.48', '14.00', '20.23', '164.71', 198),
+(689, '2017-05-11', 199, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '9.02', '216.48', '0.00', '0.00', '216.48', '14.00', '30.31', '246.79', 24),
+(690, '2017-05-11', 199, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -487),
+(691, '2017-05-11', 200, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 186),
+(692, '2017-05-11', 200, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.02', '54.12', '0.00', '0.00', '54.12', '14.00', '7.58', '61.70', 18),
+(693, '2017-05-11', 200, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '27.07', '81.21', '0.00', '0.00', '81.21', '14.00', '11.37', '92.58', 15),
+(694, '2017-05-11', 201, 38, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.14', '147.37', '0.00', '0.00', '147.37', '14.00', '20.63', '167.99', 0),
+(695, '2017-05-13', 202, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '13.70', '205.50', '0.00', '0.00', '205.50', '14.00', '28.77', '234.27', 331),
+(696, '2017-05-13', 202, 27, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '10.27', '154.05', '0.00', '0.00', '154.05', '14.00', '21.57', '175.62', 316),
+(697, '2017-05-13', 203, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '13.70', '342.50', '0.00', '0.00', '342.50', '14.00', '47.95', '390.45', 298),
+(698, '2017-05-13', 203, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15),
+(699, '2017-05-13', 203, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '26.44', '396.60', '0.00', '0.00', '396.60', '14.00', '55.52', '452.12', -58),
+(700, '2017-05-13', 203, 27, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '10.27', '154.05', '0.00', '0.00', '154.05', '14.00', '21.57', '175.62', 0),
+(701, '2017-05-13', 203, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '10.27', '154.05', '0.00', '0.00', '154.05', '14.00', '21.57', '175.62', 267),
+(702, '2017-05-13', 203, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '23.36', '186.88', '0.00', '0.00', '186.88', '14.00', '26.16', '213.04', -51),
+(703, '2017-05-13', 203, 47, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '60.06', '180.18', '0.00', '0.00', '180.18', '14.00', '25.23', '205.41', 0),
+(704, '2017-05-13', 204, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '23.36', '186.88', '0.00', '0.00', '186.88', '14.00', '26.16', '213.04', -51),
+(705, '2017-05-13', 204, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.70', '213.60', '0.00', '0.00', '213.60', '14.00', '29.90', '243.50', -47),
+(706, '2017-05-13', 204, 38, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.14', '147.36', '0.00', '0.00', '147.36', '14.00', '20.63', '167.99', -71),
+(707, '2017-05-13', 204, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 174),
+(708, '2017-05-13', 205, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 267),
+(709, '2017-05-13', 205, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '18.05', '108.30', '0.00', '0.00', '108.30', '14.00', '15.16', '123.46', -73),
+(710, '2017-05-13', 205, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.98', '83.76', '0.00', '0.00', '83.76', '5.00', '4.19', '87.95', -72),
+(711, '2017-05-13', 206, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.70', '213.60', '0.00', '0.00', '213.60', '14.00', '29.90', '243.50', -55),
+(712, '2017-05-13', 207, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 162),
+(713, '2017-05-13', 207, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', 150),
+(714, '2017-05-13', 208, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 298),
+(715, '2017-05-13', 208, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '26.70', '80.10', '0.00', '0.00', '80.10', '14.00', '11.21', '91.31', -58),
+(716, '2017-05-13', 208, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -34),
+(717, '2017-05-13', 208, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -40),
+(718, '2017-05-13', 208, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '30.08', '90.24', '0.00', '0.00', '90.24', '14.00', '12.63', '102.87', -127),
+(719, '2017-05-13', 209, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', -133),
+(720, '2017-05-13', 210, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '30.08', '360.96', '0.00', '0.00', '360.96', '14.00', '50.53', '411.49', -145),
+(721, '2017-05-13', 211, 8, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', 1),
+(722, '2017-05-13', 211, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', -13),
+(723, '2017-05-13', 211, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', 1),
+(724, '2017-05-13', 211, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', 1),
+(725, '2017-05-13', 211, 4, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', -1),
+(726, '2017-05-13', 211, 5, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', 8),
+(727, '2017-05-13', 211, 6, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '74.56', '223.68', '0.00', '0.00', '223.68', '14.00', '31.32', '255.00', 5),
+(728, '2017-05-13', 211, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.02', '144.48', '0.00', '0.00', '144.48', '14.00', '20.23', '164.71', 138),
+(729, '2017-05-13', 211, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', 126),
+(730, '2017-05-13', 211, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '18.05', '216.60', '0.00', '0.00', '216.60', '14.00', '30.32', '246.92', -85),
+(731, '2017-05-13', 212, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '18.05', '216.60', '0.00', '0.00', '216.60', '14.00', '30.32', '246.92', -97),
+(732, '2017-05-13', 211, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 30, '19.83', '594.90', '0.00', '0.00', '594.90', '14.00', '83.29', '678.19', -30),
+(733, '2017-05-13', 212, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -160),
+(734, '2017-05-15', 213, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '13.70', '205.50', '0.00', '0.00', '205.50', '14.00', '28.77', '234.27', 283),
+(735, '2017-05-15', 214, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 275),
+(736, '2017-05-15', 214, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 267),
+(737, '2017-05-15', 214, 27, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '10.37', '82.96', '0.00', '0.00', '82.96', '14.00', '11.61', '94.57', 259),
+(738, '2017-05-15', 214, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', -166),
+(739, '2017-05-15', 215, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 30, '35.09', '1052.70', '0.00', '0.00', '1052.70', '14.00', '147.38', '1200.08', -30),
+(740, '2017-05-15', 215, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 30, '0.00', '0.00', '0.00', '0.00', '0.00', '14.00', '0.00', '0.00', -60),
+(741, '2017-05-15', 215, 26, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '23.14', '347.10', '0.00', '0.00', '347.10', '14.00', '48.59', '395.69', -66),
+(742, '2017-05-15', 215, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', -172),
+(743, '2017-05-15', 216, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.70', '213.60', '0.00', '0.00', '213.60', '14.00', '29.90', '243.50', -66),
+(744, '2017-05-15', 216, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -5),
+(745, '2017-05-15', 216, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -4),
+(746, '2017-05-15', 216, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -35),
+(747, '2017-05-15', 216, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -19),
+(748, '2017-05-15', 216, 8, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -1),
+(749, '2017-05-15', 216, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -1),
+(750, '2017-05-15', 216, 4, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -3),
+(751, '2017-05-15', 216, 5, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 6),
+(752, '2017-05-15', 216, 37, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '114.04', '342.12', '0.00', '0.00', '342.12', '14.00', '47.90', '390.02', 3),
+(753, '2017-05-15', 216, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 126),
+(754, '2017-05-15', 216, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 120),
+(755, '2017-05-15', 216, 75, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '54.14', '54.14', '0.00', '0.00', '54.14', '14.00', '7.58', '61.72', 119),
+(756, '2017-05-15', 216, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '18.05', '54.15', '0.00', '0.00', '54.15', '14.00', '7.58', '61.73', -100),
+(757, '2017-05-15', 217, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '75.44', '226.32', '0.00', '0.00', '226.32', '14.00', '31.68', '258.00', -8),
+(758, '2017-05-15', 217, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '75.44', '150.88', '0.00', '0.00', '150.88', '14.00', '21.12', '172.00', -6),
+(759, '2017-05-15', 217, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '75.44', '150.88', '0.00', '0.00', '150.88', '14.00', '21.12', '172.00', -37),
+(760, '2017-05-15', 217, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '75.44', '150.88', '0.00', '0.00', '150.88', '14.00', '21.12', '172.00', -21),
+(761, '2017-05-15', 217, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '75.44', '150.88', '0.00', '0.00', '150.88', '14.00', '21.12', '172.00', -5),
+(762, '2017-05-15', 218, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', -9),
+(763, '2017-05-15', 218, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', -7),
+(764, '2017-05-15', 218, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', -38),
+(765, '2017-05-15', 218, 8, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', -2),
+(766, '2017-05-15', 218, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', -14),
+(767, '2017-05-15', 218, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', 0),
+(768, '2017-05-15', 218, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', -2),
+(769, '2017-05-15', 218, 4, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', -4),
+(770, '2017-05-15', 218, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 114),
+(771, '2017-05-15', 218, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.02', '108.24', '0.00', '0.00', '108.24', '14.00', '15.15', '123.39', 6),
+(772, '2017-05-15', 218, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 0),
+(773, '2017-05-15', 218, 75, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '54.14', '54.14', '0.00', '0.00', '54.14', '14.00', '7.58', '61.72', -1),
+(774, '2017-05-15', 219, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 267),
+(775, '2017-05-15', 219, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.70', '213.60', '0.00', '0.00', '213.60', '14.00', '29.90', '243.50', -74),
+(776, '2017-05-15', 219, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 60, '6.02', '361.20', '0.00', '0.00', '361.20', '14.00', '50.57', '411.77', 54),
+(777, '2017-05-15', 220, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -40),
+(778, '2017-05-15', 220, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -20),
+(779, '2017-05-15', 220, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -23),
+(780, '2017-05-15', 220, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -6),
+(781, '2017-05-15', 220, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.98', '83.76', '0.00', '0.00', '83.76', '5.00', '4.19', '87.95', -84),
+(782, '2017-05-15', 220, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -96),
+(783, '2017-05-15', 221, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -11),
+(784, '2017-05-15', 221, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -22),
+(785, '2017-05-15', 221, 17, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -23),
+(786, '2017-05-15', 221, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 30, '13.16', '394.80', '0.00', '0.00', '394.80', '14.00', '55.27', '450.07', 237),
+(787, '2017-05-15', 221, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 261),
+(788, '2017-05-15', 222, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '26.44', '396.60', '0.00', '0.00', '396.60', '14.00', '55.52', '452.12', -89),
+(789, '2017-05-15', 223, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -29),
+(790, '2017-05-15', 223, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -13),
+(791, '2017-05-15', 223, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -8),
+(792, '2017-05-15', 223, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -42),
+(793, '2017-05-15', 223, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -24),
+(794, '2017-05-15', 224, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', 42),
+(795, '2017-05-15', 224, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.02', '108.24', '0.00', '0.00', '108.24', '14.00', '15.15', '123.39', -6),
+(796, '2017-05-15', 225, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(797, '2017-05-15', 226, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.02', '144.48', '0.00', '0.00', '144.48', '14.00', '20.23', '164.71', 18),
+(798, '2017-05-15', 226, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.02', '108.24', '0.00', '0.00', '108.24', '14.00', '15.15', '123.39', -18),
+(799, '2017-05-15', 227, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.08', '180.48', '0.00', '0.00', '180.48', '14.00', '25.27', '205.75', -178),
+(800, '2017-05-15', 228, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 72, '6.02', '433.44', '0.00', '0.00', '433.44', '14.00', '60.68', '494.12', -54),
+(801, '2017-05-15', 228, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -193),
+(802, '2017-06-03', 229, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -30),
+(803, '2017-06-03', 229, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -14),
+(804, '2017-06-03', 229, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -9),
+(805, '2017-06-03', 229, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -43),
+(806, '2017-06-03', 230, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.69', '106.76', '0.00', '0.00', '106.76', '14.00', '14.95', '121.71', 0),
+(807, '2017-06-03', 230, 76, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '46.72', '373.76', '0.00', '0.00', '373.76', '14.00', '52.33', '426.09', 0),
+(808, '2017-06-03', 230, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.70', '213.60', '0.00', '0.00', '213.60', '14.00', '29.90', '243.50', -127),
+(809, '2017-06-03', 230, 24, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '162.28', '324.56', '0.00', '0.00', '325.12', '14.00', '36.84', '300.00', 8),
+(810, '2017-06-03', 230, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -32),
+(811, '2017-06-03', 230, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -16),
+(812, '2017-06-03', 230, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -11),
+(813, '2017-06-03', 230, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -45),
+(814, '2017-06-03', 230, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '78.95', '236.85', '0.00', '0.00', '236.85', '14.00', '33.16', '270.01', -27),
+(815, '2017-06-03', 230, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -25),
+(816, '2017-06-03', 230, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -8),
+(817, '2017-06-03', 230, 17, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', 0),
+(818, '2017-06-03', 230, 6, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 0),
+(819, '2017-06-03', 230, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', -78),
+(820, '2017-06-03', 230, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.86', '77.16', '0.00', '0.00', '54.12', '14.00', '7.58', '61.70', 0),
+(821, '2017-06-03', 230, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '28.95', '86.85', '0.00', '0.00', '81.21', '14.00', '11.37', '92.58', 0),
+(822, '2017-06-03', 230, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', 0),
+(823, '2017-06-03', 231, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '26.44', '396.60', '0.00', '0.00', '396.60', '14.00', '55.52', '452.12', -112),
+(824, '2017-06-03', 231, 76, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '46.72', '140.16', '0.00', '0.00', '140.16', '14.00', '19.62', '159.78', -115),
+(825, '2017-06-03', 231, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -2),
+(826, '2017-06-03', 231, 6, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -3),
+(827, '2017-06-03', 232, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '26.44', '396.60', '0.00', '0.00', '396.60', '14.00', '55.52', '452.12', -127),
+(828, '2017-06-03', 232, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.02', '72.24', '0.00', '0.00', '72.24', '14.00', '10.11', '82.35', -78),
+(829, '2017-06-03', 232, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -84),
+(830, '2017-06-03', 233, 69, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '26.12', '156.72', '0.00', '0.00', '156.72', '5.00', '7.84', '164.56', -6),
+(831, '2017-06-03', 233, 70, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '26.12', '156.72', '0.00', '0.00', '156.72', '5.00', '7.84', '164.56', -12),
+(832, '2017-06-03', 233, 71, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '26.12', '156.72', '0.00', '0.00', '156.72', '5.00', '7.84', '164.56', -18),
+(833, '2017-06-03', 234, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 60, '12.03', '721.80', '0.00', '0.00', '721.80', '14.00', '101.05', '822.85', -60),
+(834, '2017-06-03', 234, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 300, '3.37', '1011.00', '0.00', '0.00', '1011.00', '14.00', '141.54', '1152.54', -787),
+(835, '2017-06-03', 235, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '12.03', '288.72', '0.00', '0.00', '288.72', '14.00', '40.42', '329.14', -24),
+(836, '2017-06-03', 236, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.69', '106.76', '0.00', '0.00', '106.76', '14.00', '14.95', '121.71', -4),
+(837, '2017-06-03', 236, 76, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '46.72', '373.76', '0.00', '0.00', '373.76', '14.00', '52.33', '426.09', -12),
+(838, '2017-06-03', 236, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.70', '213.60', '0.00', '0.00', '213.60', '14.00', '29.90', '243.50', -135),
+(839, '2017-06-03', 236, 24, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '162.28', '324.56', '0.00', '0.00', '324.56', '14.00', '45.44', '370.00', 6),
+(840, '2017-06-03', 236, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -34),
+(841, '2017-06-03', 236, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -18),
+(842, '2017-06-03', 236, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -13),
+(843, '2017-06-03', 236, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -47),
+(844, '2017-06-03', 236, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '78.95', '236.85', '0.00', '0.00', '236.85', '14.00', '33.16', '270.01', -30),
+(845, '2017-06-03', 236, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -27),
+(846, '2017-06-03', 236, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -10),
+(847, '2017-06-03', 236, 17, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -12),
+(848, '2017-06-03', 236, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -90),
+(849, '2017-06-03', 236, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.86', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -96),
+(850, '2017-06-03', 236, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '28.95', '86.85', '0.00', '0.00', '86.85', '14.00', '12.16', '99.01', -99),
+(851, '2017-06-03', 236, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -105),
+(852, '2017-06-03', 236, 6, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -106),
+(853, '2017-06-05', 237, 37, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '131.58', '263.16', '0.00', '0.00', '263.16', '14.00', '36.84', '300.00', -2),
+(854, '2017-06-05', 237, 32, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '114.91', '229.82', '0.00', '0.00', '229.82', '14.00', '32.17', '261.99', 4),
+(855, '2017-06-05', 237, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -2),
+(856, '2017-06-05', 237, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -14),
+(857, '2017-06-12', 238, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '74.56', '149.12', '0.00', '0.00', '149.12', '14.00', '20.88', '170.00', -15),
+(858, '2017-06-12', 238, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '74.56', '149.12', '0.00', '0.00', '149.12', '14.00', '20.88', '170.00', -49),
+(859, '2017-06-12', 238, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '74.56', '149.12', '0.00', '0.00', '149.12', '14.00', '20.88', '170.00', -12);
+INSERT INTO `item_movment` (`id`, `date`, `invoice_no`, `item_id`, `pur_qty`, `pur_rate`, `gross_pur`, `pur_discount_rate`, `pur_discount`, `pur_base_amt`, `pur_vat_rate`, `pur_vat`, `pur_value`, `sales_qty`, `sales_rate`, `gross_sales`, `sales_discount_rate`, `sales_discount`, `sales_base_amt`, `sales_vat_rate`, `sales_vat`, `sales_value`, `balance_qty`) VALUES
+(860, '2017-06-12', 239, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -35),
+(861, '2017-06-12', 239, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -19),
+(862, '2017-06-12', 239, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -16),
+(863, '2017-06-12', 239, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -51),
+(864, '2017-06-12', 239, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -32),
+(865, '2017-06-12', 240, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', -6),
+(866, '2017-06-12', 240, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '19.30', '115.80', '0.00', '0.00', '115.80', '14.00', '16.21', '132.01', -106),
+(867, '2017-06-12', 241, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -208),
+(868, '2017-06-12', 242, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 229),
+(869, '2017-06-12', 242, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', 221),
+(870, '2017-06-12', 242, 38, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.14', '147.36', '0.00', '0.00', '147.36', '14.00', '20.63', '167.99', 197),
+(871, '2017-06-12', 242, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', 191),
+(872, '2017-06-12', 242, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', 185),
+(873, '2017-06-12', 243, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -20),
+(874, '2017-06-12', 243, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -17),
+(875, '2017-06-12', 243, 18, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -18),
+(876, '2017-06-12', 243, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -15),
+(877, '2017-06-12', 243, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '77.19', '77.19', '0.00', '0.00', '77.19', '14.00', '10.81', '88.00', -3),
+(878, '2017-06-12', 243, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', -9),
+(879, '2017-06-12', 243, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '26.32', '157.92', '0.00', '0.00', '157.92', '14.00', '22.11', '180.03', -15),
+(880, '2017-06-12', 243, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '19.30', '57.90', '0.00', '0.00', '57.90', '14.00', '8.11', '66.01', -109),
+(881, '2017-06-12', 243, 0, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '14.00', '0.00', '0.00', -109),
+(882, '2017-06-12', 243, 77, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.97', '83.82', '0.00', '0.00', '83.82', '5.00', '4.19', '88.01', -6),
+(883, '2017-06-12', 244, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', -8),
+(884, '2017-06-12', 244, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', -16),
+(885, '2017-06-12', 245, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', 0),
+(886, '2017-06-12', 245, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -126),
+(887, '2017-06-12', 245, 77, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.97', '83.82', '0.00', '0.00', '83.82', '5.00', '4.19', '88.01', 0),
+(888, '2017-06-12', 246, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -114),
+(889, '2017-06-12', 246, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.87', '154.44', '0.00', '0.00', '154.44', '14.00', '21.62', '176.06', -126),
+(890, '2017-06-12', 246, 75, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '57.89', '694.68', '0.00', '0.00', '694.68', '14.00', '97.26', '791.94', -138),
+(891, '2017-06-12', 246, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 7, '30.07', '210.49', '0.00', '0.00', '210.49', '14.00', '29.47', '239.96', -215),
+(892, '2017-06-12', 246, 68, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.97', '83.82', '0.00', '0.00', '83.82', '5.00', '4.19', '88.01', 30),
+(893, '2017-06-12', 247, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -126),
+(894, '2017-06-12', 247, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', -132),
+(895, '2017-06-12', 248, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '30.07', '180.42', '0.00', '0.00', '180.42', '14.00', '25.26', '205.68', -221),
+(896, '2017-06-17', 249, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -19),
+(897, '2017-06-17', 249, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.95', '157.90', '0.00', '0.00', '157.90', '14.00', '22.11', '180.01', -53),
+(898, '2017-06-17', 249, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -33),
+(899, '2017-06-17', 249, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', -28),
+(900, '2017-06-17', 250, 4, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '74.56', '149.12', '0.00', '0.00', '149.12', '14.00', '20.88', '170.00', -6),
+(901, '2017-06-17', 250, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '26.44', '396.60', '0.00', '0.00', '396.60', '14.00', '55.52', '452.12', -150),
+(902, '2017-06-17', 250, 76, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '46.72', '140.16', '0.00', '0.00', '140.16', '14.00', '19.62', '159.78', -153),
+(903, '2017-06-17', 251, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.03', '144.36', '0.00', '0.00', '144.36', '14.00', '20.21', '164.57', -12),
+(904, '2017-06-17', 252, 76, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '46.72', '140.16', '0.00', '0.00', '140.16', '14.00', '19.62', '159.78', -3),
+(905, '2017-06-17', 252, 24, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '162.28', '486.84', '0.00', '0.00', '486.84', '14.00', '68.16', '555.00', 3),
+(906, '2017-06-17', 252, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '19.83', '297.45', '0.00', '0.00', '297.45', '14.00', '41.64', '339.09', -12),
+(907, '2017-06-17', 252, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '26.44', '396.60', '0.00', '0.00', '396.60', '14.00', '55.52', '452.12', -165),
+(908, '2017-06-17', 253, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '19.83', '297.45', '0.00', '0.00', '297.45', '14.00', '41.64', '339.09', -15),
+(909, '2017-06-17', 254, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '13.70', '205.50', '0.00', '0.00', '205.50', '14.00', '28.77', '234.27', 214),
+(910, '2017-06-17', 254, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '19.83', '297.45', '0.00', '0.00', '297.45', '14.00', '41.64', '339.09', 199),
+(911, '2017-06-17', 254, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '26.44', '396.60', '0.00', '0.00', '396.60', '14.00', '55.52', '452.12', -180),
+(912, '2017-06-17', 254, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '26.44', '396.60', '0.00', '0.00', '396.60', '14.00', '55.52', '452.12', -195),
+(913, '2017-06-17', 255, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '20.02', '80.08', '0.00', '0.00', '80.08', '14.00', '11.21', '91.29', -4),
+(914, '2017-06-17', 255, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.69', '106.76', '0.00', '0.00', '106.76', '14.00', '14.95', '121.71', -8),
+(915, '2017-06-17', 256, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -138),
+(916, '2017-06-17', 256, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.64', '115.68', '0.00', '0.00', '115.68', '14.00', '16.20', '131.88', -36),
+(917, '2017-06-17', 256, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.86', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -42),
+(918, '2017-06-17', 257, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '26.31', '631.44', '0.00', '0.00', '631.44', '14.00', '88.40', '719.84', -24),
+(919, '2017-06-17', 258, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.82', '110.56', '0.00', '0.00', '110.56', '14.00', '15.48', '126.04', 206),
+(920, '2017-06-17', 258, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '20.02', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', 203),
+(921, '2017-06-17', 258, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '26.69', '80.07', '0.00', '0.00', '80.07', '14.00', '11.21', '91.28', -183),
+(922, '2017-06-17', 258, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '26.69', '53.38', '0.00', '0.00', '53.38', '14.00', '7.47', '60.85', -185),
+(923, '2017-06-17', 259, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.05', '72.60', '0.00', '0.00', '72.60', '14.00', '10.16', '82.76', -150),
+(924, '2017-06-17', 259, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.03', '72.18', '0.00', '0.00', '72.18', '14.00', '10.11', '82.29', -156),
+(925, '2017-06-17', 260, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -162),
+(926, '2017-06-17', 260, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.64', '57.84', '0.00', '0.00', '57.84', '14.00', '8.10', '65.94', -42),
+(927, '2017-06-17', 261, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 18, '26.31', '473.58', '0.00', '0.00', '473.58', '14.00', '66.30', '539.88', -18),
+(928, '2017-06-17', 261, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '79.32', '317.28', '0.00', '0.00', '317.28', '14.00', '44.42', '361.70', -19),
+(929, '2017-06-17', 261, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '79.32', '237.96', '0.00', '0.00', '237.96', '14.00', '33.31', '271.27', -38),
+(930, '2017-06-17', 261, 28, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '20.02', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', -41),
+(931, '2017-06-17', 261, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.69', '82.14', '0.00', '0.00', '82.14', '14.00', '11.50', '93.64', 200),
+(932, '2017-06-17', 261, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 25, '9.64', '241.00', '0.00', '0.00', '241.00', '14.00', '33.74', '274.74', 236),
+(933, '2017-06-17', 261, 36, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.57', '131.57', '0.00', '0.00', '131.57', '14.00', '18.42', '149.99', 7),
+(934, '2017-06-17', 261, 35, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.57', '131.57', '0.00', '0.00', '131.57', '14.00', '18.42', '149.99', 1),
+(935, '2017-06-17', 261, 33, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.03', '114.03', '0.00', '0.00', '114.03', '14.00', '15.96', '129.99', 8),
+(936, '2017-06-17', 261, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '26.69', '160.14', '0.00', '0.00', '160.14', '14.00', '22.42', '182.56', -189),
+(937, '2017-06-17', 262, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '32.65', '97.95', '0.00', '0.00', '97.95', '14.00', '13.71', '111.66', -224),
+(938, '2017-06-17', 262, 68, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.96', '83.76', '0.00', '0.00', '83.76', '14.00', '11.73', '95.49', 24),
+(939, '2017-06-17', 262, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.86', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', 18),
+(940, '2017-06-17', 263, 68, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '13.96', '27.92', '0.00', '0.00', '27.92', '14.00', '3.91', '31.83', 20),
+(941, '2017-06-17', 263, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '19.29', '38.58', '0.00', '0.00', '38.58', '14.00', '5.40', '43.98', -113),
+(942, '2017-06-17', 263, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.36', '168.00', '0.00', '0.00', '168.00', '14.00', '23.52', '191.52', -887),
+(943, '2017-06-17', 263, 68, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 22),
+(944, '2017-06-17', 263, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -111),
+(945, '2017-06-17', 263, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -837),
+(971, '2017-06-17', 264, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', -189),
+(972, '2017-06-17', 264, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 200),
+(973, '2017-06-17', 257, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '12.03', '288.72', '0.00', '0.00', '288.72', '14.00', '40.42', '329.14', -24),
+(974, '2017-06-17', 265, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '77.19', '926.28', '0.00', '0.00', '926.28', '14.00', '129.68', '1055.96', -50),
+(975, '2017-06-17', 265, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '77.19', '926.28', '0.00', '0.00', '926.28', '14.00', '129.68', '1055.96', -32),
+(976, '2017-06-17', 265, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '77.19', '926.28', '0.00', '0.00', '926.28', '14.00', '129.68', '1055.96', -31),
+(977, '2017-06-17', 265, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '77.19', '926.28', '0.00', '0.00', '926.28', '14.00', '129.68', '1055.96', -65),
+(978, '2017-06-17', 265, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '77.19', '926.28', '0.00', '0.00', '926.28', '14.00', '129.68', '1055.96', -45),
+(979, '2017-06-17', 265, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '77.19', '926.28', '0.00', '0.00', '926.28', '14.00', '129.68', '1055.96', -40),
+(980, '2017-06-17', 265, 24, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '149.12', '894.72', '0.00', '0.00', '894.72', '14.00', '125.26', '1019.98', -3),
+(981, '2017-06-17', 265, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '24.56', '368.40', '0.00', '0.00', '368.40', '14.00', '51.58', '419.98', -204),
+(982, '2017-06-17', 265, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 30, '12.28', '368.40', '0.00', '0.00', '368.40', '14.00', '51.58', '419.98', 170),
+(983, '2017-06-17', 265, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 170),
+(984, '2017-06-17', 266, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '8.77', '52.62', '0.00', '0.00', '52.62', '14.00', '7.37', '59.99', 230),
+(985, '2017-06-17', 266, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '20.02', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', 227),
+(986, '2017-06-17', 266, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '26.31', '157.86', '0.00', '0.00', '157.86', '14.00', '22.10', '179.96', 221),
+(987, '2017-06-17', 267, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.82', '110.56', '0.00', '0.00', '110.56', '14.00', '15.48', '126.04', 162),
+(988, '2017-06-17', 267, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.86', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', 156),
+(989, '2017-06-17', 268, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '19.83', '297.45', '0.00', '0.00', '297.45', '14.00', '41.64', '339.09', -15),
+(990, '2017-06-17', 269, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '9.65', '144.75', '0.00', '0.00', '144.75', '14.00', '20.27', '165.02', 215),
+(991, '2017-06-17', 269, 36, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.58', '131.58', '0.00', '0.00', '131.58', '14.00', '18.42', '150.00', 6),
+(992, '2017-06-17', 269, 32, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.04', '114.04', '0.00', '0.00', '114.04', '14.00', '15.97', '130.01', 3),
+(993, '2017-06-17', 269, 38, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.14', '147.36', '0.00', '0.00', '147.36', '14.00', '20.63', '167.99', -21),
+(994, '2017-06-17', 269, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 154),
+(995, '2017-06-17', 270, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '26.32', '315.84', '0.00', '0.00', '315.84', '14.00', '44.22', '360.06', -12),
+(996, '2017-06-17', 270, 31, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '66.11', '198.33', '0.00', '0.00', '198.33', '14.00', '27.77', '226.10', -15),
+(997, '2017-06-17', 271, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -174),
+(998, '2017-06-17', 271, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.65', '115.80', '0.00', '0.00', '115.80', '14.00', '16.21', '132.01', -54),
+(999, '2017-06-17', 271, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.87', '154.44', '0.00', '0.00', '154.44', '14.00', '21.62', '176.06', -66),
+(1000, '2017-06-17', 272, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '9.65', '77.20', '0.00', '0.00', '77.20', '14.00', '10.81', '88.01', 207),
+(1001, '2017-06-17', 272, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '26.32', '157.92', '0.00', '0.00', '157.92', '14.00', '22.11', '180.03', 201),
+(1002, '2017-06-17', 273, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', -6),
+(1003, '2017-06-17', 273, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '26.44', '158.64', '0.00', '0.00', '158.64', '14.00', '22.21', '180.85', -12),
+(1004, '2017-06-17', 273, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.70', '82.20', '0.00', '0.00', '82.20', '14.00', '11.51', '93.71', -18),
+(1005, '2017-06-17', 273, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '26.32', '157.92', '0.00', '0.00', '157.92', '14.00', '22.11', '180.03', -24),
+(1006, '2017-06-17', 273, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.83', '82.98', '0.00', '0.00', '82.98', '14.00', '11.62', '94.60', 201),
+(1007, '2017-06-17', 274, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 146),
+(1008, '2017-06-17', 274, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.69', '213.52', '0.00', '0.00', '213.52', '14.00', '29.89', '243.41', -212),
+(1009, '2017-06-17', 274, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -186),
+(1010, '2017-06-17', 274, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', -192),
+(1011, '2017-06-17', 274, 55, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '39.66', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -194),
+(1012, '2017-06-17', 274, 52, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '46.72', '93.44', '0.00', '0.00', '93.44', '14.00', '13.08', '106.52', -196),
+(1013, '2017-06-17', 274, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '21.93', '131.58', '0.00', '0.00', '131.58', '14.00', '18.42', '150.00', -202),
+(1014, '2017-06-17', 274, 52, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '46.28', '92.56', '0.00', '0.00', '92.56', '14.00', '12.96', '105.52', -204),
+(1015, '2017-06-17', 274, 53, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '0.00', '0.00', '0.00', '0.00', '0.00', '14.00', '0.00', '0.00', -205),
+(1016, '2017-06-17', 275, 38, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 48, '5.90', '283.20', '0.00', '0.00', '283.20', '14.00', '39.65', '322.85', -48),
+(1017, '2017-06-17', 275, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -887),
+(1018, '2017-06-17', 276, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '19.30', '115.80', '0.00', '0.00', '115.80', '14.00', '16.21', '132.01', -117),
+(1019, '2017-06-17', 276, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', -123),
+(1020, '2017-06-17', 276, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.65', '57.90', '0.00', '0.00', '57.90', '14.00', '8.11', '66.01', -60),
+(1021, '2017-06-17', 276, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -96),
+(1022, '2017-06-17', 277, 38, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 48, '5.09', '244.32', '0.00', '0.00', '244.32', '14.00', '34.20', '278.52', -48),
+(1023, '2017-06-17', 277, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '19.30', '115.80', '0.00', '0.00', '115.80', '14.00', '16.21', '132.01', -123),
+(1024, '2017-06-17', 278, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -198),
+(1025, '2017-06-17', 278, 71, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 0, '0.00', '0.00', '0.00', '0.00', '0.00', '14.00', '0.00', '0.00', -198),
+(1026, '2017-06-17', 278, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '26.32', '157.92', '0.00', '0.00', '157.92', '14.00', '22.11', '180.03', -204),
+(1027, '2017-06-17', 279, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '13.70', '205.50', '0.00', '0.00', '205.50', '14.00', '28.77', '234.27', -15),
+(1028, '2017-06-17', 279, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '26.32', '315.84', '0.00', '0.00', '315.84', '14.00', '44.22', '360.06', -27),
+(1029, '2017-06-17', 279, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.43', '154.32', '0.00', '0.00', '154.32', '14.00', '21.60', '175.92', -222),
+(1030, '2017-06-17', 279, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', -228),
+(1031, '2017-06-17', 279, 65, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.43', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -108),
+(1032, '2017-06-17', 279, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -937),
+(1033, '2017-06-17', 280, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '9.65', '57.90', '0.00', '0.00', '57.90', '14.00', '8.11', '66.01', 195),
+(1034, '2017-06-17', 280, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', 187),
+(1035, '2017-06-17', 280, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.87', '77.22', '0.00', '0.00', '77.22', '14.00', '10.81', '88.03', 181),
+(1036, '2017-06-17', 280, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '12.87', '38.61', '0.00', '0.00', '38.61', '14.00', '5.41', '44.02', 178),
+(1037, '2017-06-17', 280, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.33', '79.33', '0.00', '0.00', '79.33', '14.00', '11.11', '90.44', -33),
+(1038, '2017-06-17', 280, 18, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.33', '79.33', '0.00', '0.00', '79.33', '14.00', '11.11', '90.44', -34),
+(1039, '2017-06-17', 280, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.33', '79.33', '0.00', '0.00', '79.33', '14.00', '11.11', '90.44', -13),
+(1040, '2017-06-17', 281, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.83', '110.64', '0.00', '0.00', '110.64', '14.00', '15.49', '126.13', 138),
+(1041, '2017-06-17', 281, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '20.02', '160.16', '0.00', '0.00', '160.16', '14.00', '22.42', '182.58', 130),
+(1042, '2017-06-17', 281, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.43', '154.32', '0.00', '0.00', '154.32', '14.00', '21.60', '175.92', -246),
+(1043, '2017-06-17', 281, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -987),
+(1044, '2017-06-17', 281, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '19.30', '115.80', '0.00', '0.00', '115.80', '14.00', '16.21', '132.01', -129),
+(1045, '2017-06-17', 282, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '32.16', '96.48', '0.00', '0.00', '96.48', '14.00', '13.51', '109.99', -227),
+(1046, '2017-06-17', 282, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.87', '154.44', '0.00', '0.00', '154.44', '14.00', '21.62', '176.06', -239),
+(1047, '2017-06-17', 282, 34, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '85.94', '85.94', '0.00', '0.00', '85.94', '14.00', '12.03', '97.97', 8),
+(1048, '2017-06-17', 282, 33, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '85.94', '85.94', '0.00', '0.00', '85.94', '14.00', '12.03', '97.97', 7),
+(1049, '2017-06-17', 282, 32, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '85.94', '85.94', '0.00', '0.00', '85.94', '14.00', '12.03', '97.97', 2),
+(1050, '2017-06-17', 282, 35, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '99.16', '99.16', '0.00', '0.00', '99.16', '14.00', '13.88', '113.04', 0),
+(1051, '2017-06-17', 282, 36, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '99.16', '99.16', '0.00', '0.00', '99.16', '14.00', '13.88', '113.04', 5),
+(1052, '2017-06-17', 282, 47, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '59.50', '59.50', '0.00', '0.00', '59.50', '14.00', '8.33', '67.83', 4),
+(1053, '2017-06-17', 282, 48, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '59.50', '59.50', '0.00', '0.00', '59.50', '14.00', '8.33', '67.83', 3),
+(1054, '2017-06-17', 282, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -1037),
+(1055, '2017-06-17', 282, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.87', '154.44', '0.00', '0.00', '154.44', '14.00', '21.62', '176.06', -1049),
+(1056, '2017-06-17', 282, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.44', '77.28', '0.00', '0.00', '77.28', '14.00', '10.82', '88.10', -258),
+(1057, '2017-06-17', 282, 42, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '52.89', '52.89', '0.00', '0.00', '52.89', '14.00', '7.40', '60.29', -259),
+(1058, '2017-06-17', 282, 43, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '52.89', '52.89', '0.00', '0.00', '52.89', '14.00', '7.40', '60.29', -260),
+(1059, '2017-06-17', 283, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 72, '12.03', '866.16', '0.00', '0.00', '866.16', '14.00', '121.26', '987.42', -72),
+(1060, '2017-06-17', 283, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 600, '3.27', '1962.00', '0.00', '0.00', '1962.00', '14.00', '274.68', '2236.68', -1637),
+(1061, '2017-06-17', 284, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '29.83', '89.49', '0.00', '0.00', '89.49', '14.00', '12.53', '102.02', -230),
+(1062, '2017-06-17', 284, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.87', '154.44', '0.00', '0.00', '154.44', '14.00', '21.62', '176.06', 0),
+(1063, '2017-06-17', 284, 34, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.03', '114.03', '0.00', '0.00', '114.03', '14.00', '15.96', '129.99', 7),
+(1064, '2017-06-17', 284, 33, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.03', '114.03', '0.00', '0.00', '114.03', '14.00', '15.96', '129.99', 6),
+(1065, '2017-06-17', 284, 32, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '114.03', '114.03', '0.00', '0.00', '114.03', '14.00', '15.96', '129.99', -2),
+(1066, '2017-06-17', 284, 36, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.58', '131.58', '0.00', '0.00', '131.58', '14.00', '18.42', '150.00', 4),
+(1067, '2017-06-17', 284, 35, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '131.58', '131.58', '0.00', '0.00', '131.58', '14.00', '18.42', '150.00', -1),
+(1068, '2017-06-17', 284, 46, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 0),
+(1069, '2017-06-17', 284, 48, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.95', '78.95', '0.00', '0.00', '78.95', '14.00', '11.05', '90.00', 0),
+(1070, '2017-06-17', 284, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.86', '154.32', '0.00', '0.00', '154.32', '14.00', '21.60', '175.92', 0),
+(1071, '2017-06-17', 284, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '6.44', '77.28', '0.00', '0.00', '77.28', '14.00', '10.82', '88.10', -414),
+(1072, '2017-06-17', 284, 42, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '53.51', '53.51', '0.00', '0.00', '53.51', '14.00', '7.49', '61.00', 0),
+(1073, '2017-06-17', 284, 43, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '66.67', '66.67', '0.00', '0.00', '66.67', '14.00', '9.33', '76.00', 0),
+(1074, '2017-06-17', 284, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -1787),
+(1075, '2017-06-17', 285, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.37', '168.50', '0.00', '0.00', '168.50', '14.00', '23.59', '192.09', -1737),
+(1076, '2017-06-17', 285, 73, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 42, '6.02', '252.84', '0.00', '0.00', '252.84', '14.00', '35.40', '288.24', -1779),
+(1077, '2017-06-17', 285, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '19.30', '154.40', '0.00', '0.00', '154.40', '14.00', '21.62', '176.02', -137),
+(1078, '2017-06-17', 285, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '19.84', '297.60', '0.00', '0.00', '297.60', '14.00', '41.66', '339.26', -152),
+(1079, '2017-06-17', 286, 64, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 50, '3.36', '168.00', '0.00', '0.00', '168.00', '14.00', '23.52', '191.52', -1787),
+(1080, '2017-06-17', 286, 73, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 42, '6.10', '256.20', '0.00', '0.00', '256.20', '14.00', '35.87', '292.07', -1829),
+(1081, '2017-06-17', 286, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '19.29', '154.32', '0.00', '0.00', '154.32', '14.00', '21.60', '175.92', -145),
+(1082, '2017-06-17', 286, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '19.84', '297.60', '0.00', '0.00', '297.60', '14.00', '41.66', '339.26', -160),
+(1083, '2017-06-17', 287, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.65', '115.80', '0.00', '0.00', '115.80', '14.00', '16.21', '132.01', -72),
+(1084, '2017-06-17', 287, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '13.83', '165.96', '0.00', '0.00', '165.96', '14.00', '23.23', '189.19', 126),
+(1085, '2017-06-17', 288, 24, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '153.50', '1842.00', '0.00', '0.00', '1842.00', '14.00', '257.88', '2099.88', -16),
+(1086, '2017-06-17', 288, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 45, '19.83', '892.35', '0.00', '0.00', '892.35', '14.00', '124.93', '1017.28', 0),
+(1087, '2017-06-17', 288, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 30, '26.44', '793.20', '0.00', '0.00', '793.20', '14.00', '111.05', '904.25', -248),
+(1088, '2017-06-17', 288, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '19.29', '231.48', '0.00', '0.00', '231.48', '14.00', '32.41', '263.89', -163),
+(1089, '2017-06-17', 289, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -51),
+(1090, '2017-06-17', 289, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -34),
+(1091, '2017-06-17', 289, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -66),
+(1092, '2017-06-17', 289, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -32),
+(1093, '2017-06-17', 289, 67, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.86', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', -38),
+(1094, '2017-06-17', 290, 38, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 288, '4.82', '1388.16', '0.00', '0.00', '1388.16', '14.00', '194.34', '1582.50', -288),
+(1095, '2017-06-17', 290, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 144, '5.84', '840.96', '0.00', '0.00', '840.96', '14.00', '117.73', '958.69', -414),
+(1096, '2017-06-17', 291, 24, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '162.28', '162.28', '0.00', '0.00', '162.28', '14.00', '22.72', '185.00', -16),
+(1097, '2017-06-17', 291, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -20),
+(1098, '2017-06-17', 291, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -4),
+(1099, '2017-06-17', 291, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -3),
+(1100, '2017-06-17', 291, 4, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -7),
+(1101, '2017-06-17', 291, 7, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -8),
+(1102, '2017-06-17', 291, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.94', '157.88', '0.00', '0.00', '157.88', '14.00', '22.10', '179.98', -53),
+(1103, '2017-06-17', 291, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '78.94', '236.82', '0.00', '0.00', '236.82', '14.00', '33.15', '269.97', -35),
+(1104, '2017-06-17', 291, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.94', '157.88', '0.00', '0.00', '157.88', '14.00', '22.10', '179.98', -68),
+(1105, '2017-06-17', 291, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.94', '157.88', '0.00', '0.00', '157.88', '14.00', '22.10', '179.98', -47),
+(1106, '2017-06-17', 291, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '78.94', '157.88', '0.00', '0.00', '157.88', '14.00', '22.10', '179.98', -42),
+(1107, '2017-06-17', 291, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -14),
+(1108, '2017-06-17', 292, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', -54),
+(1109, '2017-06-17', 292, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', -35),
+(1110, '2017-06-17', 292, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', -36),
+(1111, '2017-06-17', 292, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '74.56', '74.56', '0.00', '0.00', '74.56', '14.00', '10.44', '85.00', -69),
+(1112, '2017-06-17', 292, 42, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '53.39', '53.39', '0.00', '0.00', '53.39', '14.00', '7.47', '60.86', -70),
+(1113, '2017-06-17', 292, 43, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '53.39', '53.39', '0.00', '0.00', '53.39', '14.00', '7.47', '60.86', -71),
+(1114, '2017-06-17', 292, 44, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '53.39', '53.39', '0.00', '0.00', '53.39', '14.00', '7.47', '60.86', -72),
+(1115, '2017-06-17', 292, 22, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '46.49', '371.92', '0.00', '0.00', '371.92', '14.00', '52.07', '423.99', -80),
+(1116, '2017-06-17', 292, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '11.98', '143.76', '0.00', '0.00', '143.76', '14.00', '20.13', '163.89', -92),
+(1117, '2017-06-17', 292, 74, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '17.98', '107.88', '0.00', '0.00', '107.88', '14.00', '15.10', '122.98', -163),
+(1118, '2017-06-17', 292, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '8.99', '107.88', '0.00', '0.00', '107.88', '14.00', '15.10', '122.98', -84),
+(1119, '2017-06-17', 292, 43, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '65.78', '65.78', '0.00', '0.00', '65.78', '14.00', '9.21', '74.99', -85),
+(1120, '2017-06-17', 293, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -55),
+(1121, '2017-06-17', 293, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -36),
+(1122, '2017-06-17', 293, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -37),
+(1123, '2017-06-17', 293, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -70),
+(1124, '2017-06-17', 293, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -48),
+(1125, '2017-06-17', 293, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -43),
+(1126, '2017-06-17', 293, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -21),
+(1127, '2017-06-17', 293, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -5),
+(1128, '2017-06-17', 293, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -4),
+(1129, '2017-06-17', 293, 32, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '122.80', '368.40', '0.00', '0.00', '368.40', '14.00', '51.58', '419.98', -2),
+(1130, '2017-06-17', 293, 22, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '46.71', '373.68', '0.00', '0.00', '373.68', '14.00', '52.32', '426.00', -10),
+(1131, '2017-06-17', 294, 61, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '9.64', '115.68', '0.00', '0.00', '115.68', '14.00', '16.20', '131.88', -96),
+(1132, '2017-06-17', 295, 1, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -22),
+(1133, '2017-06-17', 295, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -6),
+(1134, '2017-06-17', 295, 3, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -5),
+(1135, '2017-06-17', 295, 4, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -8),
+(1136, '2017-06-17', 295, 5, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', 5),
+(1137, '2017-06-17', 295, 7, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', 4),
+(1138, '2017-06-17', 295, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '19.95', '159.60', '0.00', '0.00', '159.60', '14.00', '22.34', '181.94', -4),
+(1139, '2017-06-17', 296, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -56),
+(1140, '2017-06-17', 296, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -37),
+(1141, '2017-06-17', 296, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -38),
+(1142, '2017-06-17', 296, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '78.94', '78.94', '0.00', '0.00', '78.94', '14.00', '11.05', '89.99', -71),
+(1143, '2017-06-17', 296, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '26.60', '79.80', '0.00', '0.00', '79.80', '14.00', '11.17', '90.97', -245),
+(1144, '2017-06-17', 297, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.34', '106.72', '0.00', '0.00', '106.72', '14.00', '14.94', '121.66', 118),
+(1145, '2017-06-17', 297, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '20.02', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', 115),
+(1146, '2017-06-17', 297, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '26.69', '80.07', '0.00', '0.00', '80.07', '14.00', '11.21', '91.28', -248),
+(1147, '2017-06-17', 297, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '26.69', '53.38', '0.00', '0.00', '53.38', '14.00', '7.47', '60.85', -250),
+(1148, '2017-06-17', 293, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '12.03', '288.72', '0.00', '0.00', '288.72', '14.00', '40.42', '329.14', -24),
+(1149, '2017-06-17', 298, 75, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '54.13', '324.78', '0.00', '0.00', '324.78', '14.00', '45.47', '370.25', -6),
+(1150, '2017-06-17', 298, 63, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '27.06', '324.72', '0.00', '0.00', '324.72', '14.00', '45.46', '370.18', -18),
+(1151, '2017-06-17', 299, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '12.86', '77.16', '0.00', '0.00', '77.16', '14.00', '10.80', '87.96', 0),
+(1152, '2017-06-17', 299, 69, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '27.93', '27.93', '0.00', '0.00', '27.93', '5.00', '1.39', '29.33', 0),
+(1153, '2017-06-17', 299, 70, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '27.93', '27.93', '0.00', '0.00', '27.93', '5.00', '1.39', '29.33', 0),
+(1154, '2017-06-17', 299, 71, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '27.93', '27.93', '0.00', '0.00', '27.93', '5.00', '1.39', '29.33', 0),
+(1155, '2017-06-17', 300, 72, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '28.07', '421.05', '0.00', '0.00', '421.05', '14.00', '58.95', '480.00', -245),
+(1156, '2017-06-17', 300, 60, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 24, '6.43', '154.32', '0.00', '0.00', '154.32', '14.00', '21.60', '175.92', -438),
+(1157, '2017-06-17', 300, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -57),
+(1158, '2017-06-17', 300, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -38),
+(1159, '2017-06-17', 300, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -39),
+(1160, '2017-06-17', 300, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -72),
+(1161, '2017-06-17', 300, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -49),
+(1162, '2017-06-17', 301, 62, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 12, '12.86', '154.32', '0.00', '0.00', '154.32', '14.00', '21.60', '175.92', -12),
+(1163, '2017-06-17', 301, 25, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.95', '111.60', '0.00', '0.00', '111.60', '14.00', '15.62', '127.22', -20),
+(1164, '2017-06-17', 301, 27, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '10.46', '83.68', '0.00', '0.00', '83.68', '14.00', '11.72', '95.40', -28),
+(1165, '2017-06-17', 301, 29, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '9.64', '77.12', '0.00', '0.00', '77.12', '14.00', '10.80', '87.92', 187),
+(1166, '2017-06-17', 301, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -58),
+(1167, '2017-06-17', 301, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -39);
+INSERT INTO `item_movment` (`id`, `date`, `invoice_no`, `item_id`, `pur_qty`, `pur_rate`, `gross_pur`, `pur_discount_rate`, `pur_discount`, `pur_base_amt`, `pur_vat_rate`, `pur_vat`, `pur_value`, `sales_qty`, `sales_rate`, `gross_sales`, `sales_discount_rate`, `sales_discount`, `sales_base_amt`, `sales_vat_rate`, `sales_vat`, `sales_value`, `balance_qty`) VALUES
+(1168, '2017-06-17', 301, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -40),
+(1169, '2017-06-17', 301, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -73),
+(1170, '2017-06-17', 301, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -50),
+(1171, '2017-06-17', 301, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -44),
+(1172, '2017-06-17', 301, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -15),
+(1173, '2017-06-17', 301, 17, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -16),
+(1174, '2017-06-17', 301, 43, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '52.88', '52.88', '0.00', '0.00', '52.88', '14.00', '7.40', '60.28', -17),
+(1175, '2017-06-17', 301, 44, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '52.88', '52.88', '0.00', '0.00', '52.88', '14.00', '7.40', '60.28', -18),
+(1176, '2017-06-17', 301, 45, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '52.88', '52.88', '0.00', '0.00', '52.88', '14.00', '7.40', '60.28', -19),
+(1177, '2017-06-17', 301, 76, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '46.72', '373.76', '0.00', '0.00', '373.76', '14.00', '52.33', '426.09', -27),
+(1178, '2017-06-17', 301, 78, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.69', '213.52', '0.00', '0.00', '213.52', '14.00', '29.89', '243.41', -35),
+(1179, '2017-06-17', 302, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.31', '105.24', '0.00', '0.00', '105.24', '14.00', '14.73', '119.97', -4),
+(1180, '2017-06-17', 302, 55, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '36.66', '36.66', '0.00', '0.00', '36.66', '14.00', '5.13', '41.79', -5),
+(1181, '2017-06-17', 302, 47, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '59.49', '118.98', '0.00', '0.00', '118.98', '14.00', '16.66', '135.64', -7),
+(1182, '2017-06-17', 302, 49, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '59.49', '118.98', '0.00', '0.00', '118.98', '14.00', '16.66', '135.64', -9),
+(1183, '2017-06-17', 303, 78, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '26.69', '213.52', '0.00', '0.00', '213.52', '14.00', '29.89', '243.41', -8),
+(1184, '2017-06-17', 303, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -59),
+(1185, '2017-06-17', 303, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -40),
+(1186, '2017-06-17', 303, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -74),
+(1187, '2017-06-17', 304, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 8, '13.95', '111.60', '0.00', '0.00', '111.60', '14.00', '15.62', '127.22', 110),
+(1188, '2017-06-17', 304, 76, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '46.72', '140.16', '0.00', '0.00', '140.16', '14.00', '19.62', '159.78', 107),
+(1189, '2017-06-17', 305, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '77.19', '154.38', '0.00', '0.00', '154.38', '14.00', '21.61', '175.99', -76),
+(1190, '2017-06-17', 305, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '24.56', '368.40', '0.00', '0.00', '368.40', '14.00', '51.58', '419.98', -263),
+(1191, '2017-06-17', 306, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 15, '24.56', '368.40', '0.00', '0.00', '368.40', '14.00', '51.58', '419.98', -278),
+(1192, '2017-06-17', 306, 76, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '46.72', '140.16', '0.00', '0.00', '140.16', '14.00', '19.62', '159.78', -281),
+(1193, '2017-06-17', 307, 9, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -60),
+(1194, '2017-06-17', 307, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -41),
+(1195, '2017-06-17', 307, 11, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '79.32', '158.64', '0.00', '0.00', '158.64', '14.00', '22.21', '180.85', -42),
+(1196, '2017-06-17', 307, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '79.32', '158.64', '0.00', '0.00', '158.64', '14.00', '22.21', '180.85', -78),
+(1197, '2017-06-17', 307, 13, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '79.32', '158.64', '0.00', '0.00', '158.64', '14.00', '22.21', '180.85', -52),
+(1198, '2017-06-17', 307, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -45),
+(1199, '2017-06-17', 307, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -16),
+(1200, '2017-06-17', 307, 2, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '79.32', '158.64', '0.00', '0.00', '158.64', '14.00', '22.21', '180.85', -8),
+(1201, '2017-06-17', 307, 4, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -9),
+(1202, '2017-06-17', 307, 5, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', 4),
+(1203, '2017-06-17', 307, 50, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '26.69', '80.07', '0.00', '0.00', '80.07', '14.00', '11.21', '91.28', 1),
+(1204, '2017-06-17', 307, 19, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '13.95', '83.70', '0.00', '0.00', '83.70', '14.00', '11.72', '95.42', 104),
+(1205, '2017-06-17', 307, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '20.02', '80.08', '0.00', '0.00', '80.08', '14.00', '11.21', '91.29', 100),
+(1206, '2017-06-17', 307, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.69', '106.76', '0.00', '0.00', '106.76', '14.00', '14.95', '121.71', -282),
+(1207, '2017-06-17', 308, 8, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '79.32', '158.64', '0.00', '0.00', '158.64', '14.00', '22.21', '180.85', -4),
+(1208, '2017-06-17', 308, 5, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '79.32', '158.64', '0.00', '0.00', '158.64', '14.00', '22.21', '180.85', 2),
+(1209, '2017-06-17', 308, 10, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -42),
+(1210, '2017-06-17', 308, 12, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -79),
+(1211, '2017-06-17', 308, 14, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -46),
+(1212, '2017-06-17', 308, 15, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '79.32', '79.32', '0.00', '0.00', '79.32', '14.00', '11.10', '90.42', -17),
+(1213, '2017-06-17', 308, 46, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '60.06', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', -18),
+(1214, '2017-06-17', 308, 47, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '60.06', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', -19),
+(1215, '2017-06-17', 308, 48, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '60.06', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', -20),
+(1216, '2017-06-17', 308, 49, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 1, '60.06', '60.06', '0.00', '0.00', '60.06', '14.00', '8.41', '68.47', -21),
+(1217, '2017-06-17', 308, 42, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '53.39', '106.78', '0.00', '0.00', '106.78', '14.00', '14.95', '121.73', -23),
+(1218, '2017-06-17', 308, 45, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 2, '53.39', '106.78', '0.00', '0.00', '106.78', '14.00', '14.95', '121.73', -25),
+(1219, '2017-06-17', 308, 41, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 4, '26.71', '106.84', '0.00', '0.00', '106.84', '14.00', '14.96', '121.80', -29),
+(1220, '2017-06-17', 308, 21, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 3, '26.69', '80.07', '0.00', '0.00', '80.07', '14.00', '11.21', '91.28', -285),
+(1221, '2017-06-17', 308, 20, 0, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 6, '20.02', '120.12', '0.00', '0.00', '120.12', '14.00', '16.82', '136.94', -291);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `item_stock`
+--
+
+CREATE TABLE `item_stock` (
+  `stock_id` bigint(100) NOT NULL,
+  `item_id` bigint(100) NOT NULL,
+  `stock_qty` bigint(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `item_stock`
+--
+
+INSERT INTO `item_stock` (`stock_id`, `item_id`, `stock_qty`) VALUES
+(1, 1, -22),
+(2, 2, -8),
+(3, 3, -5),
+(4, 4, -9),
+(5, 5, 2),
+(6, 9, -60),
+(7, 10, -42),
+(8, 11, -42),
+(9, 12, -79),
+(10, 13, -52),
+(11, 14, -46),
+(12, 15, -17),
+(13, 21, -285),
+(14, 19, 104),
+(15, 24, -16),
+(16, 29, 187),
+(17, 26, -66),
+(18, 30, 9),
+(19, 32, -2),
+(20, 33, 6),
+(21, 34, 7),
+(22, 36, 4),
+(23, 35, -1),
+(24, 8, -4),
+(25, 64, -1787),
+(26, 64, -1787),
+(27, 61, -96),
+(28, 65, -108),
+(29, 68, 22),
+(30, 60, -438),
+(31, 74, -163),
+(32, 72, -245),
+(33, 72, -245);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_book`
+--
+
+CREATE TABLE `order_book` (
+  `order_id` bigint(100) NOT NULL,
+  `order_date` date NOT NULL,
+  `client_id` bigint(100) NOT NULL,
+  `item_id` bigint(100) NOT NULL,
+  `description` varchar(1000) NOT NULL,
+  `qty` int(100) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `value` decimal(10,2) NOT NULL,
+  `st` double NOT NULL,
+  `tax` decimal(10,2) NOT NULL,
+  `netvalue` decimal(10,2) NOT NULL,
+  `currency_id` bigint(100) NOT NULL,
+  `status` varchar(50) NOT NULL,
+  `invoice_no` bigint(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `purchase`
+--
+
+CREATE TABLE `purchase` (
+  `pur_id` bigint(100) NOT NULL,
+  `date` date NOT NULL,
+  `invoice_no` bigint(100) NOT NULL,
+  `vendor_id` bigint(100) NOT NULL,
+  `total_gross` decimal(10,2) NOT NULL,
+  `total_discount` decimal(10,2) NOT NULL,
+  `total_taxable` decimal(10,2) NOT NULL,
+  `total_vat` decimal(10,2) NOT NULL,
+  `adjustval` decimal(10,2) NOT NULL,
+  `total_net` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `purchase`
+--
+
+INSERT INTO `purchase` (`pur_id`, `date`, `invoice_no`, `vendor_id`, `total_gross`, `total_discount`, `total_taxable`, `total_vat`, `adjustval`, `total_net`) VALUES
+(1, '2017-04-01', 0, 1, '39892.23', '0.00', '39882.00', '5583.48', '-5445.48', 40020),
+(2, '2017-03-31', 0, 1, '4401.60', '436.50', '3964.50', '519.99', '-88.99', 4394),
+(3, '2017-04-16', 0, 1, '6747.00', '741.08', '6003.92', '801.22', '-133.22', 6670),
+(4, '2017-04-06', 0, 1, '2829.00', '0.00', '2829.00', '396.06', '-752.06', 2473);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sales`
+--
+
+CREATE TABLE `sales` (
+  `sales_id` bigint(100) NOT NULL,
+  `date` date NOT NULL,
+  `invoice_no` bigint(100) NOT NULL,
+  `client_id` bigint(100) NOT NULL,
+  `total_gross` decimal(10,2) NOT NULL,
+  `total_discount` decimal(10,2) NOT NULL,
+  `total_taxable` decimal(10,2) NOT NULL,
+  `total_vat` decimal(10,2) NOT NULL,
+  `total_net` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sales`
+--
+
+INSERT INTO `sales` (`sales_id`, `date`, `invoice_no`, `client_id`, `total_gross`, `total_discount`, `total_taxable`, `total_vat`, `total_net`) VALUES
+(1, '2017-04-01', 1, 1, '124.86', '0.00', '124.86', '17.48', '142.00'),
+(2, '2017-04-01', 2, 2, '398.11', '0.00', '398.11', '55.73', '454.00'),
+(3, '2017-04-01', 3, 3, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(4, '2017-04-01', 4, 4, '649.68', '0.00', '649.68', '90.96', '741.00'),
+(5, '2017-04-01', 5, 5, '708.19', '0.00', '708.19', '70.94', '779.00'),
+(6, '2017-04-01', 6, 6, '110.64', '0.00', '110.64', '15.49', '126.00'),
+(7, '2017-04-01', 7, 7, '126.36', '0.00', '126.36', '17.69', '144.00'),
+(8, '2017-04-02', 8, 9, '252.72', '0.00', '252.72', '35.38', '288.00'),
+(9, '2017-04-02', 9, 10, '396.74', '0.00', '396.74', '48.01', '445.00'),
+(10, '2017-04-02', 10, 11, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(11, '2017-04-02', 11, 12, '535.04', '0.00', '535.04', '74.91', '610.00'),
+(12, '2017-04-02', 12, 13, '3031.92', '0.00', '3031.92', '424.47', '3456.00'),
+(13, '2017-04-02', 13, 14, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(14, '2017-04-02', 14, 15, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(15, '2017-04-02', 15, 16, '310.74', '0.00', '310.74', '43.50', '354.00'),
+(16, '2017-04-02', 16, 17, '189.48', '0.00', '189.48', '26.53', '216.00'),
+(17, '2017-04-02', 17, 18, '225.28', '0.00', '225.28', '31.54', '257.00'),
+(18, '2017-04-02', 18, 19, '1473.72', '0.00', '1473.72', '206.32', '1680.00'),
+(19, '2017-04-02', 19, 20, '1267.74', '0.00', '1267.74', '177.48', '1445.00'),
+(20, '2017-04-02', 20, 14, '363.61', '0.00', '363.61', '36.78', '400.00'),
+(21, '2017-04-02', 21, 15, '530.07', '0.00', '530.07', '74.21', '604.00'),
+(22, '2017-04-04', 22, 21, '507.02', '0.00', '507.02', '70.98', '578.00'),
+(23, '2017-04-04', 23, 22, '1048.30', '0.00', '1048.30', '146.77', '1195.00'),
+(24, '2017-04-04', 24, 23, '531.52', '0.00', '531.52', '74.41', '606.00'),
+(25, '2017-04-04', 25, 24, '184.26', '0.00', '184.26', '25.80', '210.00'),
+(26, '2017-04-04', 26, 25, '564.45', '0.00', '564.45', '79.02', '643.00'),
+(27, '2017-04-04', 27, 26, '228.08', '0.00', '228.08', '31.93', '260.00'),
+(28, '2017-04-04', 28, 27, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(29, '2017-04-04', 29, 28, '280.14', '0.00', '280.14', '21.59', '302.00'),
+(30, '2017-04-04', 30, 29, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(31, '2017-04-04', 31, 31, '156.00', '0.00', '156.00', '14.30', '170.00'),
+(32, '2017-04-04', 32, 32, '126.36', '0.00', '126.36', '17.69', '144.00'),
+(33, '2017-04-06', 33, 34, '866.88', '0.00', '866.88', '121.36', '988.00'),
+(34, '2017-04-06', 34, 40, '378.93', '0.00', '378.93', '53.05', '432.00'),
+(35, '2017-04-06', 35, 45, '430.20', '0.00', '430.20', '60.23', '490.00'),
+(36, '2017-04-06', 36, 46, '105.24', '0.00', '105.24', '14.73', '120.00'),
+(37, '2017-04-06', 37, 42, '477.18', '0.00', '477.18', '59.75', '537.00'),
+(38, '2017-04-06', 38, 35, '640.30', '0.00', '640.30', '89.64', '730.00'),
+(39, '2017-04-06', 39, 37, '811.13', '0.00', '811.13', '113.56', '925.00'),
+(40, '2017-04-06', 40, 47, '852.84', '0.00', '852.84', '119.40', '972.00'),
+(41, '2017-04-06', 41, 36, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(42, '2017-04-06', 42, 38, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(43, '2017-04-06', 43, 39, '252.72', '0.00', '252.72', '35.38', '288.00'),
+(44, '2017-04-06', 44, 43, '77.22', '0.00', '77.22', '10.81', '88.00'),
+(45, '2017-04-06', 45, 44, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(46, '2017-04-07', 46, 49, '315.78', '0.00', '315.78', '44.21', '360.00'),
+(47, '2017-04-07', 47, 50, '227.98', '0.00', '227.98', '31.92', '260.00'),
+(48, '2017-04-07', 48, 51, '421.05', '0.00', '421.05', '58.95', '480.00'),
+(49, '2017-04-07', 49, 52, '114.12', '0.00', '114.12', '12.21', '126.00'),
+(50, '2017-04-07', 50, 53, '421.05', '0.00', '421.05', '58.95', '480.00'),
+(51, '2017-04-07', 51, 54, '162.48', '0.00', '162.48', '22.75', '185.00'),
+(52, '2017-04-09', 52, 55, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(53, '2017-04-09', 53, 56, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(54, '2017-04-09', 54, 57, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(55, '2017-04-09', 55, 6, '1124.60', '0.00', '1124.60', '157.44', '1282.00'),
+(56, '2017-04-09', 56, 58, '531.69', '0.00', '531.69', '74.44', '606.00'),
+(57, '2017-04-09', 57, 59, '298.92', '0.00', '298.92', '38.08', '337.00'),
+(58, '2017-04-09', 58, 60, '124.86', '0.00', '124.86', '17.48', '142.00'),
+(59, '2017-04-09', 59, 61, '240.78', '0.00', '240.78', '26.66', '267.00'),
+(60, '2017-04-09', 60, 5, '78.36', '0.00', '78.36', '3.92', '82.00'),
+(61, '2017-04-09', 61, 62, '442.08', '0.00', '442.08', '61.89', '504.00'),
+(62, '2017-04-09', 62, 63, '947.40', '0.00', '947.40', '132.64', '1080.00'),
+(63, '2017-04-09', 63, 20, '292.42', '0.00', '292.42', '40.94', '333.00'),
+(64, '2017-04-11', 64, 66, '451.28', '0.00', '451.28', '63.18', '514.00'),
+(65, '2017-04-11', 65, 67, '156.72', '0.00', '156.72', '7.84', '165.00'),
+(66, '2017-04-11', 66, 68, '102.32', '0.00', '102.32', '14.32', '117.00'),
+(67, '2017-04-11', 67, 69, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(68, '2017-04-11', 68, 70, '252.72', '0.00', '252.72', '35.38', '288.00'),
+(69, '2017-04-11', 69, 71, '150.60', '0.00', '150.60', '14.03', '165.00'),
+(70, '2017-04-11', 70, 33, '667.74', '0.00', '667.74', '93.48', '761.00'),
+(71, '2017-04-14', 71, 72, '151.77', '0.00', '151.77', '21.25', '173.00'),
+(72, '2017-04-14', 72, 43, '625.80', '0.00', '625.80', '87.61', '713.00'),
+(73, '2017-04-15', 73, 73, '324.84', '0.00', '324.84', '45.48', '370.00'),
+(74, '2017-04-16', 74, 74, '147.36', '0.00', '147.36', '20.63', '168.00'),
+(75, '2017-04-16', 75, 75, '4749.90', '0.00', '4749.90', '664.99', '5415.00'),
+(76, '2017-04-16', 76, 76, '1646.61', '0.00', '1646.04', '230.45', '1877.00'),
+(77, '2017-04-16', 77, 77, '2833.93', '0.00', '2833.36', '396.67', '3230.00'),
+(78, '2017-04-16', 78, 78, '297.45', '0.00', '297.45', '41.64', '339.00'),
+(79, '2017-04-16', 79, 79, '840.23', '0.00', '840.23', '117.64', '958.00'),
+(80, '2017-04-16', 80, 64, '1303.38', '0.00', '1303.38', '182.47', '1486.00'),
+(81, '2017-04-16', 81, 65, '1241.64', '0.00', '1241.64', '173.83', '1415.00'),
+(82, '2017-04-16', 82, 80, '1039.10', '0.00', '1039.10', '145.47', '1185.00'),
+(83, '2017-04-16', 83, 81, '898.74', '0.00', '898.74', '125.82', '1025.00'),
+(84, '2017-04-16', 84, 82, '640.30', '0.00', '640.30', '89.64', '730.00'),
+(85, '2017-04-16', 85, 6, '863.05', '0.00', '863.05', '120.83', '984.00'),
+(86, '2017-04-16', 86, 1, '163.26', '0.00', '163.26', '22.86', '186.00'),
+(87, '2017-04-16', 87, 5, '458.13', '0.00', '458.13', '64.14', '522.00'),
+(88, '2017-04-16', 88, 83, '1442.18', '0.00', '1442.18', '201.91', '1644.00'),
+(89, '2017-04-17', 89, 84, '3473.55', '0.00', '3473.55', '486.30', '3960.00'),
+(90, '2017-04-17', 90, 85, '781.49', '0.00', '781.49', '109.41', '891.00'),
+(91, '2017-04-17', 91, 88, '163.26', '0.00', '163.26', '22.86', '186.00'),
+(92, '2017-04-17', 92, 12, '330.22', '0.00', '330.22', '46.23', '376.00'),
+(93, '2017-04-17', 93, 86, '162.42', '0.00', '162.42', '22.74', '185.00'),
+(94, '2017-04-20', 94, 89, '72.24', '0.00', '72.24', '10.11', '82.00'),
+(95, '2017-04-20', 95, 18, '1306.74', '0.00', '1306.74', '182.95', '1490.00'),
+(96, '2017-04-20', 96, 90, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(97, '2017-04-20', 97, 16, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(98, '2017-04-20', 98, 91, '421.05', '0.00', '421.05', '58.95', '480.00'),
+(99, '2017-04-20', 99, 92, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(100, '2017-04-20', 100, 94, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(101, '2017-04-20', 101, 96, '249.60', '0.00', '249.60', '34.94', '285.00'),
+(102, '2017-04-20', 102, 97, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(103, '2017-04-20', 103, 98, '72.24', '0.00', '72.24', '10.11', '82.00'),
+(104, '2017-04-20', 104, 99, '631.53', '0.00', '631.53', '88.41', '720.00'),
+(105, '2017-04-20', 105, 100, '324.84', '0.00', '324.84', '45.48', '370.00'),
+(106, '2017-04-20', 106, 101, '866.16', '0.00', '866.16', '121.26', '987.00'),
+(107, '2017-04-20', 107, 46, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(108, '2017-04-20', 108, 40, '284.16', '0.00', '284.16', '39.78', '324.00'),
+(109, '2017-04-20', 109, 41, '565.41', '0.00', '565.41', '79.16', '645.00'),
+(110, '2017-04-20', 110, 102, '971.64', '0.00', '971.64', '136.03', '1108.00'),
+(111, '2017-04-20', 111, 103, '114.48', '0.00', '114.48', '20.23', '165.00'),
+(112, '2017-04-20', 112, 47, '144.36', '0.00', '144.36', '20.21', '165.00'),
+(113, '2017-04-20', 113, 104, '463.93', '0.00', '463.93', '64.94', '529.00'),
+(114, '2017-04-20', 114, 105, '184.20', '0.00', '184.20', '25.79', '210.00'),
+(115, '2017-04-21', 115, 106, '72.24', '0.00', '72.24', '10.11', '82.00'),
+(116, '2017-04-21', 116, 107, '167.52', '0.00', '167.52', '8.38', '176.00'),
+(117, '2017-04-21', 117, 108, '214.06', '0.00', '214.06', '29.97', '244.00'),
+(118, '2017-04-21', 118, 109, '144.36', '0.00', '144.36', '20.21', '165.00'),
+(119, '2017-04-21', 119, 110, '376.84', '0.00', '376.84', '52.76', '430.00'),
+(120, '2017-04-23', 120, 93, '132.36', '0.00', '132.36', '18.53', '151.00'),
+(121, '2017-04-23', 121, 112, '363.98', '0.00', '363.98', '50.96', '415.00'),
+(122, '2017-04-23', 122, 113, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(123, '2017-04-23', 123, 114, '240.74', '0.00', '240.74', '33.70', '274.00'),
+(124, '2017-04-23', 124, 77, '256.75', '0.00', '256.75', '35.95', '293.00'),
+(125, '2017-04-23', 125, 89, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(126, '2017-04-23', 126, 115, '694.71', '0.00', '694.71', '97.26', '792.00'),
+(127, '2017-04-23', 127, 116, '1389.42', '0.00', '1389.42', '194.52', '1584.00'),
+(128, '2017-04-23', 128, 64, '990.00', '0.00', '990.00', '131.06', '1121.00'),
+(129, '2017-04-23', 129, 81, '149.12', '0.00', '149.12', '20.88', '170.00'),
+(130, '2017-04-23', 130, 117, '1750.67', '0.00', '1750.67', '245.09', '1996.00'),
+(131, '2017-04-23', 131, 10, '386.22', '0.00', '386.22', '54.07', '440.00'),
+(132, '2017-04-23', 132, 86, '306.78', '0.00', '306.78', '42.95', '350.00'),
+(133, '2017-04-26', 133, 22, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(134, '2017-04-26', 134, 27, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(135, '2017-04-26', 135, 69, '72.24', '0.00', '72.24', '10.11', '82.00'),
+(136, '2017-04-26', 136, 118, '529.35', '0.00', '529.35', '74.11', '603.00'),
+(137, '2017-04-26', 137, 21, '110.64', '0.00', '110.64', '15.49', '126.00'),
+(138, '2017-04-26', 138, 24, '84.25', '0.00', '84.25', '11.80', '96.00'),
+(139, '2017-04-27', 139, 119, '475.34', '0.00', '475.34', '66.55', '542.00'),
+(140, '2017-04-27', 140, 120, '216.25', '0.00', '216.25', '30.28', '247.00'),
+(141, '2017-04-27', 141, 121, '110.64', '0.00', '110.64', '15.49', '126.00'),
+(142, '2017-04-27', 142, 122, '386.59', '0.00', '386.59', '54.12', '441.00'),
+(143, '2017-05-04', 143, 123, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(144, '2017-05-04', 144, 125, '168.50', '0.00', '168.50', '23.59', '192.00'),
+(145, '2017-05-04', 145, 72, '232.18', '0.00', '232.18', '32.51', '265.00'),
+(146, '2017-05-04', 146, 39, '339.20', '0.00', '339.20', '47.49', '387.00'),
+(147, '2017-05-04', 147, 124, '751.79', '0.00', '751.79', '105.25', '857.00'),
+(148, '2017-05-04', 148, 126, '528.24', '0.00', '528.24', '73.95', '602.00'),
+(149, '2017-05-04', 149, 36, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(150, '2017-05-05', 150, 127, '124.82', '0.00', '124.82', '17.47', '142.00'),
+(151, '2017-05-05', 151, 129, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(152, '2017-05-05', 152, 130, '327.42', '0.00', '327.42', '31.73', '359.00'),
+(153, '2017-05-05', 153, 110, '315.80', '0.00', '315.80', '44.21', '360.00'),
+(154, '2017-05-05', 154, 73, '505.32', '0.00', '505.32', '70.74', '576.00'),
+(155, '2017-05-05', 155, 111, '240.74', '0.00', '240.74', '33.70', '274.00'),
+(156, '2017-05-06', 156, 131, '356.60', '0.00', '356.60', '49.92', '407.00'),
+(157, '2017-05-06', 157, 132, '457.68', '0.00', '457.68', '64.08', '522.00'),
+(158, '2017-05-06', 158, 8, '840.28', '0.00', '840.28', '110.59', '951.00'),
+(159, '2017-05-06', 159, 58, '509.16', '0.00', '509.16', '71.28', '580.00'),
+(160, '2017-05-06', 160, 133, '368.42', '0.00', '368.42', '51.57', '420.00'),
+(161, '2017-05-06', 161, 1, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(162, '2017-05-06', 162, 134, '72.24', '0.00', '72.24', '10.11', '82.00'),
+(163, '2017-05-06', 163, 5, '252.72', '0.00', '252.72', '35.38', '288.00'),
+(164, '2017-05-07', 164, 14, '561.92', '0.00', '561.92', '78.67', '641.00'),
+(165, '2017-05-07', 165, 92, '270.80', '0.00', '270.80', '37.91', '309.00'),
+(166, '2017-05-07', 166, 94, '1283.61', '0.00', '1283.61', '172.17', '1456.00'),
+(167, '2017-05-07', 167, 16, '347.04', '0.00', '347.04', '48.59', '396.00'),
+(168, '2017-05-07', 168, 77, '1380.60', '0.00', '1380.60', '193.28', '1574.00'),
+(169, '2017-05-07', 169, 98, '594.78', '0.00', '594.78', '83.27', '678.00'),
+(170, '2017-05-07', 170, 116, '368.40', '0.00', '368.40', '51.58', '420.00'),
+(171, '2017-05-07', 171, 64, '394.74', '0.00', '394.74', '55.26', '450.00'),
+(172, '2017-05-07', 172, 136, '1875.76', '0.00', '1875.76', '262.61', '2139.00'),
+(173, '2017-05-07', 173, 81, '745.60', '0.00', '745.60', '104.38', '850.00'),
+(174, '2017-05-07', 174, 100, '144.36', '0.00', '144.36', '20.21', '165.00'),
+(175, '2017-05-07', 175, 65, '72.18', '0.00', '72.18', '10.11', '82.00'),
+(176, '2017-05-07', 176, 137, '204.69', '0.00', '204.69', '28.66', '233.00'),
+(177, '2017-05-07', 177, 117, '379.02', '0.00', '379.02', '53.06', '432.00'),
+(178, '2017-05-07', 178, 99, '421.05', '0.00', '421.05', '58.95', '480.00'),
+(179, '2017-05-07', 179, 89, '216.72', '0.00', '216.72', '30.34', '247.00'),
+(180, '2017-05-10', 180, 12, '439.25', '0.00', '439.25', '61.48', '501.00'),
+(181, '2017-05-10', 181, 86, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(182, '2017-05-10', 182, 21, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(183, '2017-05-10', 183, 22, '240.74', '0.00', '240.74', '33.70', '274.00'),
+(184, '2017-05-10', 184, 28, '300.33', '0.00', '300.33', '34.51', '335.00'),
+(185, '2017-05-10', 185, 70, '450.39', '0.00', '450.39', '63.05', '513.00'),
+(186, '2017-05-10', 186, 71, '144.48', '0.00', '144.48', '20.23', '165.00'),
+(187, '2017-05-10', 187, 138, '155.94', '0.00', '155.94', '14.29', '170.00'),
+(188, '2017-05-10', 188, 139, '157.86', '0.00', '157.86', '22.10', '180.00'),
+(189, '2017-05-10', 189, 140, '120.12', '0.00', '120.12', '16.82', '137.00'),
+(190, '2017-05-11', 190, 141, '198.51', '0.00', '198.51', '27.79', '226.00'),
+(191, '2017-05-11', 191, 142, '162.48', '0.00', '162.48', '22.75', '185.00'),
+(192, '2017-05-11', 192, 42, '457.80', '0.00', '457.80', '35.88', '494.00'),
+(193, '2017-05-11', 193, 143, '144.42', '0.00', '144.42', '20.22', '165.00'),
+(194, '2017-05-11', 194, 146, '228.18', '0.00', '228.18', '24.41', '253.00'),
+(195, '2017-05-11', 195, 144, '1708.19', '0.00', '1708.19', '239.15', '1947.00'),
+(196, '2017-05-11', 196, 37, '288.75', '0.00', '288.75', '40.43', '329.00'),
+(197, '2017-05-11', 197, 145, '144.36', '0.00', '144.36', '20.21', '165.00'),
+(198, '2017-05-11', 198, 103, '288.96', '0.00', '288.96', '40.45', '329.00'),
+(199, '2017-05-11', 199, 47, '529.46', '0.00', '529.46', '74.12', '604.00'),
+(200, '2017-05-11', 200, 41, '207.57', '0.00', '207.57', '29.06', '237.00'),
+(201, '2017-05-11', 201, 36, '147.37', '0.00', '147.37', '20.63', '168.00'),
+(202, '2017-05-13', 202, 107, '359.55', '0.00', '359.55', '50.34', '410.00'),
+(203, '2017-05-13', 203, 48, '1414.26', '0.00', '1414.26', '198.00', '1612.00'),
+(204, '2017-05-13', 204, 50, '620.08', '0.00', '620.08', '86.81', '707.00'),
+(205, '2017-05-13', 205, 127, '244.68', '0.00', '244.68', '26.72', '271.00'),
+(206, '2017-05-13', 206, 51, '213.60', '0.00', '213.60', '29.90', '244.00'),
+(207, '2017-05-13', 207, 147, '216.60', '0.00', '216.60', '30.32', '247.00'),
+(208, '2017-05-13', 208, 74, '432.11', '0.00', '432.11', '60.50', '493.00'),
+(209, '2017-05-13', 209, 129, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(210, '2017-05-13', 210, 148, '360.96', '0.00', '360.96', '50.53', '411.00'),
+(211, '2017-05-13', 211, 84, '2666.10', '0.00', '2666.10', '373.26', '3039.00'),
+(212, '2017-05-13', 212, 149, '637.65', '0.00', '637.65', '89.27', '727.00'),
+(213, '2017-05-15', 213, 150, '205.50', '0.00', '205.50', '28.77', '234.00'),
+(214, '2017-05-15', 214, 151, '484.72', '0.00', '484.72', '67.86', '553.00'),
+(215, '2017-05-15', 215, 77, '1580.28', '0.00', '1580.28', '221.24', '1802.00'),
+(216, '2017-05-15', 216, 63, '1992.68', '0.00', '1992.68', '278.98', '2272.00'),
+(217, '2017-05-15', 217, 115, '829.84', '0.00', '829.84', '116.18', '946.00'),
+(218, '2017-05-15', 218, 152, '903.28', '0.00', '903.28', '126.46', '1030.00'),
+(219, '2017-05-15', 219, 153, '685.44', '0.00', '685.44', '95.96', '781.00'),
+(220, '2017-05-15', 220, 64, '701.82', '0.00', '701.82', '90.72', '793.00'),
+(221, '2017-05-15', 221, 20, '842.17', '0.00', '842.17', '117.90', '960.00'),
+(222, '2017-05-15', 222, 80, '396.60', '0.00', '396.60', '55.52', '452.00'),
+(223, '2017-05-15', 223, 154, '631.60', '0.00', '631.60', '88.42', '720.00'),
+(224, '2017-05-15', 224, 90, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(225, '2017-05-15', 225, 155, '144.36', '0.00', '144.36', '20.21', '165.00'),
+(226, '2017-05-15', 226, 16, '252.72', '0.00', '252.72', '35.38', '288.00'),
+(227, '2017-05-15', 227, 98, '180.48', '0.00', '180.48', '25.27', '206.00'),
+(228, '2017-05-15', 228, 156, '854.49', '0.00', '854.49', '119.63', '974.00'),
+(229, '2017-06-03', 229, 152, '315.80', '0.00', '315.80', '44.21', '360.00'),
+(230, '2017-06-03', 230, 65, '2658.13', '0.00', '2658.13', '372.14', '3030.00'),
+(231, '2017-06-03', 231, 20, '773.61', '0.00', '773.61', '108.31', '882.00'),
+(232, '2017-06-03', 232, 80, '541.02', '0.00', '541.02', '75.74', '617.00'),
+(233, '2017-06-03', 233, 100, '470.16', '0.00', '470.16', '23.51', '494.00'),
+(234, '2017-06-03', 234, 34, '1732.80', '0.00', '1732.80', '242.59', '1975.00'),
+(235, '2017-06-03', 235, 157, '288.72', '0.00', '288.72', '40.42', '329.00'),
+(236, '2017-06-03', 236, 65, '2753.13', '0.00', '2753.13', '385.44', '3139.00'),
+(237, '2017-06-05', 237, 85, '709.52', '0.00', '709.52', '99.33', '809.00'),
+(238, '2017-06-12', 238, 81, '447.36', '0.00', '447.36', '62.63', '510.00'),
+(239, '2017-06-12', 239, 154, '540.33', '0.00', '540.33', '75.65', '616.00'),
+(240, '2017-06-12', 240, 159, '193.02', '0.00', '193.02', '27.02', '220.00'),
+(241, '2017-06-12', 241, 160, '421.05', '0.00', '421.05', '58.95', '480.00'),
+(242, '2017-06-12', 242, 161, '572.60', '0.00', '572.60', '80.16', '653.00'),
+(243, '2017-06-12', 243, 85, '762.81', '0.00', '762.81', '99.25', '862.00'),
+(244, '2017-06-12', 244, 12, '270.80', '0.00', '270.80', '37.91', '309.00'),
+(245, '2017-06-12', 245, 162, '238.20', '0.00', '238.20', '25.80', '264.00'),
+(246, '2017-06-12', 246, 163, '1220.59', '0.00', '1220.59', '163.34', '1384.00'),
+(247, '2017-06-12', 247, 164, '154.38', '0.00', '154.38', '21.61', '176.00'),
+(248, '2017-06-12', 248, 86, '180.42', '0.00', '180.42', '25.26', '206.00'),
+(249, '2017-06-17', 249, 64, '473.70', '0.00', '473.70', '66.32', '540.00'),
+(250, '2017-06-17', 250, 81, '685.88', '0.00', '685.88', '96.02', '782.00'),
+(251, '2017-06-17', 251, 157, '144.36', '0.00', '144.36', '20.21', '165.00'),
+(252, '2017-06-17', 252, 117, '1321.05', '0.00', '1321.05', '184.95', '1506.00'),
+(253, '2017-06-17', 253, 20, '297.45', '0.00', '297.45', '41.64', '339.00'),
+(254, '2017-06-17', 254, 66, '1296.15', '0.00', '1296.15', '181.46', '1478.00'),
+(255, '2017-06-17', 255, 165, '186.84', '0.00', '186.84', '26.16', '213.00'),
+(256, '2017-06-17', 256, 23, '270.00', '0.00', '270.00', '37.80', '308.00'),
+(257, '2017-06-17', 257, 166, '920.16', '0.00', '920.16', '128.82', '1049.14'),
+(258, '2017-06-17', 258, 42, '304.07', '0.00', '304.07', '42.57', '347.00'),
+(259, '2017-06-17', 259, 145, '144.78', '0.00', '144.78', '20.27', '165.00'),
+(260, '2017-06-17', 260, 43, '135.00', '0.00', '135.00', '18.90', '154.00'),
+(261, '2017-06-17', 261, 141, '1634.39', '0.00', '1634.39', '228.81', '1863.00'),
+(262, '2017-06-17', 262, 38, '258.87', '0.00', '258.87', '36.24', '295.00'),
+(263, '2017-06-17', 263, 167, '234.50', '0.00', '234.50', '32.83', '267.00'),
+(264, '2017-06-17', 263, 167, '234.50', '0.00', '234.50', '32.83', '267.00'),
+(265, '2017-06-17', 264, 84, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(266, '2017-06-17', 264, 84, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(267, '2017-06-17', 264, 84, '0.00', '0.00', '0.00', '0.00', '0.00'),
+(268, '2017-06-17', 265, 84, '7189.20', '0.00', '7189.20', '1006.49', '8196.00'),
+(269, '2017-06-17', 266, 108, '270.54', '0.00', '270.54', '37.88', '308.00'),
+(270, '2017-06-17', 267, 168, '187.72', '0.00', '187.72', '26.28', '214.00'),
+(271, '2017-06-17', 268, 48, '297.45', '0.00', '297.45', '41.64', '339.00'),
+(272, '2017-06-17', 269, 147, '648.37', '0.00', '648.37', '90.77', '739.00'),
+(273, '2017-06-17', 270, 148, '514.17', '0.00', '514.17', '71.98', '586.00'),
+(274, '2017-06-17', 271, 4, '347.40', '0.00', '347.40', '48.64', '396.00'),
+(275, '2017-06-17', 272, 3, '235.12', '0.00', '235.12', '32.92', '268.00'),
+(276, '2017-06-17', 273, 169, '558.96', '0.00', '558.96', '78.25', '637.21'),
+(277, '2017-06-17', 274, 173, '875.44', '0.00', '875.44', '122.56', '998.00'),
+(278, '2017-06-17', 275, 174, '451.70', '0.00', '451.70', '63.24', '514.94'),
+(279, '2017-06-17', 276, 90, '405.30', '0.00', '405.30', '56.74', '462.00'),
+(280, '2017-06-17', 277, 175, '360.12', '0.00', '360.12', '50.42', '411.01'),
+(281, '2017-06-17', 278, 14, '235.08', '0.00', '235.08', '32.91', '268.00'),
+(282, '2017-06-17', 279, 176, '998.54', '0.00', '998.54', '139.80', '1138.00'),
+(283, '2017-06-17', 280, 92, '571.88', '0.00', '571.88', '80.06', '652.00'),
+(284, '2017-06-17', 281, 114, '709.42', '0.00', '709.42', '99.32', '809.00'),
+(285, '2017-06-17', 282, 177, '1332.06', '0.00', '1332.06', '186.49', '1518.55'),
+(286, '2017-06-17', 283, 178, '2828.16', '0.00', '2828.16', '395.94', '3224.00'),
+(287, '2017-06-17', 284, 177, '2379.19', '0.00', '2379.19', '333.09', '1741.00'),
+(288, '2017-06-17', 285, 177, '1041.34', '0.00', '1041.34', '145.79', '1187.13'),
+(289, '2017-06-17', 286, 77, '2560.62', '0.00', '2560.62', '358.49', '2919.11'),
+(290, '2017-06-17', 287, 179, '397.56', '0.00', '397.56', '55.66', '453.22'),
+(291, '2017-06-17', 288, 180, '11508.85', '0.00', '11508.85', '1611.24', '4285.00'),
+(292, '2017-06-17', 289, 152, '392.92', '0.00', '392.92', '55.01', '448.00'),
+(293, '2017-06-17', 290, 101, '2229.12', '0.00', '2229.12', '312.08', '2541.00'),
+(294, '2017-06-17', 291, 20, '1504.26', '0.00', '1504.26', '210.60', '1715.00'),
+(295, '2017-06-17', 292, 81, '1409.95', '0.00', '1409.95', '197.39', '1607.00'),
+(296, '2017-06-17', 293, 64, '1741.26', '0.00', '1741.26', '243.78', '1984.14'),
+(297, '2017-06-17', 294, 182, '115.68', '0.00', '115.68', '16.20', '131.00'),
+(298, '2017-06-17', 295, 115, '633.24', '0.00', '633.24', '88.65', '722.00'),
+(299, '2017-06-17', 296, 159, '395.56', '0.00', '395.56', '55.38', '451.01'),
+(300, '2017-06-17', 297, 42, '300.23', '0.00', '300.23', '42.03', '342.00'),
+(301, '2017-06-17', 298, 84, '649.50', '0.00', '649.50', '90.93', '740.00'),
+(302, '2017-06-17', 299, 58, '160.95', '0.00', '160.95', '14.97', '178.00'),
+(303, '2017-06-17', 300, 5, '971.97', '0.00', '971.97', '136.08', '1108.00'),
+(304, '2017-06-17', 301, 6, '1807.20', '0.00', '1807.20', '253.01', '2060.00'),
+(305, '2017-06-17', 302, 9, '379.86', '0.00', '379.86', '53.18', '433.00'),
+(306, '2017-06-17', 303, 85, '451.48', '0.00', '451.48', '63.21', '515.00'),
+(307, '2017-06-17', 304, 12, '251.76', '0.00', '251.76', '35.25', '287.00'),
+(308, '2017-06-17', 305, 154, '522.78', '0.00', '522.78', '73.19', '596.00'),
+(309, '2017-06-17', 306, 116, '508.56', '0.00', '508.56', '71.20', '580.00'),
+(310, '2017-06-17', 307, 63, '1461.09', '0.00', '1461.09', '204.55', '1666.00'),
+(311, '2017-06-17', 308, 95, '1395.39', '0.00', '1395.39', '195.35', '1591.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tax`
+--
+
+CREATE TABLE `tax` (
+  `tax_id` bigint(100) NOT NULL,
+  `cat` varchar(50) NOT NULL,
+  `tax` varchar(50) NOT NULL,
+  `rate` double NOT NULL,
+  `exmpt` decimal(50,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tax`
+--
+
+INSERT INTO `tax` (`tax_id`, `cat`, `tax`, `rate`, `exmpt`) VALUES
+(1, 'VAT', 'Vat Tax 5%', 5, '0'),
+(2, 'VAT', 'Vat Tax 14%', 14, '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `unit`
+--
+
+CREATE TABLE `unit` (
+  `unit_id` bigint(100) NOT NULL,
+  `unit` varchar(50) NOT NULL,
+  `description` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `unit`
+--
+
+INSERT INTO `unit` (`unit_id`, `unit`, `description`) VALUES
+(1, 'U', 'Unit');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` bigint(100) NOT NULL,
+  `loginid` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `status` varchar(10) NOT NULL,
+  `type` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `loginid`, `password`, `status`, `type`) VALUES
+(1, 'jaimaa', 'admin@123', 'Active', 'Admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vendor`
+--
+
+CREATE TABLE `vendor` (
+  `vendor_id` bigint(100) NOT NULL,
+  `vendor_name` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `state` varchar(50) NOT NULL,
+  `country` varchar(50) NOT NULL,
+  `pin` varchar(10) NOT NULL,
+  `contact` varchar(50) NOT NULL,
+  `mobile` varchar(50) NOT NULL,
+  `mail` varchar(50) NOT NULL,
+  `PAN` varchar(50) NOT NULL,
+  `TIN` varchar(50) NOT NULL,
+  `ST` varchar(50) NOT NULL,
+  `CST` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `vendor`
+--
+
+INSERT INTO `vendor` (`vendor_id`, `vendor_name`, `address`, `city`, `state`, `country`, `pin`, `contact`, `mobile`, `mail`, `PAN`, `TIN`, `ST`, `CST`) VALUES
+(1, 'GANESH DISTRIBUTOR', 'JIWAJI CHOWK BADA ', 'GWALIOR', 'M.P.', 'India', '474001', '', '9098319067', '', '', '23779061173', '', '');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `area`
+--
+ALTER TABLE `area`
+  ADD PRIMARY KEY (`area_id`);
+
+--
+-- Indexes for table `autogen`
+--
+ALTER TABLE `autogen`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bank`
+--
+ALTER TABLE `bank`
+  ADD PRIMARY KEY (`bank_id`);
+
+--
+-- Indexes for table `bill`
+--
+ALTER TABLE `bill`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`category_id`);
+
+--
+-- Indexes for table `client`
+--
+ALTER TABLE `client`
+  ADD PRIMARY KEY (`client_id`);
+
+--
+-- Indexes for table `company_profile`
+--
+ALTER TABLE `company_profile`
+  ADD PRIMARY KEY (`company_id`);
+
+--
+-- Indexes for table `creditor`
+--
+ALTER TABLE `creditor`
+  ADD PRIMARY KEY (`trn_id`);
+
+--
+-- Indexes for table `currency`
+--
+ALTER TABLE `currency`
+  ADD PRIMARY KEY (`currency_id`);
+
+--
+-- Indexes for table `currency_value`
+--
+ALTER TABLE `currency_value`
+  ADD PRIMARY KEY (`cur_val_id`);
+
+--
+-- Indexes for table `debtors`
+--
+ALTER TABLE `debtors`
+  ADD PRIMARY KEY (`trn_id`);
+
+--
+-- Indexes for table `invoice`
+--
+ALTER TABLE `invoice`
+  ADD PRIMARY KEY (`invoice_id`);
+
+--
+-- Indexes for table `invoice_value`
+--
+ALTER TABLE `invoice_value`
+  ADD PRIMARY KEY (`val_id`);
+
+--
+-- Indexes for table `item`
+--
+ALTER TABLE `item`
+  ADD PRIMARY KEY (`item_id`);
+
+--
+-- Indexes for table `item_movment`
+--
+ALTER TABLE `item_movment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `item_stock`
+--
+ALTER TABLE `item_stock`
+  ADD PRIMARY KEY (`stock_id`);
+
+--
+-- Indexes for table `order_book`
+--
+ALTER TABLE `order_book`
+  ADD PRIMARY KEY (`order_id`);
+
+--
+-- Indexes for table `purchase`
+--
+ALTER TABLE `purchase`
+  ADD PRIMARY KEY (`pur_id`);
+
+--
+-- Indexes for table `sales`
+--
+ALTER TABLE `sales`
+  ADD PRIMARY KEY (`sales_id`);
+
+--
+-- Indexes for table `tax`
+--
+ALTER TABLE `tax`
+  ADD PRIMARY KEY (`tax_id`);
+
+--
+-- Indexes for table `unit`
+--
+ALTER TABLE `unit`
+  ADD PRIMARY KEY (`unit_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `vendor`
+--
+ALTER TABLE `vendor`
+  ADD PRIMARY KEY (`vendor_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `area`
+--
+ALTER TABLE `area`
+  MODIFY `area_id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `autogen`
+--
+ALTER TABLE `autogen`
+  MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `bank`
+--
+ALTER TABLE `bank`
+  MODIFY `bank_id` bigint(100) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `bill`
+--
+ALTER TABLE `bill`
+  MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=312;
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `category_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `client`
+--
+ALTER TABLE `client`
+  MODIFY `client_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
+--
+-- AUTO_INCREMENT for table `company_profile`
+--
+ALTER TABLE `company_profile`
+  MODIFY `company_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `creditor`
+--
+ALTER TABLE `creditor`
+  MODIFY `trn_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `currency`
+--
+ALTER TABLE `currency`
+  MODIFY `currency_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `currency_value`
+--
+ALTER TABLE `currency_value`
+  MODIFY `cur_val_id` bigint(100) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `debtors`
+--
+ALTER TABLE `debtors`
+  MODIFY `trn_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=312;
+--
+-- AUTO_INCREMENT for table `invoice`
+--
+ALTER TABLE `invoice`
+  MODIFY `invoice_id` bigint(100) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `invoice_value`
+--
+ALTER TABLE `invoice_value`
+  MODIFY `val_id` bigint(100) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `item`
+--
+ALTER TABLE `item`
+  MODIFY `item_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+--
+-- AUTO_INCREMENT for table `item_movment`
+--
+ALTER TABLE `item_movment`
+  MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1222;
+--
+-- AUTO_INCREMENT for table `item_stock`
+--
+ALTER TABLE `item_stock`
+  MODIFY `stock_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+--
+-- AUTO_INCREMENT for table `order_book`
+--
+ALTER TABLE `order_book`
+  MODIFY `order_id` bigint(100) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `purchase`
+--
+ALTER TABLE `purchase`
+  MODIFY `pur_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `sales`
+--
+ALTER TABLE `sales`
+  MODIFY `sales_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=312;
+--
+-- AUTO_INCREMENT for table `tax`
+--
+ALTER TABLE `tax`
+  MODIFY `tax_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `unit`
+--
+ALTER TABLE `unit`
+  MODIFY `unit_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `vendor`
+--
+ALTER TABLE `vendor`
+  MODIFY `vendor_id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

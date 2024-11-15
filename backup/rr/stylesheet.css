@@ -1,0 +1,189 @@
+/* CSS Document */
+.wrapper
+{ /*float:left;*/
+height:875px;
+width:990px;
+padding:0px;
+margin:0px;
+margin-left:auto; 
+margin-right:auto;
+background:#FFFFFF;
+/*border:0px solid #FFFFFF;*/
+}
+
+.head
+{
+float:leftl;
+height:190px;
+width:990px;
+padding:0px;
+margin:0px;
+/*border:0px solid #FFFFFF;*/
+}
+
+.container
+{
+float:left;
+height:655px;
+width:990px;
+padding:0px;
+margin:0px;
+border:1px solid #000000;
+}
+
+/*.left
+{
+float:left;
+height:700px;
+width:100px;
+padding:0px;
+margin:0px;
+border:0px solid #FFFFFF;
+}*/
+
+.content
+{
+float:left;
+height:655px;
+width:745px;
+padding:0px;
+margin:0px;
+/*border:0px solid #FFFFFF;*/
+}
+
+/*.lable
+{
+border-style:solid;
+width:30px;
+vertical-align:middle;
+background-color:#FFFFFF;
+}*/
+
+.right
+{
+float:left;
+height:655px;
+width:240px;
+padding:0px;
+margin:0px;
+/*border:0px solid #FFFFFF;*/
+}
+
+
+
+.layer
+{
+margin-left:500px;
+/*margin-top:20px;*/
+/*margin-bottom:20px;*/
+height:10px;
+width:990px;
+padding:0px;
+margin:0px;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:14px;
+}
+
+.layer1
+{
+float:left;
+height:130px;
+width:990px;
+padding:0px;
+margin:0px;
+}
+
+.logo
+{
+font-family:"Times New Roman", Times, serif;
+font-size:16mm;
+color:#003333;
+}
+
+.layer2
+{
+float:left;
+height:40px;
+width:990px;
+padding:0px;
+margin:0px;
+}
+
+/*.menu2
+{
+float:left;
+margin-top:5px;
+padding:2px;
+margin-left:15px;
+}
+
+.name
+{
+float:left;
+margin-top:5px;
+padding:2px;
+margin-left:15px;
+margin-top:10px;
+}*/
+
+
+.footer1
+{
+float:left;
+height:30px;
+width:990px;
+padding:0px;
+margin:0px;
+margin-top:0px;
+margin-bottom:32px;
+/*background:url(images/footerbackimage3.png) no-repeat;*/
+border:1px solid #000000;
+}
+/*.footerlayer1
+  {
+  width:135px;
+  height:30px;
+  margin-left:2px;
+  margin-top:22px;
+  opacity:0.6;
+  filter:alpha(opacity=60); 
+  float:left;
+  font-size:24px;
+  font-family:"Courier New", Courier, monospace;
+  color:#660000;
+  }
+  .footerlayer2
+  {
+  width:990px;
+  height:150px;
+  margin-left:4px;
+ 
+  opacity:0.6;
+  filter:alpha(opacity=60); 
+  float:left;
+  font-size:12px;
+  font-family:"Courier New", Courier, monospace;
+  color:#000000;
+  }
+  .footerlayer3
+  {
+  width:990px;
+  height:10px;
+  margin-left:2px;
+  margin-top:2px;
+  opacity:0.6;
+  filter:alpha(opacity=60); 
+  float:left;
+  font-size:12px;
+  font-family:"Courier New", Courier, monospace;
+  color:#660000;
+  }*/
+/*.footer2
+{
+float:left;
+height:20px;
+width:985px;
+padding:1px;
+margin:1px;
+background:#FFFFFF;
+}*/
